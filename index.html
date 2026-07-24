@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Cofu — Textiles. Objets. Histoires du Japon.</title>
+<meta name="description" content="Vintage Japanese textiles transformed. Objects discovered. Cultural experiences shared. Rooted in the crafts and landscapes of Kyushu, Japan.">
+<link rel="icon" href="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/editor/official-logo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Raleway:wght@300;400;600;700;800&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream:#F5F0E8; --warm:#EDE8DC; --dark:#2C2416; --dark2:#3A3020; --dark3:#4A3E2C;
+  --amber:#A0622A; --gold:#C9952A; --mid:#6B5A44; --rule:#C8BAA4; --rulelt:#D8CCBA;
+  --pale:#EAE0D0; --nav-h:64px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--cream);color:var(--dark);font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.82;-webkit-font-smoothing:antialiased;font-size:19px;padding-top:var(--nav-h);}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+
+.fr{display:none!important;} .en{display:block;}
+span.en,a.en{display:inline!important;} span.fr,a.fr{display:none!important;}
+body.lang-fr .fr{display:block!important;} body.lang-fr .en{display:none!important;}
+body.lang-fr span.fr,body.lang-fr a.fr{display:inline!important;}
+body.lang-fr span.en,body.lang-fr a.en{display:none!important;}
+
+.site-header{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:500;background:rgba(44,36,22,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(160,98,42,0.3);display:flex;align-items:center;justify-content:space-between;padding:0 40px;transition:border-color .3s;}
+.site-header.scrolled{border-bottom-color:var(--amber);}
+.header-logo{display:flex;align-items:center;gap:12px;flex-shrink:0;text-decoration:none;}
+.header-logo img{height:38px;width:auto;display:block;filter:brightness(1.1);}
+.header-logo-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:20px;letter-spacing:.1em;color:var(--cream);display:none;}
+.header-nav{display:flex;align-items:center;gap:28px;flex:1;justify-content:flex-end;}
+.header-nav a{font-family:'Raleway',sans-serif;font-size:14px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pale);transition:color .2s;white-space:nowrap;}
+.header-nav a:hover,.header-nav a.cur{color:var(--amber);}
+.lang-toggle{display:flex;align-items:center;gap:0;margin-left:24px;border-left:1px solid rgba(160,98,42,0.3);padding-left:20px;}
+.lang-toggle button{background:none;border:none;cursor:pointer;font-family:'Raleway',sans-serif;font-size:14px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--pale);padding:8px 6px;transition:color .15s;}
+.lang-toggle button.on{color:var(--amber);}
+.lang-sep-hdr{font-size:14px;color:var(--dark3);font-family:'Raleway',sans-serif;user-select:none;}
+.burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:4px;margin-left:16px;width:32px;height:32px;}
+.burger span{display:block;width:22px;height:1.5px;background:var(--pale);transition:transform .3s,opacity .3s;transform-origin:center;}
+.burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.burger.open span:nth-child(2){opacity:0;}
+.burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.header-mobile-right{display:none;align-items:center;gap:4px;}
+.mob-lang-btn{background:none;border:none;cursor:pointer;font-family:'Raleway',sans-serif;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--pale);padding:4px 5px;transition:color .15s;}
+.mob-lang-btn.on{color:var(--amber);}
+.mob-lang-sep{font-size:14px;color:var(--dark3);user-select:none;}
+.mob-veil{display:none;position:fixed;inset:0;z-index:490;background:rgba(20,14,6,.5);backdrop-filter:blur(2px);}
+.mob-veil.on{display:block;}
+.mob-panel{position:fixed;top:var(--nav-h);right:-100%;bottom:0;z-index:495;width:min(280px,80vw);background:var(--dark);border-left:1px solid var(--dark3);padding:36px 32px 40px;display:flex;flex-direction:column;gap:0;transition:right .3s ease;overflow-y:auto;}
+.mob-panel.on{right:0;}
+.mob-panel a{display:block;padding:16px 0;border-bottom:1px solid var(--dark3);font-family:'Raleway',sans-serif;font-size:14px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rulelt);transition:color .2s;}
+.mob-panel a:last-of-type{border-bottom:none;}
+.mob-panel a:hover,.mob-panel a.cur{color:var(--amber);}
+
+/* HERO */
+.hero{position:relative;min-height:clamp(480px,65vh,720px);display:flex;align-items:flex-end;overflow:hidden;border-bottom:2px solid var(--amber);}
+.hero-bg{position:absolute;inset:0;background-color:#3a3020;background-image:url('https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-04-23-at-16-43-45_orig.png');background-size:cover;background-position:center 30%;background-repeat:no-repeat;}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(44,36,22,0.25) 0%,rgba(44,36,22,0.60) 50%,rgba(44,36,22,0.90) 100%);}
+.hero-inner{position:relative;z-index:1;padding:48px 48px 56px;max-width:860px;}
+.hero-kicker{font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:#C9A84C;margin-bottom:18px;display:block;text-shadow:0 1px 3px rgba(0,0,0,0.4);}
+.hero-title{font-style:italic;font-weight:300;font-size:clamp(48px,9vw,82px);line-height:1.02;letter-spacing:.02em;color:#FDFAF5;margin-bottom:14px;text-shadow:0 2px 8px rgba(0,0,0,0.3);}
+.hero-tagline{font-family:'Raleway',sans-serif;font-size:clamp(10px,1.1vw,12px);font-weight:800;letter-spacing:.32em;text-transform:uppercase;color:#C9A84C;margin-bottom:26px;display:block;text-shadow:0 1px 3px rgba(0,0,0,0.4);}
+.hero-rule{width:40px;height:1px;background:var(--amber);margin-bottom:28px;}
+.hero-sub{font-size:clamp(17px,2.2vw,21px);font-weight:300;line-height:1.78;color:rgba(253,250,245,.92);max-width:560px;text-shadow:0 1px 4px rgba(0,0,0,0.3);}
+.hero-sub em{font-style:italic;color:#FDFAF5;}
+
+/* NARRATIVE */
+.narrative-band{background:var(--warm);border-bottom:1px solid var(--rule);padding:72px 48px;}
+.narrative-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+.narrative-eyebrow{font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--amber);margin-bottom:20px;display:block;}
+.narrative-headline{font-style:italic;font-weight:300;font-size:clamp(26px,3.2vw,40px);line-height:1.15;color:var(--dark);margin-bottom:12px;}
+.narrative-rule{width:36px;height:1px;background:var(--amber);margin:22px 0;}
+.narrative-key{font-size:clamp(18px,2vw,22px);font-style:italic;font-weight:300;line-height:1.6;color:var(--dark);border-left:2px solid var(--amber);padding-left:20px;}
+.narrative-body{font-size:clamp(15px,1.6vw,17px);line-height:1.9;color:var(--mid);margin-bottom:18px;}
+.narrative-pillars{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);margin:28px 0;}
+.narrative-pillar{background:var(--warm);padding:20px 22px;}
+.narrative-pillar-lbl{font-family:'Raleway',sans-serif;font-size:9px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:6px;}
+.narrative-pillar-text{font-size:14px;line-height:1.7;color:var(--mid);}
+.narrative-note{font-size:14px;line-height:1.8;color:var(--mid);font-style:italic;margin-bottom:28px;}
+.narrative-cta{display:inline-flex;align-items:center;gap:12px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);transition:gap .2s,color .2s;}
+.narrative-cta::after{content:'→';font-family:serif;font-size:15px;}
+.narrative-cta:hover{gap:18px;color:var(--gold);}
+
+/* NAV BLOCKS */
+.nav-item{display:block;border-bottom:1px solid var(--rule);transition:background .22s;}
+.nav-item:hover{background:#EAE3D6;}
+.nav-item-inner{max-width:1080px;margin:0 auto;padding:48px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;}
+.nav-item-half-wrap{border-bottom:1px solid var(--rule);}
+.nav-item-half-inner{max-width:1080px;margin:0 auto;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.nav-half{padding:48px;border-right:1px solid var(--rule);display:block;transition:background .22s;}
+.nav-half:last-child{border-right:none;}
+.nav-half:hover{background:#EAE3D6;}
+.ni-lbl{font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--amber);margin-bottom:14px;display:block;}
+.ni-title{font-style:italic;font-weight:300;font-size:clamp(22px,3vw,34px);color:var(--dark);line-height:1.2;margin-bottom:14px;}
+.ni-desc{font-size:clamp(16px,1.8vw,19px);line-height:1.8;color:var(--mid);margin-bottom:28px;}
+.btn{display:inline-flex;align-items:center;gap:12px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);transition:gap .2s,color .2s;white-space:nowrap;}
+.btn::after{content:'→';font-family:serif;font-size:15px;}
+.btn:hover{gap:18px;color:var(--gold);}
+
+/* CONCEPT */
+.sec-dark{background:var(--dark);padding:64px 48px;border-top:2px solid var(--amber);border-bottom:1px solid var(--dark3);}
+.concept-body{font-size:clamp(16px,1.8vw,19px);line-height:1.82;color:var(--mid);}
+.concept-body-light{color:rgba(245,240,232,.75)!important;}
+
+/* FOOTER */
+footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48px 40px;display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:start;}
+.ft-brand{font-style:italic;font-size:22px;letter-spacing:.1em;color:var(--cream);margin-bottom:10px;}
+.ft-jp{font-family:'Noto Serif JP',serif;font-size:12px;color:var(--rulelt);letter-spacing:.16em;line-height:1.9;}
+.ft-mid{text-align:center;}
+.ft-social{display:flex;gap:22px;justify-content:center;margin-bottom:14px;}
+.ft-social a{color:var(--rulelt);transition:color .2s;}
+.ft-social a:hover{color:var(--amber);}
+.ft-social svg{width:20px;height:20px;fill:currentColor;}
+.ft-email{font-family:'Raleway',sans-serif;font-size:12px;letter-spacing:.1em;color:var(--pale);}
+.ft-right{text-align:right;}
+.ft-credit{font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--pale);line-height:2.5;}
+.ft-bottom{background:var(--dark2);padding:14px 48px;display:flex;justify-content:center;align-items:center;}
+.ft-bottom span{font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--rulelt);}
+
+@media(min-width:721px) and (max-width:1024px){
+  :root{--nav-h:60px;}
+  .site-header{padding:0 28px;}
+  .header-nav,.lang-toggle{display:none;}
+  .header-mobile-right,.burger{display:flex;}
+  .nav-item-inner{padding:44px 40px;}
+  .nav-half{padding:44px 40px;}
+  .sec-dark{padding:56px 40px;}
+  footer{padding:48px 40px 36px;grid-template-columns:1fr;gap:28px;}
+  .ft-mid,.ft-right{text-align:left;}
+  .ft-social{justify-content:flex-start;}
+  .ft-bottom{padding:14px 40px;}
+  /* narrative section tablet */
+  section[style*="padding:72px 56px"]{padding:56px 40px!important;}
+  /* hero text band tablet */
+  div[style*="padding:52px 56px"]{padding:44px 40px!important;}
+  /* two-pillar grid tablet: stay 2 cols */
+  /* concept 2col tablet: stack */
+  .concept-2col{grid-template-columns:1fr!important;gap:28px!important;}
+  /* 3-pillar foundations tablet: 2 cols */
+  div[style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr 1fr!important;}
+  div[style*="border-right:1px solid var(--dark3)"]{border-right:none!important;border-bottom:1px solid var(--dark3)!important;}
+}
+@media(max-width:720px){
+  :root{--nav-h:56px;}
+  .site-header{padding:0 20px;}
+  .header-nav,.lang-toggle{display:none;}
+  .header-mobile-right,.burger{display:flex;}
+  .hero{min-height:clamp(260px,50vw,400px);}
+  .nav-item-inner{padding:36px 20px;grid-template-columns:1fr;gap:20px;}
+  .nav-item-half-inner{grid-template-columns:1fr;}
+  .nav-half{padding:36px 20px;border-right:none;border-bottom:1px solid var(--rule);}
+  .nav-half:last-child{border-bottom:none;}
+  .sec-dark{padding:40px 20px;}
+  footer{grid-template-columns:1fr;gap:32px;padding:44px 20px 32px;}
+  .ft-mid,.ft-right{text-align:left;}
+  .ft-social{justify-content:flex-start;}
+  .ft-bottom{padding:14px 20px;}
+  /* narrative section mobile */
+  section[style*="padding:72px 56px"]{padding:44px 20px!important;}
+  /* hero text band mobile */
+  div[style*="padding:52px 56px"]{padding:36px 20px!important;}
+  /* two-pillar grid mobile: stack */
+  div[style*="grid-template-columns:1fr 1fr;gap:1px"]{grid-template-columns:1fr!important;}
+  /* concept 2col mobile */
+  .concept-2col{grid-template-columns:1fr!important;gap:24px!important;}
+  /* 3-pillar foundations mobile */
+  div[style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important;}
+  div[style*="border-right:1px solid var(--dark3)"]{border-right:none!important;border-bottom:1px solid var(--dark3)!important;}
+  /* CTA buttons mobile: stack */
+  div[style*="display:flex;gap:16px;flex-wrap:wrap"]{flex-direction:column!important;}
+  div[style*="display:flex;gap:16px;flex-wrap:wrap"] a{width:100%!important;justify-content:center!important;}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <a href="index.html" class="header-logo">
+    <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/editor/official-logo.jpeg?1758860028" alt="La Cofu" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <span class="header-logo-text">La Cofu</span>
+  </a>
+  <nav class="header-nav">
+    <a href="index.html" class="cur en">Home</a>
+    <a href="index.html" class="cur fr">Accueil</a>
+    <a href="about.html"><span class="en">About</span><span class="fr">À Propos</span></a>
+    <a href="experiences.html"><span class="en">Experiences</span><span class="fr">Expériences</span></a>
+    <a href="residencies.html"><span class="en">Residencies</span><span class="fr">Résidences</span></a>
+    <a href="locations.html"><span class="en">Locations & venues</span><span class="fr">Lieux</span></a>
+    <a href="shop.html"><span class="en">Shop</span><span class="fr">Boutique</span></a>
+    <a href="contact.html">Contact</a>
+    <div class="lang-toggle">
+      <button data-l="en" onclick="L('en')">EN</button>
+      <span class="lang-sep-hdr">/</span>
+      <button data-l="fr" onclick="L('fr')" class="on">FR</button>
+    </div>
+  </nav>
+  <div class="header-mobile-right">
+    <button class="mob-lang-btn" data-l="en" onclick="L('en')">EN</button>
+    <span class="mob-lang-sep">/</span>
+    <button class="mob-lang-btn on" data-l="fr" onclick="L('fr')">FR</button>
+    <button class="burger" id="burger" onclick="toggleMob()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mob-veil" id="mobVeil" onclick="closeMob()"></div>
+<nav class="mob-panel" id="mobPanel">
+  <a href="index.html" class="cur en" onclick="closeMob()">Home</a>
+  <a href="index.html" class="cur fr" onclick="closeMob()">Accueil</a>
+  <a href="about.html" onclick="closeMob()"><span class="en">About</span><span class="fr">À Propos</span></a>
+  <a href="experiences.html" onclick="closeMob()"><span class="en">Experiences</span><span class="fr">Expériences</span></a>
+  <a href="residencies.html" onclick="closeMob()"><span class="en">Residencies</span><span class="fr">Résidences</span></a>
+  <a href="locations.html" onclick="closeMob()"><span class="en">Locations & venues</span><span class="fr">Lieux</span></a>
+  <a href="shop.html" onclick="closeMob()"><span class="en">Online Shop</span><span class="fr">Boutique</span></a>
+  <a href="contact.html" onclick="closeMob()">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+</section>
+
+<!-- HERO TEXT BAND -->
+<div style="background:var(--dark);border-bottom:2px solid var(--amber);padding:52px 56px">
+  <div style="max-width:1080px;margin:0 auto">
+    <span style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px" class="en">Itoshima · Kyūshū · Japan</span>
+    <span style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px" class="fr">Itoshima · Kyūshū · Japon</span>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(48px,9vw,82px);line-height:1.02;letter-spacing:.02em;color:var(--cream);margin-bottom:14px">La Cofu</h1>
+    <span style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:28px" class="en">Textiles · Objects · Stories from Japan</span>
+    <span style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:28px" class="fr">Textiles · Objets · Histoires du Japon</span>
+    <div style="width:40px;height:1px;background:var(--amber);margin-bottom:28px"></div>
+    <p style="font-size:clamp(17px,2.2vw,21px);font-weight:300;line-height:1.78;color:rgba(245,240,232,.88);max-width:100%;margin-bottom:36px" class="en">Vintage textiles transformed. Objects discovered. Cultural experiences shared. <em style="font-style:italic;color:var(--cream)">Rooted in the crafts and landscapes of Kyushu.</em></p>
+    <p style="font-size:clamp(17px,2.2vw,21px);font-weight:300;line-height:1.78;color:rgba(245,240,232,.88);max-width:100%;margin-bottom:36px" class="fr">Textiles anciens transformés. Objets chinés. Expériences culturelles partagées.<br><em style="font-style:italic;color:var(--cream)">Ancrés dans l'artisanat et les paysages de Kyushu.</em></p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:32px">
+      <a href="shop.html" style="display:inline-flex;align-items:center;gap:10px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#2C2416;background:var(--gold);padding:14px 28px;transition:background .2s">
+        <span class="en">Discover the shop →</span><span class="fr">Découvrir la boutique →</span>
+      </a>
+      <a href="experiences.html" style="display:inline-flex;align-items:center;gap:10px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--pale);border:1px solid rgba(216,204,186,0.35);padding:14px 28px;transition:border-color .2s,color .2s">
+        <span class="en">Cultural experiences →</span><span class="fr">Expériences culturelles →</span>
+      </a>
+    </div>
+    <span style="font-family:'Noto Serif JP',serif;font-size:12px;letter-spacing:.22em;color:rgba(216,204,186,0.4);display:block">古布 · 糸島 · 九州</span>
+  </div>
+</div>
+
+<!-- NARRATIVE BLOCK -->
+<section style="background:var(--warm);border-bottom:1px solid var(--rule);padding:72px 56px">
+  <div style="max-width:1080px;margin:0 auto;text-align:left">
+
+    <!-- Label + headline -->
+    <span style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:20px" class="en">La Cofu · 古布</span>
+    <span style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:20px" class="fr">La Cofu · 古布</span>
+
+    <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(24px,3.2vw,40px);line-height:1.2;color:var(--dark);margin-bottom:8px" class="en">No project begins with a sketch.</h2>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(24px,3.2vw,40px);line-height:1.2;color:var(--dark);margin-bottom:8px" class="fr">Aucun projet ne commence par un dessin.</h2>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(24px,3.2vw,40px);line-height:1.2;color:var(--amber);margin-bottom:32px" class="en">Everything begins with a textile.</h2>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(24px,3.2vw,40px);line-height:1.2;color:var(--amber);margin-bottom:32px" class="fr">Tout commence par un textile.</h2>
+
+    <div style="width:40px;height:1px;background:var(--amber);margin-bottom:36px"></div>
+
+    <!-- Main narrative paragraphs — one sentence per line rhythm -->
+    <p style="font-size:clamp(17px,1.9vw,20px);line-height:1.9;color:var(--mid);margin-bottom:24px" class="en">
+      La Cofu was born in Itoshima, on the northern coast of Kyushu, Japan.<br>
+      Every creation begins with a discovery — a vintage obi, a forgotten kimono, a textile whose beauty deserves a second life.<br>
+      Carefully selected through our explorations across Kyushu, each fabric is transformed in collaboration with local artisans into a contemporary creation produced in very small quantities.<br>
+      Sometimes as a one-of-a-kind piece.
+    </p>
+    <p style="font-size:clamp(17px,1.9vw,20px);line-height:1.9;color:var(--mid);margin-bottom:24px" class="fr">
+      La Cofu est née à Itoshima, sur la côte nord de Kyūshū, au Japon.<br>
+      Chaque création commence par une découverte — un obi ancien, un kimono oublié, un tissu dont la beauté mérite une nouvelle vie.<br>
+      Soigneusement sélectionné au fil de nos explorations à travers Kyūshū, chaque textile est transformé en collaboration avec des artisans locaux en une création contemporaine réalisée en très petite série.<br>
+      Parfois en pièce unique.
+    </p>
+
+    <p style="font-size:clamp(17px,1.9vw,20px);line-height:1.9;color:var(--mid);margin-bottom:24px" class="en">
+      Our explorations also lead us to markets, brocantes, and artisan workshops throughout Kyushu.<br>
+      Ceramics, baskets, everyday objects and handcrafted pieces — chosen for their history, beauty, and authenticity.
+    </p>
+    <p style="font-size:clamp(17px,1.9vw,20px);line-height:1.9;color:var(--mid);margin-bottom:24px" class="fr">
+      Nos explorations nous conduisent également vers des marchés, brocantes et ateliers de Kyūshū.<br>
+      Céramiques, paniers, objets du quotidien et pièces artisanales — sélectionnés pour leur histoire, leur beauté et leur authenticité.
+    </p>
+
+    <div style="width:40px;height:1px;background:var(--rule);margin-bottom:32px"></div>
+
+    <!-- Gifting line -->
+    <p style="font-size:clamp(16px,1.8vw,19px);line-height:1.9;color:var(--mid);font-style:italic;margin-bottom:32px" class="en">
+      Each piece also makes a meaningful gift — a unique fragment of Japan, with provenance, craft, and story.<br>
+      Something to give that cannot be found anywhere else.
+    </p>
+    <p style="font-size:clamp(16px,1.8vw,19px);line-height:1.9;color:var(--mid);font-style:italic;margin-bottom:32px" class="fr">
+      Chaque pièce fait également un cadeau rare — un fragment unique du Japon, avec une provenance, un savoir-faire et une histoire.<br>
+      Quelque chose à offrir que l'on ne trouve nulle part ailleurs.
+    </p>
+
+    <div style="width:40px;height:1px;background:var(--rule);margin-bottom:32px"></div>
+
+    <!-- Two pillars -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin-bottom:36px">
+      <div style="background:var(--cream);padding:28px 32px">
+        <span style="font-family:'Raleway',sans-serif;font-size:10px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:10px;text-align:left" class="en">Obi Tees · Objects · Home</span>
+        <span style="font-family:'Raleway',sans-serif;font-size:10px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:10px;text-align:left" class="fr">Obi Tees · Objets · Maison</span>
+        <p style="font-size:clamp(15px,1.6vw,17px);line-height:1.78;color:var(--mid);text-align:left" class="en">Vintage textiles given a new life — wearable, liveable, one of a kind.</p>
+        <p style="font-size:clamp(15px,1.6vw,17px);line-height:1.78;color:var(--mid);text-align:left" class="fr">Textiles anciens transformés — à porter, à vivre, en pièce unique.</p>
+      </div>
+      <div style="background:var(--cream);padding:28px 32px">
+        <span style="font-family:'Raleway',sans-serif;font-size:10px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:10px;text-align:left" class="en">Cultural Residencies</span>
+        <span style="font-family:'Raleway',sans-serif;font-size:10px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:10px;text-align:left" class="fr">Résidences Culturelles</span>
+        <p style="font-size:clamp(15px,1.6vw,17px);line-height:1.78;color:var(--mid);text-align:left" class="en">Tea ceremony, wagashi, craft — brought to your venue across Europe.</p>
+        <p style="font-size:clamp(15px,1.6vw,17px);line-height:1.78;color:var(--mid);text-align:left" class="fr">Cérémonie du thé, wagashi, artisanat — dans votre lieu en Europe.</p>
+      </div>
+    </div>
+
+    <!-- Closing note -->
+    <p style="font-size:clamp(15px,1.6vw,17px);line-height:1.82;color:var(--mid);font-style:italic;margin-bottom:28px" class="en">Most of our creations are presented at pop-up events and with selected partners. This site is an invitation to discover our world.</p>
+    <p style="font-size:clamp(15px,1.6vw,17px);line-height:1.82;color:var(--mid);font-style:italic;margin-bottom:28px" class="fr">La plupart de nos créations sont présentées lors d'événements et chez nos partenaires. Ce site est une invitation à découvrir notre univers.</p>
+
+    <a href="shop.html" style="display:inline-flex;align-items:center;gap:12px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);transition:gap .2s,color .2s" class="en">Discover the collection <span style="font-family:serif;font-size:15px">→</span></a>
+    <a href="shop.html" style="display:inline-flex;align-items:center;gap:12px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--amber);transition:gap .2s,color .2s" class="fr">Découvrir la collection <span style="font-family:serif;font-size:15px">→</span></a>
+
+  </div>
+</section>
+
+<!-- CONCEPT -->
+<div class="sec-dark">
+  <div style="max-width:1080px;margin:0 auto">
+    <span style="font-family:'Raleway',sans-serif;font-size:14px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:rgba(201,149,42,0.7)!important;display:block;margin-bottom:32px">— 古布 · Kofu · <span class="en">The memory of old textiles</span><span class="fr">La mémoire des tissus anciens</span></span>
+    <div style="background:var(--dark2);border-left:3px solid var(--amber);padding:28px 32px;margin-bottom:40px">
+      <p style="font-size:clamp(19px,2.4vw,24px);font-style:italic;font-weight:300;line-height:1.65;color:var(--cream)!important" class="en">A traveling residency offering authentic Japanese cultural experiences at your locations and venues across Europe and beyond.</p>
+      <p style="font-size:clamp(19px,2.4vw,24px);font-style:italic;font-weight:300;line-height:1.65;color:var(--cream)!important" class="fr">Une résidence itinérante proposant des expériences culturelles japonaises authentiques dans vos lieux et espaces, à travers l'Europe et au-delà.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-bottom:40px" class="concept-2col">
+      <div>
+        <p class="concept-body concept-body-light en" style="margin-bottom:16px">In Japanese culture, textiles have never been mere utilitarian objects. Kimonos, obis, and precious fabrics carried family lineage, a sense of the seasons, and artistic intention. A single bolt of fabric could take months to weave and generations to wear. As these textiles aged, they were not discarded — they were passed on, reshaped into new forms, treated as living archives of a life already lived.</p>
+        <p class="concept-body concept-body-light fr" style="margin-bottom:16px">Dans la culture japonaise, les textiles n'ont jamais été de simples objets utilitaires. Kimonos, obis et étoffes précieuses portaient la lignée familiale, le sens des saisons et une intention artistique. Un seul rouleau de tissu pouvait prendre des mois à tisser et des générations à porter. Lorsque ces textiles vieillissaient, ils n'étaient pas jetés — ils étaient transmis, repliés dans de nouvelles formes, traités comme des archives vivantes d'une vie déjà vécue.</p>
+      </div>
+      <div>
+        <p style="font-size:clamp(16px,1.8vw,19px);line-height:1.82;color:var(--rulelt)!important;margin-bottom:16px" class="en"><span style="color:rgba(201,149,42,0.7)!important">古布 — kofu</span> — traditionally refers to textiles that are preserved and reused over time. Beyond the material, it reflects a broader sensibility: objects, gestures, and traditions evolve through use and reinterpretation. They carry memory. They do not disappear — they transform.</p>
+        <p style="font-size:clamp(16px,1.8vw,19px);line-height:1.82;color:var(--rulelt)!important;margin-bottom:16px" class="fr"><span style="color:rgba(201,149,42,0.7)!important">古布 — kofu</span> — désigne traditionnellement les textiles préservés et réutilisés dans le temps. Au-delà du matériau, cela reflète une sensibilité plus large : les objets, les gestes et les traditions évoluent par l'usage et la réinterprétation. Ils portent la mémoire. Ils ne disparaissent pas — ils se transforment.</p>
+        <p class="concept-body concept-body-light en">This sensibility lies at the heart of La Cofu. Not as a concept to explain, but as a practice to embody. The textiles of the atelier, the tea ceremony on tatami, repaired ceramics returned to their maker — all stem from the same refusal to treat things as disposable.</p>
+        <p class="concept-body concept-body-light fr">Cette sensibilité est au cœur de La Cofu. Non pas comme un concept à expliquer, mais comme une pratique à incarner. Les tissus de l'atelier, la cérémonie sur le tatami, la céramique réparée rendue à son créateur : tout cela procède du même refus de traiter les choses comme des objets à usage unique.</p>
+      </div>
+    </div>
+    <div style="border-top:1px solid var(--dark3);padding-top:32px;margin-bottom:40px">
+      <p style="font-size:clamp(16px,1.8vw,19px);line-height:1.82;color:var(--rulelt)!important;margin-bottom:28px" class="en">La Cofu extends this through cultural experiences: tea ceremony, matcha &amp; wagashi, Onigiri craft, and <strong style="color:var(--rulelt)!important;font-weight:500">handmade bags</strong> from vintage kimono and obi fabrics.</p>
+      <p style="font-size:clamp(16px,1.8vw,19px);line-height:1.82;color:var(--rulelt)!important;margin-bottom:28px" class="fr">La Cofu le prolonge à travers des expériences culturelles : cérémonie du thé, matcha &amp; wagashi, Onigiri craft, et <strong style="color:var(--rulelt)!important;font-weight:500">sacs faits main</strong> à partir de tissus de kimono et d'obi anciens.</p>
+      <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/collage_orig.png" alt="La Cofu experiences" style="width:100%;max-height:420px;object-fit:cover;object-position:center 40%;display:block;opacity:.88">
+    </div>
+    <div style="border-top:2px solid var(--dark3);padding-top:36px">
+      <p style="font-family:'Raleway',sans-serif;font-size:14px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,149,42,0.7)!important;margin-bottom:28px"><span class="en">Foundations</span><span class="fr">Fondements</span></p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+        <div style="padding:32px 28px 36px;background:rgba(255,255,255,0.03);border-right:1px solid var(--dark3)">
+          <p style="font-family:'Noto Serif JP',serif;font-size:22px;color:rgba(201,149,42,0.7)!important;line-height:1;margin-bottom:10px">もったいない</p>
+          <p style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,149,42,0.7)!important;margin-bottom:18px">Mottainai</p>
+          <p class="concept-body concept-body-light en">Respect for objects and resources. A refusal of waste. Applied to old textiles: offering them a second life rather than abandoning them.</p>
+          <p class="concept-body concept-body-light fr">Le respect des objets et des ressources. Le refus du gaspillage. Appliqué aux tissus anciens : leur offrir une seconde existence plutôt que de les abandonner.</p>
+        </div>
+        <div style="padding:32px 28px 36px;background:rgba(255,255,255,0.05);border-right:1px solid var(--dark3)">
+          <p style="font-family:'Noto Serif JP',serif;font-size:22px;color:rgba(201,149,42,0.7)!important;line-height:1;margin-bottom:10px">侘寂</p>
+          <p style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,149,42,0.7)!important;margin-bottom:18px">Wabi-Sabi</p>
+          <p class="concept-body concept-body-light en">The art of perceiving beauty in imperfection and the marks of time. An old textile, with its irregularities, is not damaged — it is elevated by time.</p>
+          <p class="concept-body concept-body-light fr">L'art de percevoir la beauté dans l'imperfection et les marques du temps. Un tissu ancien, avec ses irrégularités, n'est pas abîmé : il est magnifié par le temps.</p>
+        </div>
+        <div style="padding:32px 28px 36px;background:rgba(255,255,255,0.03)">
+          <p style="font-family:'Noto Serif JP',serif;font-size:22px;color:rgba(201,149,42,0.7)!important;line-height:1;margin-bottom:10px">一期一会</p>
+          <p style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(201,149,42,0.7)!important;margin-bottom:18px">Ichigo Ichie</p>
+          <p class="concept-body concept-body-light en">Once, a meeting. Each residency, each session is singular and cannot be repeated.</p>
+          <p class="concept-body concept-body-light fr">Une fois, une rencontre. Chaque résidence, chaque session est singulière et irremplaçable.</p>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:36px">
+      <a href="experiences.html" style="display:inline-flex;align-items:center;gap:12px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)!important;transition:gap .2s,color .2s">
+        <span class="en">Discover the experiences</span><span class="fr">Découvrir les expériences</span>
+        <span style="font-family:serif;font-size:15px">→</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div style="height:1px;background:var(--rule)"></div>
+<a href="residencies.html" class="nav-item">
+  <div class="nav-item-inner" style="grid-template-columns:1fr;gap:24px">
+    <div>
+      <span class="ni-lbl en">The Residency Format</span>
+      <span class="ni-lbl fr">Le Format Résidence</span>
+      <h2 class="ni-title en">To name a few</h2>
+      <h2 class="ni-title fr">Par exemple</h2>
+      <p class="ni-desc en" style="max-width:none">We aim to work with boutique hotels, wine estates, wellness retreats, and distinctive venues — as well as cultural centres, city partners, galleries, heritage sites, private residences...</p>
+      <p class="ni-desc fr" style="max-width:none">Pensé pour des hôtels de charme, des domaines viticoles, des lieux de bien-être et des espaces distinctifs — ainsi que pour des centres culturels, partenaires publics, galeries, sites patrimoniaux, résidences privées...</p>
+      <p class="ni-desc en" style="max-width:none">A complete programme for a small group at a time.</p>
+      <p class="ni-desc fr" style="max-width:none">Un programme complet conçu pour un petit groupe à la fois.</p>
+    </div>
+    <span class="btn en">Find out more</span>
+    <span class="btn fr">En savoir plus</span>
+  </div>
+</a>
+
+<div class="nav-item-half-wrap">
+  <div class="nav-item-half-inner">
+    <a href="about.html" class="nav-half">
+      <span class="ni-lbl en">About us</span>
+      <span class="ni-lbl fr">Notre Histoire</span>
+      <h2 class="ni-title en">Mayumi &amp; Gilles</h2>
+      <h2 class="ni-title fr">Mayumi &amp; Gilles</h2>
+      <span class="btn en">Our story</span>
+      <span class="btn fr">En savoir plus</span>
+    </a>
+    <a href="locations.html" class="nav-half">
+      <span class="ni-lbl en">Locations & Venues</span>
+      <span class="ni-lbl fr">Destinations</span>
+      <h2 class="ni-title en">Where to?</h2>
+      <h2 class="ni-title fr">Dans quels endroits?</h2>
+      <span class="btn en">Follow the route</span>
+      <span class="btn fr">Je découvre</span>
+    </a>
+  </div>
+</div>
+
+<a href="contact.html" class="nav-item" style="border-bottom:none">
+  <div class="nav-item-inner">
+    <div>
+      <span class="ni-lbl">QUESTIONS?</span>
+      <h2 class="ni-title en">Contact us.</h2>
+      <h2 class="ni-title fr">Contactez nous.</h2>
+    </div>
+    <span class="btn en">Get in touch</span>
+    <span class="btn fr">Par ici</span>
+  </div>
+</a>
+
+<footer>
+  <div>
+    <div class="ft-brand">La Cofu</div>
+    <div class="ft-jp">古きを尊び<br>新しき命を吹き込む</div>
+  </div>
+  <div class="ft-mid">
+    <div class="ft-social">
+      <a href="https://instagram.com/lacofu" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://youtube.com/@basecampkyushu" target="_blank" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+      </a>
+    </div>
+    <div class="ft-email" id="footer-email"></div>
+  </div>
+  <div class="ft-right">
+    <div class="ft-credit">
+      More about our region — visit:<br>
+      <a href="https://basecampkyushu.com" target="_blank" style="color:inherit;text-decoration:none">Basecamp Kyushu</a><br><br>
+      A project by <a href="https://mglobaljapan.weebly.com" target="_blank" style="color:inherit;text-decoration:none">M Global Japan</a>
+    </div>
+  </div>
+</footer>
+<div class="ft-bottom">
+  <span>© 2026 La Cofu &nbsp;·&nbsp; All rights reserved &nbsp;·&nbsp; Tous droits réservés</span>
+</div>
+
+<script>
+function L(l){document.body.classList.toggle('lang-fr',l==='fr');document.querySelectorAll('[data-l]').forEach(function(b){b.classList.toggle('on',b.dataset.l===l)});localStorage.setItem('lc-l',l);}
+function toggleMob(){var open=document.getElementById('mobPanel').classList.toggle('on');document.getElementById('mobVeil').classList.toggle('on',open);document.getElementById('burger').classList.toggle('open',open);document.body.style.overflow=open?'hidden':'';}
+function closeMob(){document.getElementById('mobPanel').classList.remove('on');document.getElementById('mobVeil').classList.remove('on');document.getElementById('burger').classList.remove('open');document.body.style.overflow='';}
+window.addEventListener('scroll',function(){document.getElementById('siteHeader').classList.toggle('scrolled',window.scrollY>40);});
+(function(){var u='info',d='mglobaljapan.com';var addr=u+'\u0040'+d;['contact-email','footer-email'].forEach(function(id){var el=document.getElementById(id);if(el)el.textContent=addr;});})();
+(function(){var s=localStorage.getItem('lc-l')||'fr';L(s);})();
+</script>
+</body>
+</html>

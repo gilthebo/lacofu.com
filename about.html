@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — La Cofu</title>
+<meta name="description" content="La Cofu — born in Itoshima, Kyushu. The philosophy, the people. Mayumi and Gilles — a certified Urasenke tea sensei and a French creative with thirty years in Japan.">
+<link rel="icon" href="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/editor/official-logo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Raleway:wght@300;400;600;700;800&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+:root{
+  --cream:#F5F0E8;--warm:#EDE8DC;--dark:#2C2416;--dark2:#3A3020;--dark3:#4A3E2C;
+  --amber:#A0622A;--gold:#C9952A;--mid:#4A3828;--rule:#C8BAA4;--rulelt:#D8CCBA;
+  --pale:#EAE0D0;--nav-h:64px;
+}
+body{background:var(--cream);color:var(--dark);font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.85;-webkit-font-smoothing:antialiased;font-size:19px;padding-top:var(--nav-h);}
+a{text-decoration:none;color:inherit;}
+img{display:block;max-width:100%;}
+
+/* LANGUAGE */
+.fr{display:none!important;}.en{display:block;}
+span.en,a.en{display:inline!important;}span.fr,a.fr{display:none!important;}
+body.lang-fr .fr{display:block!important;}body.lang-fr .en{display:none!important;}
+body.lang-fr span.fr,body.lang-fr a.fr{display:inline!important;}
+body.lang-fr span.en,body.lang-fr a.en{display:none!important;}
+
+/* HEADER */
+.site-header{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:500;background:rgba(44,36,22,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(160,98,42,0.3);display:flex;align-items:center;justify-content:space-between;padding:0 40px;transition:border-color .3s;}
+.site-header.scrolled{border-bottom-color:var(--amber);}
+.header-logo{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+.header-logo img{height:38px;width:auto;filter:brightness(1.1);}
+.header-logo-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:20px;letter-spacing:.1em;color:var(--cream);display:none;}
+.header-nav{display:flex;align-items:center;gap:28px;flex:1;justify-content:flex-end;}
+.header-nav a{font-family:'Raleway',sans-serif;font-size:14px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--pale);transition:color .2s;white-space:nowrap;}
+.header-nav a:hover,.header-nav a.cur{color:var(--amber);}
+.lang-toggle{display:flex;align-items:center;gap:0;margin-left:24px;border-left:1px solid rgba(160,98,42,0.3);padding-left:20px;}
+.lang-toggle button{background:none;border:none;cursor:pointer;font-family:'Raleway',sans-serif;font-size:14px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--pale);padding:8px 6px;transition:color .15s;}
+.lang-toggle button.on{color:var(--amber);}
+.lang-sep-hdr{font-size:14px;color:var(--dark3);user-select:none;}
+.burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:4px;margin-left:16px;width:32px;height:32px;}
+.burger span{display:block;width:22px;height:1.5px;background:var(--pale);transition:transform .3s,opacity .3s;transform-origin:center;}
+.burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.burger.open span:nth-child(2){opacity:0;}
+.burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+.header-mobile-right{display:none;align-items:center;gap:4px;}
+.mob-lang-btn{background:none;border:none;cursor:pointer;font-family:'Raleway',sans-serif;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--pale);padding:4px 5px;transition:color .15s;}
+.mob-lang-btn.on{color:var(--amber);}
+.mob-lang-sep{font-size:14px;color:var(--dark3);user-select:none;}
+.mob-veil{display:none;position:fixed;inset:0;z-index:490;background:rgba(20,14,6,.5);backdrop-filter:blur(2px);}
+.mob-veil.on{display:block;}
+.mob-panel{position:fixed;top:var(--nav-h);right:-100%;bottom:0;z-index:495;width:min(280px,80vw);background:var(--dark);border-left:1px solid var(--dark3);padding:36px 32px 40px;display:flex;flex-direction:column;transition:right .3s ease;overflow-y:auto;}
+.mob-panel.on{right:0;}
+.mob-panel a{display:block;padding:16px 0;border-bottom:1px solid var(--dark3);font-family:'Raleway',sans-serif;font-size:14px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rulelt);transition:color .2s;}
+.mob-panel a:last-of-type{border-bottom:none;}
+.mob-panel a:hover,.mob-panel a.cur{color:var(--amber);}
+
+/* LAYOUT */
+.wrap{max-width:1080px;margin:0 auto;padding:0 48px;}
+.lbl{font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:18px;}
+.rule-line{width:36px;height:1px;background:var(--amber);margin:22px 0;}
+.body{font-size:clamp(17px,1.9vw,20px);line-height:1.88;color:var(--mid);}
+.body+.body{margin-top:16px;}
+.profile-grid{display:grid;grid-template-columns:220px 1fr;gap:44px;align-items:start;margin-bottom:24px;}
+.btn{display:inline-flex;align-items:center;gap:12px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);transition:gap .2s,color .2s;white-space:nowrap;}
+.btn::after{content:'→';font-family:serif;font-size:15px;}
+.btn:hover{gap:18px;color:var(--gold);}
+.mayumi-bg{background:#d6c8b6;padding:48px;margin:0 -48px;}
+.sec-warm{background:#E2D9C8;padding:48px;margin:0 -48px;border-top:2px solid var(--amber);border-bottom:2px solid var(--amber);}
+
+/* FOOTER */
+footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48px 40px;display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:start;}
+.ft-brand{font-style:italic;font-size:22px;letter-spacing:.1em;color:var(--cream);margin-bottom:10px;}
+.ft-jp{font-family:'Noto Serif JP',serif;font-size:12px;color:var(--rulelt);letter-spacing:.16em;line-height:1.9;}
+.ft-mid{text-align:center;}
+.ft-social{display:flex;gap:22px;justify-content:center;margin-bottom:14px;}
+.ft-social a{color:var(--rulelt);transition:color .2s;}
+.ft-social a:hover{color:var(--amber);}
+.ft-social svg{width:20px;height:20px;fill:currentColor;}
+.ft-email{font-family:'Raleway',sans-serif;font-size:12px;letter-spacing:.1em;color:var(--pale);}
+.ft-right{text-align:right;}
+.ft-credit{font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--pale);line-height:2.5;}
+.ft-bottom{background:var(--dark2);padding:14px 48px;display:flex;justify-content:center;}
+.ft-bottom span{font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--rulelt);}
+
+/* RESPONSIVE */
+@media(min-width:721px) and (max-width:1024px){
+  :root{--nav-h:60px;}
+  .site-header{padding:0 28px;}
+  .header-nav,.lang-toggle{display:none;}
+  .header-mobile-right,.burger{display:flex;}
+  .wrap{padding:0 40px;}
+  .mayumi-bg{padding:44px 40px;margin:0 -40px;}
+  .sec-warm{padding:44px 40px;margin:0 -40px;}
+  footer{padding:48px 40px 36px;grid-template-columns:1fr;gap:28px;}
+  .ft-mid,.ft-right{text-align:left;}
+  .ft-social{justify-content:flex-start;}
+}
+@media(max-width:720px){
+  :root{--nav-h:56px;}
+  .site-header{padding:0 20px;}
+  .header-nav,.lang-toggle{display:none;}
+  .header-mobile-right,.burger{display:flex;}
+  .wrap{padding:0 22px;}
+  .profile-grid{grid-template-columns:1fr;gap:28px;}
+  .profile-grid img{width:140px!important;}
+  .mayumi-bg{padding:32px 22px!important;margin:0 -22px!important;}
+  .sec-warm{padding:32px 22px!important;margin:0 -22px!important;}
+  footer{grid-template-columns:1fr;gap:32px;padding:44px 22px 32px;}
+  .ft-mid,.ft-right{text-align:left;}
+  .ft-social{justify-content:flex-start;}
+  .ft-bottom{padding:14px 22px;}
+  /* intro dark band mobile */
+  div[style*="padding:64px 56px"]{padding:44px 22px!important;}
+  div[style*="grid-template-columns:1fr 1fr;gap:48px"]{grid-template-columns:1fr!important;gap:24px!important;}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+  <a href="index.html" class="header-logo">
+    <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/editor/official-logo.jpeg?1758860028" alt="La Cofu" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <span class="header-logo-text">La Cofu</span>
+  </a>
+  <nav class="header-nav">
+    <a href="index.html"><span class="en">Home</span><span class="fr">Accueil</span></a>
+    <a href="about.html" class="cur"><span class="en">About</span><span class="fr">À Propos</span></a>
+    <a href="experiences.html"><span class="en">Experiences</span><span class="fr">Expériences</span></a>
+    <a href="residencies.html"><span class="en">Residencies</span><span class="fr">Résidences</span></a>
+    <a href="locations.html"><span class="en">Locations & venues</span><span class="fr">Lieux</span></a>
+    <a href="shop.html"><span class="en">Shop</span><span class="fr">Boutique</span></a>
+    <a href="contact.html">Contact</a>
+    <div class="lang-toggle">
+      <button data-l="en" onclick="L('en')">EN</button>
+      <span class="lang-sep-hdr">/</span>
+      <button data-l="fr" onclick="L('fr')" class="on">FR</button>
+    </div>
+  </nav>
+  <div class="header-mobile-right">
+    <button class="mob-lang-btn" data-l="en" onclick="L('en')">EN</button>
+    <span class="mob-lang-sep">/</span>
+    <button class="mob-lang-btn on" data-l="fr" onclick="L('fr')">FR</button>
+    <button class="burger" id="burger" onclick="toggleMob()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mob-veil" id="mobVeil" onclick="closeMob()"></div>
+<nav class="mob-panel" id="mobPanel">
+  <a href="index.html" onclick="closeMob()"><span class="en">Home</span><span class="fr">Accueil</span></a>
+  <a href="about.html" class="cur" onclick="closeMob()"><span class="en">About</span><span class="fr">À Propos</span></a>
+  <a href="experiences.html" onclick="closeMob()"><span class="en">Experiences</span><span class="fr">Expériences</span></a>
+  <a href="residencies.html" onclick="closeMob()"><span class="en">Residencies</span><span class="fr">Résidences</span></a>
+  <a href="locations.html" onclick="closeMob()"><span class="en">Locations & venues</span><span class="fr">Lieux</span></a>
+  <a href="shop.html" onclick="closeMob()"><span class="en">Online Shop</span><span class="fr">Boutique</span></a>
+  <a href="contact.html" onclick="closeMob()">Contact</a>
+</nav>
+
+<!-- HERO -->
+<div style="width:100%;overflow:hidden;border-bottom:2px solid var(--amber);line-height:0">
+  <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-04-05-at-14-41-11_orig.png"
+       alt="La Cofu — Itoshima, Kyushu"
+       style="width:100%;max-height:600px;object-fit:cover;object-position:center 30%;display:block">
+</div>
+
+<!-- BIOS -->
+<div style="background:var(--cream)">
+<div class="wrap">
+
+<!-- MAYUMI -->
+<section style="padding:0;border-bottom:none">
+<div class="mayumi-bg">
+  <span class="lbl en">— Tea Master · Experiences & Atelier</span>
+  <span class="lbl fr">— Maître de thé · Expériences & Atelier</span>
+  <div class="profile-grid">
+    <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-04-04-at-13-01-11_orig.png"
+         alt="Mayumi — La Cofu"
+         style="width:200px;aspect-ratio:3/4;object-fit:cover;object-position:center top;border-bottom:3px solid var(--amber);">
+    <div>
+      <h2 style="font-weight:400;font-size:clamp(28px,4vw,46px);line-height:1.1;color:var(--dark);margin-bottom:10px">Mayumi B.</h2>
+      <div class="rule-line"></div>
+      <p class="body en">Mayumi was born in Takeo Onsen, a historic town in Kyushu renowned for its centuries-old hot springs, within Saga Prefecture — a region known for its rich ceramic tradition.</p>
+      <p class="body fr">Mayumi est née à Takeo Onsen, une ville historique de Kyushu réputée pour ses sources thermales séculaires, au cœur de la préfecture de Saga — une région reconnue pour sa riche tradition céramique.</p>
+      <div class="rule-line"></div>
+      <p class="body en">She spent four decades in Tokyo, building an international career in public relations and marketing with leading global apparel companies. Her work took her frequently to Europe and the United States, and included high-profile projects such as the FIFA World Cup and the Tokyo Olympics.</p>
+      <p class="body fr">Elle a passé quarante ans à Tokyo, où elle a mené une carrière internationale dans les relations publiques et le marketing au sein de grandes maisons de la mode. Son travail l'a conduite fréquemment en Europe et aux États-Unis, et a inclus des projets d'envergure tels que la Coupe du Monde de la FIFA et les Jeux Olympiques de Tokyo.</p>
+      <div class="rule-line"></div>
+      <p class="body en">She is co-owner and Director at M Global Japan, a company specializing in video production, brand activations, and spherical projection systems.</p>
+      <p class="body fr">Elle est aujourd'hui associée et directrice de M Global Japan, une société spécialisée dans la production vidéo, le branding et les systèmes de projection sphériques.</p>
+      <div class="rule-line"></div>
+      <p class="body en">Together with Gilles and their son, Mayumi left Tokyo for a new project in Okawachiyama — a secluded mountain village and historic birthplace of Japanese porcelain. There, they renovated a traditional Japanese house into a café and lodge, where they hosted guests for 3 years, offering experiences centered on kimono, wagashi, and matcha. The lodge has since been sold.</p>
+      <p class="body fr">Avec Gilles et leur fils, Mayumi a quitté Tokyo pour un projet à Okawachiyama — un village de montagne isolé et berceau historique de la porcelaine japonaise. Ils y ont rénové une maison traditionnelle japonaise, transformée en café et en lodge, où ils ont accueilli des visiteurs pendant trois ans autour d'expériences centrées sur le kimono, les wagashi et le matcha. Le lodge a depuis été vendu.</p>
+      <div class="rule-line"></div>
+      <p class="body en">Mayumi now lives in Itoshima, Kyushu, between sea and mountains. She devotes herself to writing novels — a lifelong passion — and to the practice of the tea ceremony within the Urasenke tradition (裏千家), where she holds certification as a sensei and has received an official tea name. It is within this new chapter that La Cofu was born.</p>
+      <p class="body fr">Mayumi vit désormais à Itoshima, à Kyushu, entre mer et montagne. Elle se consacre à l'écriture de romans — une passion de toujours — ainsi qu'à la pratique de la cérémonie du thé dans la tradition Urasenke (裏千家), où elle est certifiée en tant que sensei et a reçu un nom de thé officiel. C'est dans ce nouveau chapitre qu'est né le projet La Cofu.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<div style="height:1px;background:var(--rule)"></div>
+
+<!-- GILLES -->
+<section style="padding:0;border-bottom:none">
+  <div class="sec-warm">
+    <span class="lbl en">— Founder · Creative Direction</span>
+    <span class="lbl fr">— Fondateur · Direction Créative</span>
+    <div class="profile-grid">
+      <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-04-04-at-13-32-01_orig.png"
+           alt="Gilles — La Cofu"
+           style="width:160px;aspect-ratio:1/1;object-fit:cover;object-position:center 20%;border-bottom:3px solid var(--amber);">
+      <div>
+        <h2 style="font-weight:400;font-size:clamp(28px,4vw,46px);line-height:1.1;color:var(--dark);margin-bottom:10px">Gilles B.</h2>
+        <div class="rule-line"></div>
+        <p class="body en">Born in France and originally from Royan, Gilles lived in Tokyo for over 30 years. During that time, he developed several business ventures spanning real estate services and guesthouses for international residents, as well as visual communication for events, notably by introducing spherical projection systems to Japan.</p>
+        <p class="body fr">Né en France et originaire de Royan, Gilles a vécu plus de 30 ans à Tokyo. Durant cette période, il a développé plusieurs activités, notamment dans les services immobiliers et les guesthouses destinées aux résidents étrangers, ainsi que dans la communication visuelle pour événements, en introduisant au Japon des systèmes de projection sphériques.</p>
+        <div class="rule-line"></div>
+        <p class="body en">Seeking a different pace of life, he later relocated to Kyushu with the intention of leaving behind the urban environment and establishing a new base. Together with his wife and son, he renovated a traditional kominka house in the heart of the village of Okawachiyama — known as the "village of secret kilns" — near Imari, in Saga Prefecture. The space was transformed into a café and a lodge.</p>
+        <p class="body fr">Désireux de changer de rythme de vie, il s'est ensuite installé à Kyushu avec l'envie de s'éloigner de l'environnement urbain et d'y établir une nouvelle base. Avec sa femme et son fils, il a rénové une maison traditionnelle kominka au cœur du village d'Okawachiyama — connu comme le « village des fours secrets » — près d'Imari, dans la préfecture de Saga. Ce lieu a été transformé en café et en lodge.</p>
+        <div class="rule-line"></div>
+        <p class="body en">He wrote a trilingual immersive fiction, <em>Whispers of Ashes</em>, set in this very village. The book is available online, notably through Amazon and via his Kyushu website.</p>
+        <p class="body fr">Il a écrit une fiction immersive trilingue, <em>Murmures des Cendres</em>, situé dans ce même village. L'ouvrage est disponible en ligne, notamment sur Amazon et via son site dédié à Kyushu.</p>
+        <div style="margin-top:10px;margin-bottom:24px">
+          <a href="https://basecampkyushu.com/stories.html" target="_blank" class="btn en">Read online</a>
+          <a href="https://basecampkyushu.com/stories.html" target="_blank" class="btn fr">Lire en ligne</a>
+        </div>
+        <p class="body en">Gilles collaborated with French video production teams, supporting the creation of documentaries across Japan, with a particular focus on the Kyushu region. These projects explored a variety of specialties, including yuzu, tofu, rice, and matsutake mushrooms, among others.</p>
+        <p class="body fr">Gilles a collaboré avec des équipes françaises de production vidéo, contribuant à la réalisation de documentaires à travers le Japon, avec un accent particulier sur la région de Kyushu. Ces projets ont exploré différentes spécialités, telles que le yuzu, le tofu, le riz ou encore le matsutake.</p>
+        <div class="rule-line"></div>
+        <p class="body en">He developed an online 360° platform featuring immersive content about the island — including videos, panoramic experiences, and more — as well as a website <a href="https://basecampkyushu.com/in-motion.html" target="_blank" style="color:var(--amber);text-decoration:underline;text-underline-offset:3px">dedicated to Kyushu</a>, based on his personal explorations and insights.</p>
+        <p class="body fr">Il a développé une plateforme immersive en ligne en 360°, proposant des contenus sur l'île — vidéos, panoramas, etc. — ainsi qu'un site <a href="https://basecampkyushu.com/in-motion.html" target="_blank" style="color:var(--amber);text-decoration:underline;text-underline-offset:3px">dédié à Kyushu</a>, basé sur ses propres explorations et expériences.</p>
+        <div class="rule-line"></div>
+        <p class="body en">With the creation of La Cofu, Gilles now seeks to build a new bridge between Europe and Japan, while creating opportunities to reconnect more regularly with his home country.</p>
+        <p class="body fr">Avec la création de La Cofu, Gilles souhaite aujourd'hui construire un nouveau pont entre l'Europe et le Japon, tout en se donnant l'opportunité de renouer plus régulièrement avec son pays d'origine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+</div>
+
+<!-- PAGE LINKS -->
+<div style="background:var(--cream);border-top:1px solid var(--rule)">
+  <div style="padding:28px 48px;max-width:1080px;margin:0 auto;display:flex;gap:40px;flex-wrap:wrap;justify-content:center">
+    <a href="experiences.html" style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--amber)"><span class="en">Experiences</span><span class="fr">Expériences</span> →</a>
+    <a href="residencies.html" style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--amber)"><span class="en">Residencies</span><span class="fr">Résidences</span> →</a>
+    <a href="shop.html" style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--amber)"><span class="en">Shop</span><span class="fr">Boutique</span> →</a>
+    <a href="contact.html" style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--amber)">Contact →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="ft-brand">La Cofu</div>
+    <div class="ft-jp">古きを尊び<br>新しき命を吹き込む</div>
+  </div>
+  <div class="ft-mid">
+    <div class="ft-social">
+      <a href="https://instagram.com/lacofu" target="_blank" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://youtube.com/@basecampkyushu" target="_blank" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+      </a>
+    </div>
+    <div class="ft-email" id="footer-email"></div>
+  </div>
+  <div class="ft-right">
+    <div class="ft-credit">
+      More about our region — visit:<br>
+      <a href="https://basecampkyushu.com" target="_blank" style="color:inherit">Basecamp Kyushu</a><br><br>
+      A project by <a href="https://mglobaljapan.weebly.com" target="_blank" style="color:inherit">M Global Japan</a>
+    </div>
+  </div>
+</footer>
+<div class="ft-bottom">
+  <span>© 2026 La Cofu &nbsp;·&nbsp; All rights reserved &nbsp;·&nbsp; Tous droits réservés</span>
+</div>
+
+<script>
+function L(l){
+  document.body.classList.toggle('lang-fr',l==='fr');
+  document.querySelectorAll('[data-l]').forEach(function(b){b.classList.toggle('on',b.dataset.l===l);});
+  localStorage.setItem('lc-l',l);
+}
+function toggleMob(){
+  var open=document.getElementById('mobPanel').classList.toggle('on');
+  document.getElementById('mobVeil').classList.toggle('on',open);
+  document.getElementById('burger').classList.toggle('open',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+function closeMob(){
+  document.getElementById('mobPanel').classList.remove('on');
+  document.getElementById('mobVeil').classList.remove('on');
+  document.getElementById('burger').classList.remove('open');
+  document.body.style.overflow='';
+}
+window.addEventListener('scroll',function(){
+  document.getElementById('siteHeader').classList.toggle('scrolled',window.scrollY>40);
+});
+(function(){
+  var u='info',d='mglobaljapan.com';
+  var el=document.getElementById('footer-email');
+  if(el)el.textContent=u+'\u0040'+d;
+  var s=localStorage.getItem('lc-l')||'fr';
+  L(s);
+})();
+</script>
+</body>
+</html>
