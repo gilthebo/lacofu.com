@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Boutique — La Cofu | Textiles Japonais Anciens</title>
 <meta name="description" content="Obi Tees et sacs en tissus kimono et obi anciens. Créations en petite série depuis Itoshima, Kyushu, Japon. Livraison mondiale.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lacofu.com/shop.html">
+<meta property="og:title" content="Boutique — La Cofu | Textiles Japonais Anciens">
+<meta property="og:description" content="Obi Tees et sacs en tissus kimono et obi anciens. Créations en petite série depuis Itoshima, Kyushu. Livraison mondiale.">
+<meta property="og:image" content="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-07-25-at-13-51-55_orig.png">
+<meta property="og:site_name" content="La Cofu">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/editor/official-logo.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Raleway:wght@300;400;600;700;800&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
@@ -58,56 +65,65 @@ body.lang-fr span.en,body.lang-fr a.en{display:none!important;}
 .mob-panel a:hover,.mob-panel a.cur{color:var(--amber);}
 
 /* SHOP NAV */
-.shop-nav{background:var(--dark2);border-bottom:1px solid var(--dark3);padding:0 40px;display:flex;gap:0;align-items:center;position:sticky;top:var(--nav-h);z-index:400;}
+.shop-nav{background:var(--dark2);border-bottom:1px solid var(--dark3);padding:0 40px;display:flex;align-items:center;position:sticky;top:var(--nav-h);z-index:400;overflow-x:auto;}
 .shop-nav a{font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--rulelt);padding:16px 20px;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap;}
 .shop-nav a:hover,.shop-nav a.active{color:var(--gold);border-bottom-color:var(--amber);}
-.shop-nav-right{margin-left:auto;display:flex;align-items:center;gap:6px;font-family:'Raleway',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--rulelt);}
+.shop-nav-right{margin-left:auto;display:flex;align-items:center;gap:6px;font-family:'Raleway',sans-serif;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--rulelt);padding-left:20px;white-space:nowrap;}
 .rate-val{color:var(--gold);font-size:11px;font-weight:800;}
 
-/* PHILOSOPHY BAND */
+/* PHILOSOPHY */
 .phil-band{background:var(--dark);padding:44px 48px;border-bottom:2px solid var(--amber);}
 .phil-inner{max-width:1080px;margin:0 auto;}
+.phil-lbl{font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:rgba(201,149,42,0.65);display:block;margin-bottom:20px;}
 .phil-text{font-size:clamp(17px,1.9vw,20px);line-height:1.9;color:rgba(245,240,232,.78);max-width:820px;}
 .phil-text em{color:var(--gold);font-style:italic;}
 
-/* SECTION HEADER */
-.sec-header{padding:48px 48px 0;max-width:1080px;margin:0 auto;}
+/* CONVERTER */
+.conv-band{background:var(--warm);border-bottom:1px solid var(--rule);padding:16px 48px;}
+.conv-inner{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+.conv-label{font-family:'Raleway',sans-serif;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);}
+.conv-input{border:1px solid var(--rule);background:var(--cream);padding:8px 12px;font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--dark);width:130px;outline:none;border-radius:0;}
+.conv-result{font-family:'Raleway',sans-serif;font-size:14px;font-weight:800;color:var(--amber);}
+.conv-rate{font-family:'Raleway',sans-serif;font-size:10px;color:var(--mid);letter-spacing:.1em;}
+
+/* SECTION */
+.sec-wrap{max-width:1080px;margin:0 auto;padding:0 48px;}
 .sec-lbl{font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:12px;}
-.sec-title{font-style:italic;font-weight:300;font-size:clamp(28px,4vw,44px);color:var(--dark);line-height:1.1;margin-bottom:12px;}
+.sec-title{font-style:italic;font-weight:300;font-size:clamp(28px,4vw,44px);color:var(--dark);line-height:1.1;margin-bottom:10px;}
+.sec-rule{width:36px;height:1px;background:var(--amber);margin:18px 0;}
 .sec-desc{font-size:clamp(16px,1.8vw,18px);line-height:1.82;color:var(--mid);max-width:680px;}
-.sec-rule{width:36px;height:1px;background:var(--amber);margin:20px 0;}
 
 /* PRODUCT GRID */
-.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;padding:24px 0 0;}
-.prod-wrap{max-width:1080px;margin:0 auto;padding:0 48px 64px;}
-
-/* PRODUCT CARD */
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:28px;}
 .prod-card{background:var(--warm);display:flex;flex-direction:column;position:relative;}
 .prod-img{position:relative;overflow:hidden;aspect-ratio:3/4;}
 .prod-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
 .prod-card:hover .prod-img img{transform:scale(1.04);}
-.prod-badge{position:absolute;top:12px;left:12px;font-family:'Raleway',sans-serif;font-size:8px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px;}
+.prod-badge{position:absolute;top:12px;left:12px;font-family:'Raleway',sans-serif;font-size:8px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:4px 10px;z-index:2;}
 .badge-limited{background:var(--amber);color:var(--cream);}
 .badge-unique{background:var(--dark);color:var(--gold);}
-.badge-sold{background:rgba(44,36,22,.7);color:var(--rulelt);}
+.badge-sold{background:rgba(44,36,22,.75);color:var(--rulelt);}
 .prod-body{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1;}
-.prod-name{font-style:italic;font-weight:400;font-size:clamp(18px,2vw,22px);color:var(--dark);margin-bottom:6px;line-height:1.2;}
-.prod-fabric{font-family:'Raleway',sans-serif;font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-bottom:8px;display:block;}
-.prod-desc{font-size:15px;line-height:1.72;color:var(--mid);margin-bottom:16px;flex:1;}
+.prod-name{font-style:italic;font-weight:400;font-size:clamp(18px,2vw,22px);color:var(--dark);margin-bottom:4px;line-height:1.2;}
+.prod-fabric{font-family:'Raleway',sans-serif;font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-bottom:10px;display:block;}
+.prod-desc{font-size:15px;line-height:1.72;color:var(--mid);margin-bottom:6px;}
+.prod-sig{font-size:13px;font-style:italic;color:var(--amber);margin-bottom:10px;line-height:1.5;}
+.prod-meta{font-family:'Raleway',sans-serif;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mid);margin-bottom:6px;line-height:1.8;}
+.prod-wash{font-size:13px;color:var(--mid);margin-bottom:14px;line-height:1.7;border-top:1px solid var(--rule);padding-top:10px;margin-top:4px;}
 .prod-price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:14px;flex-wrap:wrap;}
 .prod-price-jpy{font-family:'Raleway',sans-serif;font-size:16px;font-weight:800;color:var(--dark);}
 .prod-price-eur{font-family:'Raleway',sans-serif;font-size:12px;font-weight:700;color:var(--mid);}
-.prod-btn{display:block;text-align:center;font-family:'Raleway',sans-serif;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;background:var(--amber);color:var(--cream);padding:12px 16px;transition:background .2s;border:none;cursor:pointer;width:100%;}
+.prod-btn{display:block;text-align:center;font-family:'Raleway',sans-serif;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;background:var(--amber);color:var(--cream);padding:12px 16px;transition:background .2s;width:100%;}
 .prod-btn:hover{background:var(--gold);}
-.prod-btn-sold{background:var(--dark3);color:var(--rulelt);cursor:not-allowed;}
-.prod-btn-sold:hover{background:var(--dark3);}
+.prod-btn-sold{display:block;text-align:center;font-family:'Raleway',sans-serif;font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;background:var(--dark3);color:var(--rulelt);padding:12px 16px;width:100%;}
 
 /* GIFT BAND */
 .gift-band{background:#E2D9C8;border-top:2px solid var(--amber);border-bottom:2px solid var(--amber);padding:36px 48px;text-align:center;}
 .gift-inner{max-width:720px;margin:0 auto;}
 
 /* COMING SOON */
-.soon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.soon-wrap{background:var(--dark);padding:56px 0;border-top:2px solid var(--amber);}
+.soon-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:28px;}
 .soon-card{background:var(--dark2);padding:36px 28px;display:flex;flex-direction:column;gap:12px;}
 .soon-jp{font-family:'Noto Serif JP',serif;font-size:32px;color:var(--amber);opacity:.5;line-height:1;}
 .soon-name{font-style:italic;font-weight:300;font-size:22px;color:rgba(245,240,232,.7);}
@@ -115,13 +131,12 @@ body.lang-fr span.en,body.lang-fr a.en{display:none!important;}
 .soon-tag{font-family:'Raleway',sans-serif;font-size:8px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,149,42,.5);display:inline-block;border:1px solid rgba(201,149,42,.25);padding:3px 10px;align-self:flex-start;}
 
 /* SHIPPING */
-.ship-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);margin-top:2px;}
+.ship-wrap{background:var(--warm);border-top:1px solid var(--rule);padding:48px 0;}
+.ship-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);margin-top:24px;}
 .ship-item{background:var(--cream);padding:28px 24px;}
 .ship-icon{font-size:24px;margin-bottom:10px;}
 .ship-title{font-family:'Raleway',sans-serif;font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:8px;}
 .ship-body{font-size:15px;line-height:1.72;color:var(--mid);}
-
-/* BTN */
 .btn{display:inline-flex;align-items:center;gap:12px;font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);transition:gap .2s,color .2s;}
 .btn::after{content:'→';font-family:serif;font-size:15px;}
 .btn:hover{gap:18px;color:var(--gold);}
@@ -147,11 +162,12 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
   .site-header{padding:0 28px;}
   .header-nav,.lang-toggle{display:none;}
   .header-mobile-right,.burger{display:flex;}
+  .sec-wrap{padding:0 32px;}
+  .phil-band,.conv-band,.gift-band{padding-left:32px;padding-right:32px;}
   .prod-grid{grid-template-columns:repeat(2,1fr);}
   .soon-grid{grid-template-columns:repeat(2,1fr);}
   .ship-grid{grid-template-columns:1fr 1fr;}
-  .prod-wrap,.sec-header,.phil-band,.gift-band{padding-left:28px;padding-right:28px;}
-  footer{padding:48px 28px 36px;grid-template-columns:1fr;gap:28px;}
+  footer{padding:48px 32px 36px;grid-template-columns:1fr;gap:28px;}
   .ft-mid,.ft-right{text-align:left;}
   .ft-social{justify-content:flex-start;}
 }
@@ -160,31 +176,20 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
   .site-header{padding:0 20px;}
   .header-nav,.lang-toggle{display:none;}
   .header-mobile-right,.burger{display:flex;}
-  .shop-nav{padding:0 20px;overflow-x:auto;}
+  .sec-wrap{padding:0 20px;}
+  .phil-band{padding:36px 20px;}
+  .conv-band{padding:14px 20px;}
+  .gift-band{padding:28px 20px;}
   .prod-grid{grid-template-columns:1fr 1fr;}
   .soon-grid{grid-template-columns:1fr;}
   .ship-grid{grid-template-columns:1fr;}
-  .prod-wrap,.sec-header,.phil-band,.gift-band{padding-left:20px;padding-right:20px;}
   footer{grid-template-columns:1fr;gap:32px;padding:44px 20px 32px;}
   .ft-mid,.ft-right{text-align:left;}
   .ft-social{justify-content:flex-start;}
   .ft-bottom{padding:14px 20px;}
 }
-@media(max-width:480px){
-  .prod-grid{grid-template-columns:1fr;}
-}
+@media(max-width:480px){.prod-grid{grid-template-columns:1fr;}}
 </style>
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://lacofu.com/shop.html">
-  <meta property="og:title" content="Boutique — La Cofu | Textiles Japonais Anciens">
-  <meta property="og:description" content="Obi Tees et sacs en tissus kimono et obi anciens. Créations en petite série depuis Itoshima, Kyushu. Livraison mondiale.">
-  <meta property="og:image" content="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-07-25-at-13-51-55_orig.png">
-  <meta property="og:locale" content="fr_FR">
-  <meta property="og:site_name" content="La Cofu">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Boutique — La Cofu | Textiles Japonais Anciens">
-  <meta name="twitter:description" content="Obi Tees et sacs en tissus kimono et obi anciens. Créations en petite série depuis Itoshima, Kyushu. Livraison mondiale.">
-  <meta name="twitter:image" content="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-07-25-at-13-51-55_orig.png">
 </head>
 <body>
 
@@ -239,7 +244,7 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
   <a href="#bags"><span class="en">Bags</span><span class="fr">Sacs</span></a>
   <a href="#coming-soon"><span class="en">Coming soon</span><span class="fr">Bientôt</span></a>
   <div class="shop-nav-right">
-    <span class="en">JPY/EUR ≈</span><span class="fr">JPY/EUR ≈</span>
+    <span>JPY/EUR ≈</span>
     <span class="rate-val" id="rateDisplay">—</span>
   </div>
 </div>
@@ -247,100 +252,102 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
 <!-- PHILOSOPHY -->
 <div class="phil-band">
   <div class="phil-inner">
-    <span style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:rgba(201,149,42,0.65);display:block;margin-bottom:20px"><span class="en">— Our philosophy</span><span class="fr">— Notre philosophie</span></span>
+    <span class="phil-lbl"><span class="en">— Our philosophy</span><span class="fr">— Notre philosophie</span></span>
     <p class="phil-text en">At La Cofu, everything begins with a textile. Vintage obi, kimono, silk or cotton — we select only materials that deserve a new life. Sometimes only a few fragments of a kimono can be saved. Sometimes a whole obi allows us to create several pieces. The number of creations is never decided in advance — it is dictated by the textile itself. We do not reproduce our designs in series. Each creation reflects a unique material, a craft, and a history we have chosen to preserve. <em>The textile guides the creation.</em></p>
     <p class="phil-text fr">Chez La Cofu, tout commence par un textile. Obi anciens, kimonos vintage, soies ou cotons japonais — nous sélectionnons uniquement des matières qui méritent une nouvelle vie. Parfois, seuls quelques fragments d'un kimono peuvent être sauvés. Parfois, un obi entier permet de créer plusieurs pièces. Le nombre de créations n'est jamais décidé à l'avance : il est dicté par le textile lui-même. Nous ne reproduisons pas nos modèles en série. Chaque création est le reflet d'une matière unique, d'un savoir-faire et d'une histoire que nous avons choisi de préserver. <em>Le textile guide la création.</em></p>
   </div>
 </div>
 
+<!-- CONVERTER -->
+<div class="conv-band">
+  <div class="conv-inner">
+    <span class="conv-label"><span class="en">JPY → EUR</span><span class="fr">JPY → EUR</span></span>
+    <input class="conv-input" type="number" id="jpyInput" placeholder="¥" oninput="convertJPY()">
+    <span class="conv-result" id="eurResult">—</span>
+    <span class="conv-rate" id="convRate"></span>
+  </div>
+</div>
+
 <!-- OBI TEES -->
-<div id="obi-tees" style="scroll-margin-top:calc(var(--nav-h) + 48px)">
-  <div class="sec-header">
+<div id="obi-tees" style="scroll-margin-top:calc(var(--nav-h) + 48px);background:var(--cream);padding:48px 0 56px">
+  <div class="sec-wrap">
     <span class="sec-lbl">— Obi Tees · 古布</span>
     <h2 class="sec-title"><span class="en">Obi Tees</span><span class="fr">Obi Tees</span></h2>
     <div class="sec-rule"></div>
-    <p class="sec-desc en">Vintage-weight T-shirts reworked with obi and kimono fabric panels. Each piece is made in our Itoshima atelier in collaboration with local artisans. Sizes run slightly small — we recommend sizing up.</p>
-    <p class="sec-desc fr">T-shirts de grammage vintage retravaillés avec des panneaux en tissu obi et kimono. Chaque pièce est réalisée dans notre atelier d'Itoshima en collaboration avec des artisans locaux. Les tailles sont légèrement petites — nous recommandons de prendre une taille au-dessus.</p>
-  </div>
-  <div class="prod-wrap">
+    <p class="sec-desc en">Vintage-weight T-shirts hand-assembled with obi and kimono fabric panels. Made in our Itoshima atelier in collaboration with local artisans. Each piece is washed and ready to wear.</p>
+    <p class="sec-desc fr">T-shirts de grammage vintage assemblés à la main avec des panneaux en tissu obi et kimono. Réalisés dans notre atelier d'Itoshima en collaboration avec des artisans locaux. Chaque pièce est lavée et prête à porter.</p>
     <div class="prod-grid">
 
-      <!-- PRODUCT 1 -->
+      <!-- OBI TEE 1 — Golden Garden -->
       <div class="prod-card">
         <div class="prod-img">
-          <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-04-23-at-16-43-45_orig.png" alt="Obi Tee — La Cofu" loading="lazy">
+          <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/published/screenshot-2026-04-23-at-16-43-45.png?1775195623" alt="Golden Garden Obi Tee — La Cofu" loading="lazy">
           <span class="prod-badge badge-limited"><span class="en">Limited</span><span class="fr">Limité</span></span>
         </div>
         <div class="prod-body">
-          <div class="prod-name">Obi Tee No.1</div>
+          <div class="prod-name">Golden Garden Obi Tee</div>
           <span class="prod-fabric en">Vintage Obi · Kyushu</span>
           <span class="prod-fabric fr">Obi Vintage · Kyushu</span>
-          <p class="prod-desc en">Heavyweight vintage tee with obi panel. Hand-assembled.<br><em style="font-size:13px;color:var(--amber)">Vintage obi · quantity determined by the textile.</em></p>
-          <p class="prod-desc fr">T-shirt vintage grammage lourd avec panneau obi. Assemblé à la main.<br><em style="font-size:13px;color:var(--amber)">Obi vintage · quantité dictée par le tissu disponible.</em></p>
+          <p class="prod-desc en">Heavyweight vintage tee with golden obi panel. Floral motif. Hand-assembled.</p>
+          <p class="prod-desc fr">T-shirt vintage grammage lourd avec panneau obi doré à motif floral. Assemblé à la main.</p>
+          <p class="prod-sig en">Vintage obi · quantity determined by the textile.</p>
+          <p class="prod-sig fr">Obi vintage · quantité dictée par le tissu disponible.</p>
+          <p class="prod-meta en">Size: L · Runs slightly small, recommend sizing up</p>
+          <p class="prod-meta fr">Taille : L · Taille légèrement petite, recommandons de prendre une taille au-dessus</p>
+          <p class="prod-wash en">🧺 Hand wash cold · Do not tumble dry · Iron on low away from obi panel</p>
+          <p class="prod-wash fr">🧺 Lavage à la main à froid · Ne pas mettre au sèche-linge · Repassage doux en évitant le panneau obi</p>
           <div class="prod-price-row">
             <span class="prod-price-jpy">¥14,500</span>
-            <span class="prod-price-eur" id="eur1">—</span>
+            <span class="prod-price-eur" id="p1eur">—</span>
           </div>
           <a href="https://square.link/u/KHiE5T2b" target="_blank" class="prod-btn"><span class="en">Buy — Pay with Square</span><span class="fr">Acheter — Payer via Square</span></a>
         </div>
       </div>
 
-      <!-- PRODUCT 2 -->
+      <!-- OBI TEE 2 — Crimson Wave -->
       <div class="prod-card">
         <div class="prod-img">
-          <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/obi-tee-2_orig.png" alt="Obi Tee No.2 — La Cofu" loading="lazy">
+          <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/published/obi-tee-2.png?1775195623" alt="Crimson Wave Obi Tee — La Cofu" loading="lazy">
           <span class="prod-badge badge-limited"><span class="en">Limited</span><span class="fr">Limité</span></span>
         </div>
         <div class="prod-body">
-          <div class="prod-name">Obi Tee No.2</div>
+          <div class="prod-name">Crimson Wave Obi Tee</div>
           <span class="prod-fabric en">Vintage Obi · Kyushu</span>
           <span class="prod-fabric fr">Obi Vintage · Kyushu</span>
-          <p class="prod-desc en">Heavyweight vintage tee with obi panel. Hand-assembled.<br><em style="font-size:13px;color:var(--amber)">Each obi is different — this design cannot be repeated.</em></p>
-          <p class="prod-desc fr">T-shirt vintage grammage lourd avec panneau obi. Assemblé à la main.<br><em style="font-size:13px;color:var(--amber)">Chaque obi est différent — ce modèle ne peut être reproduit.</em></p>
+          <p class="prod-desc en">Heavyweight vintage tee with deep red obi panel. Wave pattern. Hand-assembled.</p>
+          <p class="prod-desc fr">T-shirt vintage grammage lourd avec panneau obi rouge profond à motif vague. Assemblé à la main.</p>
+          <p class="prod-sig en">Each obi is different — this design cannot be repeated.</p>
+          <p class="prod-sig fr">Chaque obi est différent — ce modèle ne peut être reproduit.</p>
+          <p class="prod-meta en">Size: M · Runs slightly small, recommend sizing up</p>
+          <p class="prod-meta fr">Taille : M · Taille légèrement petite, recommandons de prendre une taille au-dessus</p>
+          <p class="prod-wash en">🧺 Hand wash cold · Do not tumble dry · Iron on low away from obi panel</p>
+          <p class="prod-wash fr">🧺 Lavage à la main à froid · Ne pas mettre au sèche-linge · Repassage doux en évitant le panneau obi</p>
           <div class="prod-price-row">
             <span class="prod-price-jpy">¥14,500</span>
-            <span class="prod-price-eur" id="eur2">—</span>
+            <span class="prod-price-eur" id="p2eur">—</span>
           </div>
-          <a href="https://square.link/u/KHiE5T2b" target="_blank" class="prod-btn"><span class="en">Buy — Pay with Square</span><span class="fr">Acheter — Payer via Square</span></a>
+          <a href="https://square.link/u/5fEiNlvn" target="_blank" class="prod-btn"><span class="en">Buy — Pay with Square</span><span class="fr">Acheter — Payer via Square</span></a>
         </div>
       </div>
 
-      <!-- PRODUCT 3 -->
+      <!-- OBI TEE 3 — SOLD -->
       <div class="prod-card">
         <div class="prod-img">
-          <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/obi-tee-3_orig.png" alt="Obi Tee No.3 — La Cofu" loading="lazy">
-          <span class="prod-badge badge-limited"><span class="en">Limited</span><span class="fr">Limité</span></span>
-        </div>
-        <div class="prod-body">
-          <div class="prod-name">Obi Tee No.3</div>
-          <span class="prod-fabric en">Vintage Kimono Silk · Kyushu</span>
-          <span class="prod-fabric fr">Soie Kimono Vintage · Kyushu</span>
-          <p class="prod-desc en">Heavyweight vintage tee with kimono silk panel. Hand-assembled.<br><em style="font-size:13px;color:var(--amber)">Vintage kimono silk · never reproduced identically.</em></p>
-          <p class="prod-desc fr">T-shirt vintage grammage lourd avec panneau en soie kimono. Assemblé à la main.<br><em style="font-size:13px;color:var(--amber)">Soie kimono vintage · jamais reproduit à l'identique.</em></p>
-          <div class="prod-price-row">
-            <span class="prod-price-jpy">¥14,500</span>
-            <span class="prod-price-eur" id="eur3">—</span>
-          </div>
-          <a href="https://square.link/u/KHiE5T2b" target="_blank" class="prod-btn"><span class="en">Buy — Pay with Square</span><span class="fr">Acheter — Payer via Square</span></a>
-        </div>
-      </div>
-
-      <!-- PRODUCT 4 -->
-      <div class="prod-card">
-        <div class="prod-img">
-          <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/obi-tee-4_orig.png" alt="Obi Tee No.4 — La Cofu" loading="lazy">
+          <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/published/obi-tee-3.png?1775195623" alt="Indigo Crane Obi Tee — La Cofu" loading="lazy">
           <span class="prod-badge badge-sold"><span class="en">Sold</span><span class="fr">Vendu</span></span>
         </div>
         <div class="prod-body">
-          <div class="prod-name">Obi Tee No.4</div>
-          <span class="prod-fabric en">Vintage Obi · Kyushu</span>
-          <span class="prod-fabric fr">Obi Vintage · Kyushu</span>
+          <div class="prod-name">Indigo Crane Obi Tee</div>
+          <span class="prod-fabric en">Vintage Kimono Silk · Kyushu</span>
+          <span class="prod-fabric fr">Soie Kimono Vintage · Kyushu</span>
           <p class="prod-desc en">This piece has found its owner. A new series is in preparation.</p>
           <p class="prod-desc fr">Cette pièce a trouvé son propriétaire. Une nouvelle série est en préparation.</p>
+          <p class="prod-sig en">Vintage kimono silk · never reproduced identically.</p>
+          <p class="prod-sig fr">Soie kimono vintage · jamais reproduit à l'identique.</p>
           <div class="prod-price-row">
-            <span class="prod-price-jpy" style="text-decoration:line-through;opacity:.5">¥14,500</span>
+            <span class="prod-price-jpy" style="text-decoration:line-through;opacity:.4">¥14,500</span>
           </div>
-          <button class="prod-btn prod-btn-sold"><span class="en">Sold out</span><span class="fr">Épuisé</span></button>
+          <span class="prod-btn-sold"><span class="en">Sold out</span><span class="fr">Épuisé</span></span>
         </div>
       </div>
 
@@ -358,15 +365,13 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
 </div>
 
 <!-- BAGS -->
-<div id="bags" style="scroll-margin-top:calc(var(--nav-h) + 48px)">
-  <div class="sec-header">
+<div id="bags" style="scroll-margin-top:calc(var(--nav-h) + 48px);background:var(--warm);padding:48px 0 56px">
+  <div class="sec-wrap">
     <span class="sec-lbl">— <span class="en">Bags</span><span class="fr">Sacs</span> · 古布</span>
-    <h2 class="sec-title"><span class="en">Kimono Bags</span><span class="fr">Sacs Kimono</span></h2>
+    <h2 class="sec-title"><span class="en">Kimono &amp; Obi Bags</span><span class="fr">Sacs Kimono &amp; Obi</span></h2>
     <div class="sec-rule"></div>
-    <p class="sec-desc en">Handmade bags from vintage kimono and obi fabric. Each piece is unique — the fabric determines the shape, the size, and the possibility of making more.</p>
-    <p class="sec-desc fr">Sacs fabriqués à la main à partir de tissus kimono et obi anciens. Chaque pièce est unique — le tissu détermine la forme, la taille et la possibilité d'en faire davantage.</p>
-  </div>
-  <div class="prod-wrap">
+    <p class="sec-desc en">Handmade bags from vintage kimono and obi fabric. The textile determines the shape, the size, and what is possible to make.</p>
+    <p class="sec-desc fr">Sacs fabriqués à la main à partir de tissus kimono et obi anciens. Le tissu détermine la forme, la taille et ce qu'il est possible de réaliser.</p>
     <div class="prod-grid">
 
       <!-- BAG 1 -->
@@ -376,14 +381,18 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
           <span class="prod-badge badge-unique"><span class="en">One of a kind</span><span class="fr">Pièce unique</span></span>
         </div>
         <div class="prod-body">
-          <div class="prod-name"><span class="en">Kimono Bag No.1</span><span class="fr">Sac Kimono No.1</span></div>
+          <div class="prod-name"><span class="en">Sakura Tote</span><span class="fr">Tote Sakura</span></div>
           <span class="prod-fabric en">Vintage Kimono · Kyushu</span>
           <span class="prod-fabric fr">Kimono Vintage · Kyushu</span>
-          <p class="prod-desc en">Handmade tote from vintage kimono fabric. Lined.<br><em style="font-size:13px;color:var(--amber)">The fabric chose its form. One piece made.</em></p>
-          <p class="prod-desc fr">Tote fabriqué à la main en tissu kimono vintage. Doublé.<br><em style="font-size:13px;color:var(--amber)">Le tissu a choisi sa forme. Un seul exemplaire réalisé.</em></p>
+          <p class="prod-desc en">Handmade tote from vintage kimono fabric. Fully lined.</p>
+          <p class="prod-desc fr">Tote fabriqué à la main en tissu kimono vintage. Entièrement doublé.</p>
+          <p class="prod-sig en">The fabric chose its form. One piece made.</p>
+          <p class="prod-sig fr">Le tissu a choisi sa forme. Un seul exemplaire réalisé.</p>
+          <p class="prod-wash en">🧺 Dry clean only · Store in dust bag</p>
+          <p class="prod-wash fr">🧺 Nettoyage à sec uniquement · Conserver dans une pochette anti-poussière</p>
           <div class="prod-price-row">
             <span class="prod-price-jpy">¥18,000</span>
-            <span class="prod-price-eur" id="eur5">—</span>
+            <span class="prod-price-eur" id="b1eur">—</span>
           </div>
           <a href="https://square.link/u/KHiE5T2b" target="_blank" class="prod-btn"><span class="en">Buy — Pay with Square</span><span class="fr">Acheter — Payer via Square</span></a>
         </div>
@@ -396,14 +405,18 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
           <span class="prod-badge badge-unique"><span class="en">One of a kind</span><span class="fr">Pièce unique</span></span>
         </div>
         <div class="prod-body">
-          <div class="prod-name"><span class="en">Obi Bag No.1</span><span class="fr">Sac Obi No.1</span></div>
+          <div class="prod-name"><span class="en">Obi Clutch</span><span class="fr">Pochette Obi</span></div>
           <span class="prod-fabric en">Vintage Obi · Kyushu</span>
           <span class="prod-fabric fr">Obi Vintage · Kyushu</span>
-          <p class="prod-desc en">Structured bag from vintage obi fabric. The obi's stiffness gives it natural form without padding.<br><em style="font-size:13px;color:var(--amber)">Obi fabric · structure and size dictated by the original textile.</em></p>
-          <p class="prod-desc fr">Sac structuré en tissu obi vintage. La rigidité de l'obi lui donne une forme naturelle sans rembourrage.<br><em style="font-size:13px;color:var(--amber)">Tissu obi · structure et dimensions dictées par le textile d'origine.</em></p>
+          <p class="prod-desc en">Structured bag from vintage obi. The obi's natural stiffness gives it form without padding.</p>
+          <p class="prod-desc fr">Sac structuré en obi vintage. La rigidité naturelle de l'obi lui donne sa forme sans rembourrage.</p>
+          <p class="prod-sig en">Obi fabric · structure dictated by the original textile.</p>
+          <p class="prod-sig fr">Tissu obi · structure dictée par le textile d'origine.</p>
+          <p class="prod-wash en">🧺 Dry clean only · Store in dust bag</p>
+          <p class="prod-wash fr">🧺 Nettoyage à sec uniquement · Conserver dans une pochette anti-poussière</p>
           <div class="prod-price-row">
             <span class="prod-price-jpy">¥22,000</span>
-            <span class="prod-price-eur" id="eur6">—</span>
+            <span class="prod-price-eur" id="b2eur">—</span>
           </div>
           <a href="https://square.link/u/KHiE5T2b" target="_blank" class="prod-btn"><span class="en">Buy — Pay with Square</span><span class="fr">Acheter — Payer via Square</span></a>
         </div>
@@ -412,18 +425,22 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
       <!-- BAG 3 -->
       <div class="prod-card">
         <div class="prod-img">
-          <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/bag-14_orig.png" alt="Kimono Bag — La Cofu" loading="lazy">
+          <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/bag-14_orig.png" alt="Kimono Silk Pouch — La Cofu" loading="lazy">
           <span class="prod-badge badge-unique"><span class="en">One of a kind</span><span class="fr">Pièce unique</span></span>
         </div>
         <div class="prod-body">
-          <div class="prod-name"><span class="en">Kimono Bag No.2</span><span class="fr">Sac Kimono No.2</span></div>
+          <div class="prod-name"><span class="en">Kimono Silk Pouch</span><span class="fr">Pochette Soie Kimono</span></div>
           <span class="prod-fabric en">Vintage Kimono Silk · Kyushu</span>
           <span class="prod-fabric fr">Soie Kimono Vintage · Kyushu</span>
-          <p class="prod-desc en">Handmade pouch from vintage kimono silk. Soft, lined, hand-stitched details.<br><em style="font-size:13px;color:var(--amber)">Kimono silk · what remained of the textile became this.</em></p>
-          <p class="prod-desc fr">Pochette en soie kimono vintage. Douce, doublée, détails cousus à la main.<br><em style="font-size:13px;color:var(--amber)">Soie kimono · ce qu'il restait du tissu est devenu ceci.</em></p>
+          <p class="prod-desc en">Handmade pouch from vintage kimono silk. Soft, lined, hand-stitched.</p>
+          <p class="prod-desc fr">Pochette en soie kimono vintage. Douce, doublée, cousue à la main.</p>
+          <p class="prod-sig en">Kimono silk · what remained of the textile became this.</p>
+          <p class="prod-sig fr">Soie kimono · ce qu'il restait du tissu est devenu ceci.</p>
+          <p class="prod-wash en">🧺 Dry clean only · Handle with care</p>
+          <p class="prod-wash fr">🧺 Nettoyage à sec uniquement · Manipuler avec soin</p>
           <div class="prod-price-row">
             <span class="prod-price-jpy">¥16,000</span>
-            <span class="prod-price-eur" id="eur7">—</span>
+            <span class="prod-price-eur" id="b3eur">—</span>
           </div>
           <a href="https://square.link/u/KHiE5T2b" target="_blank" class="prod-btn"><span class="en">Buy — Pay with Square</span><span class="fr">Acheter — Payer via Square</span></a>
         </div>
@@ -434,31 +451,31 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
 </div>
 
 <!-- COMING SOON -->
-<div id="coming-soon" style="background:var(--dark);padding:56px 0;border-top:2px solid var(--amber);scroll-margin-top:calc(var(--nav-h) + 48px)">
-  <div style="max-width:1080px;margin:0 auto;padding:0 48px">
-    <span style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:rgba(201,149,42,0.6);display:block;margin-bottom:20px"><span class="en">— Coming soon</span><span class="fr">— Bientôt disponible</span></span>
-    <p style="font-style:italic;font-weight:300;font-size:clamp(20px,2.5vw,28px);color:rgba(245,240,232,.7);margin-bottom:36px;max-width:600px;line-height:1.4" class="en">La Cofu is growing beyond clothing. New creations are taking shape — shaped, as always, by the fabric.</p>
-    <p style="font-style:italic;font-weight:300;font-size:clamp(20px,2.5vw,28px);color:rgba(245,240,232,.7);margin-bottom:36px;max-width:600px;line-height:1.4" class="fr">La Cofu évolue au-delà du vêtement. De nouvelles créations prennent forme — dictées, comme toujours, par le tissu.</p>
+<div id="coming-soon" class="soon-wrap" style="scroll-margin-top:calc(var(--nav-h) + 48px)">
+  <div class="sec-wrap">
+    <span class="sec-lbl" style="color:rgba(201,149,42,0.6)"><span class="en">— Coming soon</span><span class="fr">— Bientôt disponible</span></span>
+    <p style="font-style:italic;font-weight:300;font-size:clamp(20px,2.5vw,28px);color:rgba(245,240,232,.7);margin-top:8px;max-width:600px;line-height:1.4" class="en">La Cofu is growing beyond clothing. New creations are taking shape — shaped, as always, by the fabric.</p>
+    <p style="font-style:italic;font-weight:300;font-size:clamp(20px,2.5vw,28px);color:rgba(245,240,232,.7);margin-top:8px;max-width:600px;line-height:1.4" class="fr">La Cofu évolue au-delà du vêtement. De nouvelles créations prennent forme — dictées, comme toujours, par le tissu.</p>
     <div class="soon-grid">
       <div class="soon-card">
         <span class="soon-jp">座</span>
         <div class="soon-name"><span class="en">Cushion Covers</span><span class="fr">Coussins</span></div>
-        <p class="soon-desc en">Vintage obi and kimono fabric cushion covers. Each one determined by what the textile allows.</p>
-        <p class="soon-desc fr">Housses de coussin en tissu obi et kimono vintage. Chacune dictée par ce que le textile permet.</p>
+        <p class="soon-desc en">Vintage obi and kimono fabric. Each one determined by what the textile allows.</p>
+        <p class="soon-desc fr">Tissu obi et kimono vintage. Chacun dicté par ce que le textile permet.</p>
         <span class="soon-tag"><span class="en">In preparation</span><span class="fr">En préparation</span></span>
       </div>
       <div class="soon-card">
         <span class="soon-jp">膳</span>
         <div class="soon-name"><span class="en">Table Runners</span><span class="fr">Chemins de table</span></div>
-        <p class="soon-desc en">Obi fabric repurposed as table runners. The natural length of the obi defines the piece.</p>
-        <p class="soon-desc fr">Tissus obi transformés en chemins de table. La longueur naturelle de l'obi définit la pièce.</p>
+        <p class="soon-desc en">Obi fabric repurposed as table runners. The natural length defines the piece.</p>
+        <p class="soon-desc fr">Tissus obi en chemins de table. La longueur naturelle définit la pièce.</p>
         <span class="soon-tag"><span class="en">In preparation</span><span class="fr">En préparation</span></span>
       </div>
       <div class="soon-card">
         <span class="soon-jp">物</span>
         <div class="soon-name"><span class="en">Objects from Kyushu</span><span class="fr">Objets de Kyushu</span></div>
-        <p class="soon-desc en">Ceramics, baskets, handcrafted pieces found across Kyushu. Selected for their history and beauty.</p>
-        <p class="soon-desc fr">Céramiques, paniers, pièces artisanales chinées à travers Kyushu. Sélectionnés pour leur histoire et leur beauté.</p>
+        <p class="soon-desc en">Ceramics, baskets, handcrafted pieces found across Kyushu.</p>
+        <p class="soon-desc fr">Céramiques, paniers, pièces artisanales chinées à travers Kyushu.</p>
         <span class="soon-tag"><span class="en">Coming 2026</span><span class="fr">2026</span></span>
       </div>
     </div>
@@ -466,28 +483,28 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
 </div>
 
 <!-- SHIPPING -->
-<div style="background:var(--warm);border-top:1px solid var(--rule);padding:48px 0">
-  <div style="max-width:1080px;margin:0 auto;padding:0 48px">
-    <span style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:24px"><span class="en">— Shipping & Orders</span><span class="fr">— Livraison & Commandes</span></span>
+<div class="ship-wrap">
+  <div class="sec-wrap">
+    <span class="sec-lbl"><span class="en">— Shipping &amp; Orders</span><span class="fr">— Livraison &amp; Commandes</span></span>
     <div class="ship-grid">
       <div class="ship-item">
         <div class="ship-icon">📦</div>
         <span class="ship-title"><span class="en">Worldwide shipping</span><span class="fr">Livraison mondiale</span></span>
-        <p class="ship-body en">All pieces ship from Itoshima, Japan. Tracked international shipping. Delivery times vary by destination — typically 7–14 days to Europe.</p>
-        <p class="ship-body fr">Toutes les pièces sont expédiées depuis Itoshima, Japon. Livraison internationale suivie. 7 à 14 jours vers l'Europe.</p>
+        <p class="ship-body en">All pieces ship from Itoshima, Japan. Tracked international shipping. Typically 7–14 days to Europe.</p>
+        <p class="ship-body fr">Toutes les pièces expédiées depuis Itoshima, Japon. Livraison internationale suivie. 7 à 14 jours vers l'Europe.</p>
       </div>
       <div class="ship-item">
         <div class="ship-icon">💳</div>
         <span class="ship-title"><span class="en">Payment via Square</span><span class="fr">Paiement via Square</span></span>
-        <p class="ship-body en">Secure payment via Square. All major cards accepted. Once payment is confirmed, we ship within 3–5 business days.</p>
-        <p class="ship-body fr">Paiement sécurisé via Square. Toutes les principales cartes acceptées. Une fois le paiement confirmé, expédition sous 3 à 5 jours ouvrables.</p>
+        <p class="ship-body en">Secure payment via Square. All major cards accepted. Ships within 3–5 business days.</p>
+        <p class="ship-body fr">Paiement sécurisé via Square. Toutes les cartes acceptées. Expédition sous 3 à 5 jours ouvrables.</p>
       </div>
       <div class="ship-item">
         <div class="ship-icon">✉️</div>
         <span class="ship-title"><span class="en">Questions</span><span class="fr">Questions</span></span>
-        <p class="ship-body en">For size, availability, or gift enquiries, write to us directly. We respond within 48 hours.</p>
-        <p class="ship-body fr">Pour les questions de taille, disponibilité ou cadeaux, écrivez-nous directement. Réponse sous 48h.</p>
-        <a href="contact.html" class="btn" style="margin-top:12px;font-size:10px"><span class="en">Contact us</span><span class="fr">Nous contacter</span></a>
+        <p class="ship-body en">For size, availability or gift enquiries, write to us. We respond within 48h.</p>
+        <p class="ship-body fr">Pour les questions de taille, disponibilité ou cadeaux, écrivez-nous. Réponse sous 48h.</p>
+        <a href="contact.html" class="btn" style="margin-top:14px;font-size:10px"><span class="en">Contact us</span><span class="fr">Nous contacter</span></a>
       </div>
     </div>
   </div>
@@ -528,44 +545,33 @@ function L(l){document.body.classList.toggle('lang-fr',l==='fr');document.queryS
 function toggleMob(){var o=document.getElementById('mobPanel').classList.toggle('on');document.getElementById('mobVeil').classList.toggle('on',o);document.getElementById('burger').classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';}
 function closeMob(){document.getElementById('mobPanel').classList.remove('on');document.getElementById('mobVeil').classList.remove('on');document.getElementById('burger').classList.remove('open');document.body.style.overflow='';}
 window.addEventListener('scroll',function(){document.getElementById('siteHeader').classList.toggle('scrolled',window.scrollY>40);});
-
-// Shop nav active state
 var shopSections=['obi-tees','bags','coming-soon'];
 window.addEventListener('scroll',function(){
-  var offset=document.querySelector('.shop-nav').offsetHeight+80;
-  var cur=shopSections[0];
-  shopSections.forEach(function(id){
-    var el=document.getElementById(id);
-    if(el&&el.getBoundingClientRect().top<offset)cur=id;
-  });
-  document.querySelectorAll('.shop-nav a').forEach(function(a){
-    a.classList.toggle('active',a.getAttribute('href')==='#'+cur);
-  });
+  var offset=120;var cur=shopSections[0];
+  shopSections.forEach(function(id){var el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<offset)cur=id;});
+  document.querySelectorAll('.shop-nav a').forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});
 });
-
-// JPY/EUR converter
 var rate=null;
-function fetchRate(){
-  fetch('https://api.exchangerate-api.com/v4/latest/JPY')
-    .then(function(r){return r.json();})
-    .then(function(d){
-      rate=d.rates.EUR;
-      document.getElementById('rateDisplay').textContent=(rate*100).toFixed(2)+'¢';
-      var prices={eur1:14500,eur2:14500,eur3:14500,eur5:18000,eur6:22000,eur7:16000};
-      Object.keys(prices).forEach(function(id){
-        var el=document.getElementById(id);
-        if(el)el.textContent='≈ €'+(prices[id]*rate).toFixed(0);
-      });
-    }).catch(function(){document.getElementById('rateDisplay').textContent='—';});
+var priceMap={p1eur:14500,p2eur:14500,b1eur:18000,b2eur:22000,b3eur:16000};
+function updatePrices(){
+  if(!rate)return;
+  Object.keys(priceMap).forEach(function(id){var el=document.getElementById(id);if(el)el.textContent='≈ €'+(priceMap[id]*rate).toFixed(0);});
+  document.getElementById('convRate').textContent='1 JPY = €'+rate.toFixed(5);
 }
-fetchRate();
-
+function convertJPY(){
+  var val=parseFloat(document.getElementById('jpyInput').value);
+  var res=document.getElementById('eurResult');
+  if(!rate||isNaN(val)){res.textContent='—';return;}
+  res.textContent='≈ €'+(val*rate).toFixed(2);
+}
+fetch('https://api.exchangerate-api.com/v4/latest/JPY')
+  .then(function(r){return r.json();})
+  .then(function(d){rate=d.rates.EUR;document.getElementById('rateDisplay').textContent='¥100 = €'+(100*rate).toFixed(2);updatePrices();})
+  .catch(function(){document.getElementById('rateDisplay').textContent='—';});
 (function(){
   var u='info',d='mglobaljapan.com';
-  var fe=document.getElementById('footer-email');
-  if(fe)fe.textContent=u+'\u0040'+d;
-  var s=localStorage.getItem('lc-l')||'fr';
-  L(s);
+  var fe=document.getElementById('footer-email');if(fe)fe.textContent=u+'\u0040'+d;
+  var s=localStorage.getItem('lc-l')||'fr';L(s);
 })();
 </script>
 </body>
