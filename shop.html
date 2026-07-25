@@ -133,7 +133,7 @@ body.lang-fr a.en,body.lang-fr a.bag-btn.en{display:none!important}
   color:var(--muted);cursor:pointer;background:none;border:none}
 
 /* ── LAYOUT ── */
-.page-wrap{max-width:1200px;margin:0 auto;padding:72px 32px 56px}
+.page-wrap{max-width:1200px;margin:0 auto;padding:0 32px 56px}
 
 /* ── PAGE HEADER ── */
 .shop-header{text-align:center;padding-bottom:52px;margin-bottom:60px;
@@ -439,7 +439,7 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
 
 /* ── SHOP SECTION NAV ── */
 .shop-nav{display:grid;grid-template-columns:1fr 1fr;gap:1px;
-  background:var(--border);margin-top:68px}
+  background:var(--border);margin-top:0}
 .shop-nav-card{display:flex;flex-direction:column;justify-content:flex-end;
   position:relative;overflow:hidden;aspect-ratio:16/7;cursor:pointer;
   text-decoration:none;transition:opacity 0.3s}
@@ -474,7 +474,7 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
 @media(max-width:1024px){
   .nav-links{display:none}
   .burger{display:flex}
-  .page-wrap{padding:90px 20px 60px}
+  .page-wrap{padding:0 20px 60px}
   .bag-grid{grid-template-columns:repeat(2,1fr)!important;gap:12px!important}
   .bag-card{min-width:0}
   .care-grid{grid-template-columns:1fr}
@@ -586,6 +586,13 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
   <a href="https://lacofu.com/contact.html">Contact</a>
 </div>
 
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<div style="width:100%;overflow:hidden;line-height:0;border-bottom:2px solid #A8843A">
+  <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/published/screenshot-2026-07-25-at-13-51-55.png?1784957076"
+       alt="Itoshima, Kyushu — La Cofu"
+       style="width:100%;height:560px;object-fit:cover;object-position:center 40%;display:block">
+</div>
+
 <!-- ═══════════════════ SHOP NAV ═══════════════════ -->
 <div class="shop-nav">
 
@@ -619,12 +626,6 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
 
 <!-- ═══════════════════ MAIN ═══════════════════ -->
 <div id="section-obi"></div>
-<!-- HERO -->
-<div style="width:100%;overflow:hidden;line-height:0;margin-top:68px">
-  <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/published/screenshot-2026-07-25-at-13-51-55.png?1784957076"
-       alt="Itoshima, Kyushu — La Cofu"
-       style="width:100%;height:560px;object-fit:cover;object-position:center 40%;display:block">
-</div>
 
 <!-- SHOP NAV -->
 <div style="background:#2C2416;border-bottom:1px solid rgba(168,132,58,0.3);padding:0 32px;display:flex;align-items:center;position:sticky;top:68px;z-index:800;overflow-x:auto">
@@ -1171,6 +1172,17 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
 <!-- ══════════════════════════════════════════
      SHIRT SECTION — full bleed dark band
 ══════════════════════════════════════════ -->
+<!-- INSTAGRAM BAND -->
+<div style="background:#1C1714;border-top:1px solid rgba(168,132,58,0.3);border-bottom:1px solid rgba(168,132,58,0.3);padding:40px 32px;text-align:center">
+  <span style="font-family:'Noto Serif JP',serif;font-size:1.1rem;color:rgba(201,168,76,0.5);display:block;margin-bottom:12px;letter-spacing:.2em">新作</span>
+  <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(1.4rem,2.5vw,2rem);color:#F5F0E8;margin-bottom:20px;line-height:1.3" class="en">New editions announced on Instagram.<br>Each piece, one at a time.</p>
+  <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(1.4rem,2.5vw,2rem);color:#F5F0E8;margin-bottom:20px;line-height:1.3" class="fr">Nouvelles éditions annoncées sur Instagram.<br>Chaque pièce, l'une après l'autre.</p>
+  <a href="https://instagram.com/lacofu" target="_blank" style="display:inline-flex;align-items:center;gap:12px;font-family:'Raleway',sans-serif;font-size:0.78rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#1C1714;background:#C9A84C;padding:14px 36px;text-decoration:none;transition:background .2s">
+    <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    @lacofu
+  </a>
+</div>
+
 <div id="section-obi" class="section-obi-band">
 <div style="max-width:1200px;margin:0 auto">
   <div class="shirt-section">
@@ -1611,7 +1623,7 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
     <!-- /Next Edition -->
 
       <!-- INFO — full width on dark background -->
-      <div class="shirt-info" style="max-width:1000px;margin-top:56px;margin-bottom:52px;width:100%">
+      <div class="shirt-info" style="max-width:1000px;margin-top:56px;margin-bottom:52px;width:100%;margin-left:auto;margin-right:auto">
         <span class="shirt-series" style="color:#C9A84C">La Cofu — Edition Series · 糸島製</span>
         <p class="shirt-kanji" style="color:rgba(201,168,76,0.6)">古布 · 糸島</p>
 
@@ -1704,7 +1716,7 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
     </div><!-- /shirt-layout -->
 
     <!-- HOW IT'S MADE -->
-    <div class="edition-block" style="max-width:700px;margin-top:48px">
+    <div class="edition-block" style="max-width:900px;margin-top:48px;margin-left:auto;margin-right:auto">
       <p class="edition-title en">How each edition is made</p>
       <p class="edition-title fr">Comment chaque édition est créée</p>
       <div class="ed-step">
@@ -1729,7 +1741,7 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
 
 
     <!-- CARE CARD -->
-    <div class="care-card" style="background:rgba(255,255,255,0.04);border-color:rgba(201,168,76,0.25);margin-top:48px;max-width:700px">
+    <div class="care-card" style="background:rgba(255,255,255,0.04);border-color:rgba(201,168,76,0.25);margin-top:48px;max-width:900px;margin-left:auto;margin-right:auto">
       <p class="care-title en">Care instructions · The obi/kimono piece is the precious part</p>
       <p class="care-title fr">Instructions d'entretien · La pièce obi/kimono est la partie précieuse</p>
       <div class="care-grid">
@@ -1783,15 +1795,10 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
 </div>
 
 <!-- FOOTER -->
-<footer class="footer-grid" style="background:#2C2416;border-top:2px solid #A0622A">
+<footer style="background:#2C2416;border-top:2px solid #A0622A;padding:52px 48px 40px;display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:start">
   <div>
     <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;letter-spacing:.1em;color:#F5F0E8;margin-bottom:10px">La Cofu</div>
     <div style="font-family:'Noto Serif JP',serif;font-size:12px;color:#D8CCBA;letter-spacing:.16em;line-height:1.9">古きを尊び<br>新しき命を吹き込む</div>
-    <p style="font-size:0.82rem;color:rgba(245,240,230,0.4);line-height:1.9;margin-top:14px">
-      <span class="en">More about our region:</span><span class="fr">Notre région :</span><br>
-      <a href="https://basecampkyushu.com" style="color:rgba(201,168,76,0.7)">Basecamp Kyushu</a><br>
-      <span style="font-size:0.75rem">A project by <a href="https://mglobaljapan.weebly.com" style="color:rgba(201,168,76,0.7)">M Global Japan</a></span>
-    </p>
   </div>
   <div style="text-align:center">
     <div style="display:flex;gap:22px;justify-content:center;margin-bottom:14px">
@@ -1802,25 +1809,18 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
         <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
       </a>
     </div>
-    <div style="font-family:'Jost',sans-serif;font-size:12px;letter-spacing:.1em;color:#EAE0D0">
-      <a href="mailto:info@mglobaljapan.com" style="color:#EAE0D0">info@mglobaljapan.com</a>
-    </div>
+    <div style="font-family:'Raleway',sans-serif;font-size:12px;letter-spacing:.1em;color:#EAE0D0" id="shop-footer-email"></div>
   </div>
   <div style="text-align:right">
-    <p style="font-family:'Jost',sans-serif;font-size:0.72rem;letter-spacing:.28em;text-transform:uppercase;color:#C9A84C;margin-bottom:16px">Navigation</p>
-    <ul style="list-style:none">
-      <li style="margin-bottom:10px"><a href="https://lacofu.com/index.html" style="font-size:0.87rem;color:rgba(245,240,230,0.72);transition:color .2s"><span class="en">Home</span><span class="fr">Accueil</span></a></li>
-      <li style="margin-bottom:10px"><a href="https://lacofu.com/about.html" style="font-size:0.87rem;color:rgba(245,240,230,0.55)"><span class="en">About</span><span class="fr">À Propos</span></a></li>
-      <li style="margin-bottom:10px"><a href="https://lacofu.com/experiences.html" style="font-size:0.87rem;color:rgba(245,240,230,0.55)"><span class="en">Experiences</span><span class="fr">Expériences</span></a></li>
-      <li style="margin-bottom:10px"><a href="https://lacofu.com/residencies.html" style="font-size:0.87rem;color:rgba(245,240,230,0.55)"><span class="en">Residencies</span><span class="fr">Résidences</span></a></li>
-      <li style="margin-bottom:10px"><a href="https://lacofu.com/locations.html" style="font-size:0.87rem;color:rgba(245,240,230,0.55)"><span class="en">Locations</span><span class="fr">Lieux</span></a></li>
-      <li style="margin-bottom:10px"><a href="#" style="font-size:0.87rem;color:rgba(245,240,230,0.55)"><span class="en">Shop</span><span class="fr">Boutique</span></a></li>
-      <li><a href="https://lacofu.com/contact.html" style="font-size:0.87rem;color:rgba(245,240,230,0.55)">Contact</a></li>
-    </ul>
+    <div style="font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#EAE0D0;line-height:2.5">
+      More about our region — visit:<br>
+      <a href="https://basecampkyushu.com" target="_blank" style="color:#EAE0D0">Basecamp Kyushu</a><br><br>
+      A project by <a href="https://mglobaljapan.weebly.com" target="_blank" style="color:#EAE0D0">M Global Japan</a>
+    </div>
   </div>
 </footer>
 <div style="background:#3A3020;padding:14px 48px;display:flex;justify-content:center">
-  <span style="font-family:'Jost',sans-serif;font-size:0.78rem;letter-spacing:.06em;color:rgba(245,240,230,0.7)">© 2026 La Cofu · All rights reserved · Tous droits réservés</span>
+  <span style="font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#D8CCBA">© 2026 La Cofu &nbsp;·&nbsp; All rights reserved &nbsp;·&nbsp; Tous droits réservés</span>
 </div>
 
 
@@ -1943,7 +1943,9 @@ function swapCard(thumb, cardImgId, url){
   thumb.classList.add('active');
 }
 
-  // JPY/EUR converter & rate display
+  // Footer email
+  var sfe = document.getElementById('shop-footer-email');
+  if(sfe){ sfe.textContent = 'info\u0040mglobaljapan.com'; }
   var lcRate = null;
   fetch('https://api.exchangerate-api.com/v4/latest/JPY')
     .then(function(r){return r.json();})
