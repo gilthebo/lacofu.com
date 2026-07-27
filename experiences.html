@@ -82,6 +82,8 @@ body.lang-fr span.en,body.lang-fr a.en{display:none!important;}
 .gl-item{border:none;background:none;cursor:zoom-in;padding:0;overflow:hidden;aspect-ratio:1/1;display:block;position:relative;}
 .gl-item img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease,opacity .25s;}
 .gl-item:hover img{transform:scale(1.06);opacity:.85;}
+.collage-full{width:100%;line-height:0;}
+.collage-full img{width:100%;height:auto;display:block;}
 .lb{display:none;position:fixed;inset:0;z-index:900;background:rgba(20,14,6,.95);align-items:center;justify-content:center;flex-direction:column;}
 .lb.on{display:flex;}
 .lb-img{max-width:min(90vw,860px);max-height:80vh;object-fit:contain;display:block;border:1px solid rgba(160,98,42,.25);}
@@ -245,15 +247,8 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
   <div class="yt-pad"><div class="yt-wrap">
     <iframe src="https://www.youtube.com/embed/-RbZQ0rzKhM" title="La Cofu Tea Ceremony" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
   </div></div>
-  <div class="gallery" id="gl-tea" style="margin-top:24px">
-     <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-07-27-at-17-35-06_orig.png" alt="Tea Ceremony — La Cofu" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
-  </div>
-  <div class="lb" id="lb-gl-tea" onclick="closeLB('gl-tea')">
-    <button class="lb-close" onclick="closeLB('gl-tea')">×</button>
-    <button class="lb-prev" onclick="lbNav('gl-tea',-1);event.stopPropagation()">&#8249;</button>
-    <img class="lb-img" id="lb-img-gl-tea" src="" alt="Tea ceremony">
-    <button class="lb-next" onclick="lbNav('gl-tea',1);event.stopPropagation()">&#8250;</button>
-    <div class="lb-counter" id="lb-counter-gl-tea"></div>
+  <div class="collage-full" style="margin-top:24px">
+     <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-07-27-at-17-35-06_orig.png" alt="Tea Ceremony — La Cofu" loading="lazy">
   </div>
   <div class="yt-pad"><div class="yt-wrap" style="margin-top:12px">
     <iframe src="https://www.youtube.com/embed/PHJGCYQuirE" title="La Cofu Tea Ceremony" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
@@ -292,15 +287,8 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
   <div class="yt-pad"><div class="yt-wrap">
     <iframe src="https://www.youtube.com/embed/m-bynzho47I" title="La Cofu Wagashi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
   </div></div>
-  <div class="gallery" id="gl-wag" style="margin-top:24px">
-     <img src="https://https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-07-27-at-14-19-26_orig.png" alt="Wagashi — La Cofu" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
-  </div>
-  <div class="lb" id="lb-gl-wag" onclick="closeLB('gl-wag')">
-    <button class="lb-close" onclick="closeLB('gl-wag')">×</button>
-    <button class="lb-prev" onclick="lbNav('gl-wag',-1);event.stopPropagation()">&#8249;</button>
-    <img class="lb-img" id="lb-img-gl-wag" src="" alt="Wagashi">
-    <button class="lb-next" onclick="lbNav('gl-wag',1);event.stopPropagation()">&#8250;</button>
-    <div class="lb-counter" id="lb-counter-gl-wag"></div>
+  <div class="collage-full" style="margin-top:24px">
+     <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-07-27-at-14-19-26_orig.png" alt="Wagashi — La Cofu" loading="lazy">
   </div>
   <div class="yt-pad" style="padding-bottom:12px"><div class="yt-wrap" style="margin-top:12px">
     <iframe src="https://www.youtube.com/embed/GkdoT-Uk-0U?start=57" title="La Cofu Wagashi" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
@@ -361,15 +349,8 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
   </div>
 </div>
 <div class="gallery-strip">
-  <div class="gallery" id="gl-all" style="margin-top:2px">
-     <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-07-27-at-14-31-24_orig.png" alt="Atelier — La Cofu" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
-  </div>
-  <div class="lb" id="lb-gl-all" onclick="closeLB('gl-all')">
-    <button class="lb-close" onclick="closeLB('gl-all')">×</button>
-    <button class="lb-prev" onclick="lbNav('gl-all',-1);event.stopPropagation()">&#8249;</button>
-    <img class="lb-img" id="lb-img-gl-all" src="" alt="La Cofu Atelier">
-    <button class="lb-next" onclick="lbNav('gl-all',1);event.stopPropagation()">&#8250;</button>
-    <div class="lb-counter" id="lb-counter-gl-all"></div>
+  <div class="collage-full" style="margin-top:2px">
+     <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-07-27-at-14-31-24_orig.png" alt="Atelier — La Cofu" loading="lazy">
   </div>
 </div>
 
@@ -475,7 +456,7 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
 <div class="ft-bottom"><span>© 2026 La Cofu &nbsp;·&nbsp; All rights reserved &nbsp;·&nbsp; Tous droits réservés</span></div>
 
 <script>
-// Lightbox state
+// Lightbox state (kept for any future thumbnail galleries)
 var lbState={};
 function regLB(id,srcs){lbState[id]={srcs:srcs,cur:0};}
 function openLB(id,i){lbState[id].cur=i;document.getElementById('lb-'+id).classList.add('on');document.body.style.overflow='hidden';updateLB(id);}
@@ -483,11 +464,6 @@ function closeLB(id){document.getElementById('lb-'+id).classList.remove('on');do
 function lbNav(id,dir){var s=lbState[id];s.cur=(s.cur+dir+s.srcs.length)%s.srcs.length;updateLB(id);}
 function updateLB(id){var s=lbState[id];document.getElementById('lb-img-'+id).src=s.srcs[s.cur];document.getElementById('lb-counter-'+id).textContent=(s.cur+1)+' / '+s.srcs.length;}
 document.addEventListener('keydown',function(e){Object.keys(lbState).forEach(function(id){var el=document.getElementById('lb-'+id);if(el&&el.classList.contains('on')){if(e.key==='ArrowRight')lbNav(id,1);if(e.key==='ArrowLeft')lbNav(id,-1);if(e.key==='Escape')closeLB(id);}});});
-
-// Register galleries
-regLB('gl-tea',["https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/with-sher-sensei_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/sensei-house_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/kanazawa-mayu-2_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/sensei-deco_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/saga-kominka_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/8_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/kanazawa-mayumi_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/kanazawa-tea-house-matcha_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/13_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/12_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/9_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/11_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/mayumi-ceremony_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/tea-house-saga_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/tea-ceremony-mayumi-takeo_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/mayumi_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/mayumi-offcial-2_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-04-04-at-21-08-11.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-04-04-at-21-07-30.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-04-04-at-21-08-50.png"]);
-regLB('gl-wag',["https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/group_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/set2_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/outside-bench-2_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/red-becnh-2_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/set_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/red-bench-3_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/set1_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/red-bench_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/set3_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/red-bench-4_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/sugar-sweet_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/set4_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/photo-shoot_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/taiken-1_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/set5_orig.jpg","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/taiken-set_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/taiken-3_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/taiken-2_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/taiken-5_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/taiken-set-2_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/take-out-set_orig.png"]);
-regLB('gl-all',["https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-04-27-at-12-49-53_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/bag-14_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-04-26-at-13-10-49_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/bag-8_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/bag3_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/bag-11_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/bag15_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/bag9_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/bag-10_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/bag7_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/bag4_orig.png","https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-05-01-at-13-16-00_orig.png"]);
 
 // Lang + nav
 function L(l){document.body.classList.toggle('lang-fr',l==='fr');document.querySelectorAll('[data-l]').forEach(function(b){b.classList.toggle('on',b.dataset.l===l);});localStorage.setItem('lc-l',l);}
