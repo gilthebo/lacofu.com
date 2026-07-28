@@ -379,6 +379,11 @@ body.lang-fr a.en,body.lang-fr a.bag-btn.en{display:none!important}
 .care-note{font-size:0.76rem;color:var(--muted);font-style:italic;
   margin-top:16px;padding-top:14px;border-top:1px solid var(--border);
   text-align:center;line-height:1.7}
+.acc-summary{cursor:pointer;list-style:none;display:flex;align-items:center;
+  justify-content:center;gap:10px}
+.acc-summary::-webkit-details-marker{display:none}
+.acc-arrow{display:inline-block;transition:transform .2s}
+details[open] .acc-arrow{transform:rotate(180deg)}
 
 /* ── FOOTER ── */
 footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
@@ -631,8 +636,8 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
   <a href="#section-obi" style="font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:#C9A84C;padding:16px 20px;border-bottom:2px solid #A8843A;white-space:nowrap" class="fr">Obi Tees</a>
   <a href="#section-bags" style="font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:rgba(200,186,164,0.6);padding:16px 20px;border-bottom:2px solid transparent;white-space:nowrap;transition:color .2s" class="en">Bags</a>
   <a href="#section-bags" style="font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:rgba(200,186,164,0.6);padding:16px 20px;border-bottom:2px solid transparent;white-space:nowrap;transition:color .2s" class="fr">Sacs</a>
-  <a href="#section-soon" style="font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:rgba(200,186,164,0.6);padding:16px 20px;border-bottom:2px solid transparent;white-space:nowrap;transition:color .2s" class="en">Coming soon</a>
-  <a href="#section-soon" style="font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:rgba(200,186,164,0.6);padding:16px 20px;border-bottom:2px solid transparent;white-space:nowrap;transition:color .2s" class="fr">Bientôt disponible</a>
+  <a href="#section-soon" style="font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:rgba(200,186,164,0.6);padding:16px 20px;border-bottom:2px solid transparent;white-space:nowrap;transition:color .2s" class="en">Art de Vivre</a>
+  <a href="#section-soon" style="font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:rgba(200,186,164,0.6);padding:16px 20px;border-bottom:2px solid transparent;white-space:nowrap;transition:color .2s" class="fr">Art de Vivre</a>
   <div style="margin-left:auto;font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(200,186,164,0.6);padding-left:20px;white-space:nowrap">
     JPY/EUR = <span id="shopNavRate" style="color:#C9A84C;font-weight:800">—</span>
   </div>
@@ -702,8 +707,8 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
       </div>
       <p style="font-family:'Jost',sans-serif;font-size:0.72rem;color:rgba(201,168,76,0.55);
         letter-spacing:0.1em;margin-top:8px;text-align:center">
-        <span class="en">Full collection · 7 editions</span>
-        <span class="fr">Collection complète · 7 éditions</span>
+        <span class="en">Full collection · 6 editions</span>
+        <span class="fr">Collection complète · 6 éditions</span>
       </p>
     </div>
     <div style="flex:0 0 auto">
@@ -778,58 +783,6 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
             <a class="shirt-acquire-btn fr" href="https://square.link/u/ae09ZTz7" target="_blank" rel="noopener">Choisir</a>
           </div>
 
-
-          <!-- SHIRT 2 -->
-          <div class="shirt-card">
-            <div class="shirt-card-img" id="shirt-img-2">
-              <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/published/screenshot-2026-05-25-at-16-36-55.png?1780560846" alt="La Cofu Obi Tee · 2" loading="lazy"
-                style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top"
-                onerror="this.style.opacity='0'">
-            </div>
-            <div class="shirt-card-thumbs">
-              <div class="sct active" onclick="swapCard(this,'shirt-img-2','https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/published/screenshot-2026-05-25-at-16-36-55.png?1780560846')"><img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/published/screenshot-2026-05-25-at-16-36-55.png?1780560846" alt="" onerror="this.style.opacity='0'"></div>
-            <button class="vid-trigger" onclick="openVid('1worT38fJa0')" aria-label="Watch video">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="11" stroke="rgba(201,168,76,0.8)" stroke-width="1.5"/><polygon points="10,8 17,12 10,16" fill="rgba(201,168,76,0.9)"/></svg>
-              <span class="en">Watch</span><span class="fr">Voir</span>
-            </button>
-              <div class="sct" onclick="swapCard(this,'shirt-img-2','https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-06-15-at-16-07-06.png')"><img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-06-15-at-16-07-06.png" alt="" onerror="this.style.opacity='0'"></div>
-              <div class="sct" onclick="swapCard(this,'shirt-img-2','https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-06-15-at-16-03-42.png')"><img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-06-15-at-16-03-42.png" alt="" onerror="this.style.opacity='0'"></div>
-              <div class="sct" onclick="swapCard(this,'shirt-img-2','https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-06-15-at-16-05-21.png')"><img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-06-15-at-16-05-21.png" alt="" onerror="this.style.opacity='0'"></div>
-              <div class="sct" onclick="swapCard(this,'shirt-img-2','https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-06-15-at-16-04-15.png')"><img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-06-15-at-16-04-15.png" alt="" onerror="this.style.opacity='0'"></div>
-              <div class="sct" onclick="swapCard(this,'shirt-img-2','https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-06-15-at-16-04-41.png')"><img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-06-15-at-16-04-41.png" alt="" onerror="this.style.opacity='0'"></div>
-              <div class="sct" onclick="swapCard(this,'shirt-img-2','https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-06-15-at-16-06-40.png')"><img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-06-15-at-16-06-40.png" alt="" onerror="this.style.opacity='0'"></div>
-            </div>
-            <div class="shirt-card-name">
-              <p class="shirt-card-title en">Akai Tōgarashi</p>
-              <p class="shirt-card-title fr">Akai Tōgarashi</p>
-              <p class="shirt-card-desc en">Grey tee · Delicate red pepper obi pattern · Understated &amp; distinctive</p>
-              <p class="shirt-card-desc fr">Tee gris · Motif obi piment rouge · Discret &amp; distinctif</p>
-            </div>
-            <div class="card-info-strip en">
-              <span class="cis-price">¥13,000</span>
-              <span class="cis-sep">·</span>
-              <span class="cis-eur">≈ €<span class="shirt-eur-rate">--</span></span>
-              <span class="cis-sep">·</span>
-              <span class="cis-spec">Size L · 11.5 oz</span>
-            </div>
-            <div class="card-info-strip fr">
-              <span class="cis-price">¥13,000</span>
-              <span class="cis-sep">·</span>
-              <span class="cis-eur">≈ €<span class="shirt-eur-rate">--</span></span>
-              <span class="cis-sep">·</span>
-              <span class="cis-spec">Taille L · 325 g</span>
-            </div>
-            <div class="size-block-dark">
-              <div class="size-dims">
-                <span class="size-dim">A <span>74 cm</span></span>
-                <span class="size-dim">B <span>60 cm</span></span>
-                <span class="size-dim">C <span>20.5 cm</span></span>
-                <span class="size-dim">D <span>14 cm</span></span>
-              </div>
-            </div>
-            <a class="shirt-acquire-btn en" href="https://square.link/u/3SMtff7o" target="_blank" rel="noopener">Buy</a>
-            <a class="shirt-acquire-btn fr" href="https://square.link/u/3SMtff7o" target="_blank" rel="noopener">Choisir</a>
-          </div>
 
           <!-- Seigaiha (White) -->
           <div class="shirt-card">
@@ -988,18 +941,8 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
             <a class="shirt-acquire-btn fr" href="https://square.link/u/yW99Qc4p" target="_blank" rel="noopener">Choisir</a>
           </div>
 
-
-        </div><!-- /shirt-cards-col -->
-
-      </div><!-- /shirt-visual -->
-
-    <!-- ══ NEXT EDITION — UA 4252 ══ -->
-    <div style="margin-top:72px;padding-top:56px;border-top:1px solid rgba(201,168,76,0.2)">
-
-
-      <div class="next-ed-grid shirt-cards-col" style="grid-template-columns:repeat(2,1fr)!important">
-        <!-- Indigo Current Grey -->
-        <div class="shirt-card">
+          <!-- Indigo Current Grey -->
+          <div class="shirt-card">
           <div class="shirt-card-img" id="shirt-img-ua2">
             <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-06-15-at-14-45-31.png" alt="La Cofu Obi Tee - Indigo Current Grey" loading="lazy"
               style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center top"
@@ -1099,15 +1042,15 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
           <a class="shirt-acquire-btn fr" href="https://square.link/u/Dilb55KV" target="_blank" rel="noopener">Choisir</a>
         </div>
 
-      </div><!-- /3-col grid -->
+      </div><!-- /shirt-cards-col (6 shirts, 2 rows of 3) -->
 
       <p style="margin-top:24px;font-family:'Raleway',sans-serif;font-size:0.68rem;
         letter-spacing:0.2em;text-transform:uppercase;color:rgba(201,168,76,0.4)">
         <span class="en">Follow @lacofu — new editions announced on Instagram</span>
         <span class="fr">Suivez @lacofu — nouvelles éditions annoncées sur Instagram</span>
       </p>
-    </div>
-    <!-- /Next Edition -->
+
+    </div><!-- /shirt-visual -->
 
       <!-- INFO — full width on dark background -->
       <div class="shirt-info" style="max-width:1000px;margin-top:56px;margin-bottom:52px;width:100%;margin-left:auto;margin-right:auto">
@@ -1759,13 +1702,15 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
 <!-- COMING SOON -->
 <div id="section-soon" style="background:#2C2416;padding:56px 32px;border-top:2px solid #A8843A;scroll-margin-top:140px">
   <div style="max-width:1200px;margin:0 auto">
-    <span style="font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:rgba(168,132,58,0.6);display:block;margin-bottom:12px" class="en">— Coming soon</span>
-    <span style="font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:rgba(168,132,58,0.6);display:block;margin-bottom:12px" class="fr">— Bientôt disponible</span>
+    <span style="font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:rgba(168,132,58,0.6);display:block;margin-bottom:12px" class="en">— Art de Vivre</span>
+    <span style="font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:800;letter-spacing:.3em;text-transform:uppercase;color:rgba(168,132,58,0.6);display:block;margin-bottom:12px" class="fr">— Art de Vivre</span>
     <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(1.4rem,2.5vw,2rem);color:rgba(245,240,230,0.65);margin-bottom:36px;max-width:600px;line-height:1.4" class="en">La Cofu is growing beyond clothing. New creations are taking shape — shaped, as always, by the fabric.</p>
     <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(1.4rem,2.5vw,2rem);color:rgba(245,240,230,0.65);margin-bottom:36px;max-width:600px;line-height:1.4" class="fr">La Cofu évolue au-delà du vêtement. De nouvelles créations prennent forme — dictées, comme toujours, par le tissu.</p>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px">
       <div style="background:#3A3020;padding:32px 28px">
         <span style="font-family:'Noto Serif JP',serif;font-size:2rem;color:#A8843A;opacity:.5;display:block;margin-bottom:12px">座</span>
+        <span style="display:inline-block;font-family:'Raleway',sans-serif;font-size:0.6rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#A8843A;border:1px solid rgba(168,132,58,0.4);padding:2px 8px;margin-bottom:10px" class="en">Coming soon</span>
+        <span style="display:inline-block;font-family:'Raleway',sans-serif;font-size:0.6rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#A8843A;border:1px solid rgba(168,132,58,0.4);padding:2px 8px;margin-bottom:10px" class="fr">Bientôt</span>
         <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:rgba(245,240,230,.7);margin-bottom:10px" class="en">Cushion Covers</div>
         <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:rgba(245,240,230,.7);margin-bottom:10px" class="fr">Coussins</div>
         <p style="font-size:0.86rem;color:rgba(245,240,230,.4);line-height:1.7" class="en">Vintage obi and kimono fabric. Each one determined by what the textile allows.</p>
@@ -1780,12 +1725,64 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
       </div>
       <div style="background:#3A3020;padding:32px 28px">
         <span style="font-family:'Noto Serif JP',serif;font-size:2rem;color:#A8843A;opacity:.5;display:block;margin-bottom:12px">物</span>
+        <span style="display:inline-block;font-family:'Raleway',sans-serif;font-size:0.6rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#A8843A;border:1px solid rgba(168,132,58,0.4);padding:2px 8px;margin-bottom:10px" class="en">Coming soon</span>
+        <span style="display:inline-block;font-family:'Raleway',sans-serif;font-size:0.6rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:#A8843A;border:1px solid rgba(168,132,58,0.4);padding:2px 8px;margin-bottom:10px" class="fr">Bientôt</span>
         <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:rgba(245,240,230,.7);margin-bottom:10px" class="en">Objects from Kyushu</div>
         <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:rgba(245,240,230,.7);margin-bottom:10px" class="fr">Objets de Kyushu</div>
         <p style="font-size:0.86rem;color:rgba(245,240,230,.4);line-height:1.7" class="en">Ceramics, baskets, handcrafted pieces found across Kyushu.</p>
         <p style="font-size:0.86rem;color:rgba(245,240,230,.4);line-height:1.7" class="fr">Céramiques, paniers, pièces artisanales chinées à travers Kyushu.</p>
       </div>
     </div>
+
+    <!-- CHEMIN DE TABLE — PHOTOS -->
+    <div style="max-width:900px;margin:32px auto 0;display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+      <div style="flex:1;min-width:260px;max-width:430px">
+        <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-07-28-at-11-28-17_orig.png" alt="Chemin de table — tissu obi" loading="lazy" style="width:100%;height:auto;display:block">
+      </div>
+      <div style="flex:1;min-width:260px;max-width:430px">
+        <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/published/screenshot-2026-07-28-at-12-16-20.png?1785208607" alt="Chemin de table — mise en table" loading="lazy" style="width:100%;height:auto;display:block">
+      </div>
+    </div>
+
+    <!-- CHEMIN DE TABLE — AUTHENTICITÉ (accordion) -->
+    <details class="shirt-section" style="margin:20px auto 0;max-width:900px">
+      <summary class="acc-summary" style="font-family:'Raleway',sans-serif;font-size:0.8rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);padding:14px 0">
+        <span class="en">Table Runner — Authenticity &amp; care guidelines</span>
+        <span class="fr">Chemin de table — Authenticité &amp; conseils d'utilisation</span>
+        <span class="acc-arrow">▾</span>
+      </summary>
+      <div class="care-card" style="background:rgba(255,255,255,0.04);border-color:rgba(201,168,76,0.25);margin:20px auto 0">
+        <p style="font-size:1.05rem;color:var(--muted);line-height:1.8;margin-bottom:18px" class="en">Each table runner is crafted from a vintage Japanese obi, carefully selected for the quality of its weave, the beauty of its pattern, and its history. Each piece is unique, carrying within it several decades of Japanese craftsmanship.</p>
+        <p style="font-size:1.05rem;color:var(--muted);line-height:1.8;margin-bottom:18px" class="fr">Chaque chemin de table est confectionné à partir d'un obi japonais vintage, soigneusement sélectionné pour la qualité de son tissage, la beauté de ses motifs et son histoire. Chaque pièce est unique et porte en elle plusieurs décennies de savoir-faire artisanal japonais.</p>
+
+        <p style="font-size:1.05rem;color:var(--muted);line-height:1.8;margin-bottom:22px" class="en">Before being carefully transformed into a table runner, each obi is thoroughly inspected and then aired for several days in the shade, in a dry, ventilated space — allowing any odours from storage to fade naturally, while preserving the quality of its fibres and colours.</p>
+        <p style="font-size:1.05rem;color:var(--muted);line-height:1.8;margin-bottom:22px" class="fr">Avant d'être délicatement confectionné en chemin de table, chaque obi est soigneusement inspecté puis aéré plusieurs jours à l'ombre, dans un endroit sec et ventilé, afin d'atténuer naturellement les éventuelles odeurs liées à son stockage, tout en préservant la qualité de ses fibres et de ses couleurs.</p>
+
+        <div class="care-grid" style="font-size:1.08rem">
+          <div class="care-section">
+            <span class="care-section-label en" style="font-size:0.8rem">Use</span>
+            <span class="care-section-label fr" style="font-size:0.8rem">Utilisation</span>
+            <div class="care-row"><span class="care-icon" style="font-size:0.9rem">◆</span><span class="care-text en" style="font-size:1rem;line-height:1.7">Decorative use only</span><span class="care-text fr" style="font-size:1rem;line-height:1.7">Usage exclusivement décoratif</span></div>
+            <div class="care-row"><span class="care-icon" style="font-size:0.9rem">×</span><span class="care-text en" style="font-size:1rem;line-height:1.7">Do not place in direct contact with food — always use plates, dishes, trivets, or trays</span><span class="care-text fr" style="font-size:1rem;line-height:1.7">Ne pas mettre en contact direct avec les aliments — utilisez toujours des assiettes, plats, dessous de plat ou plateaux</span></div>
+          </div>
+          <div class="care-section">
+            <span class="care-section-label en" style="font-size:0.8rem">Care</span>
+            <span class="care-section-label fr" style="font-size:0.8rem">Entretien</span>
+            <div class="care-row"><span class="care-icon" style="font-size:0.9rem">×</span><span class="care-text en" style="font-size:1rem;line-height:1.7">Do not wash — traditional dyes in antique textiles may bleed slightly on contact with water</span><span class="care-text fr" style="font-size:1rem;line-height:1.7">Ne pas laver — les teintures traditionnelles des textiles anciens peuvent légèrement dégorger au contact de l'eau</span></div>
+            <div class="care-row"><span class="care-icon" style="font-size:0.9rem">◈</span><span class="care-text en" style="font-size:1rem;line-height:1.7">A simple dusting, or spot-cleaning if needed, is recommended</span><span class="care-text fr" style="font-size:1rem;line-height:1.7">Privilégier un simple dépoussiérage, ou un nettoyage localisé si nécessaire</span></div>
+          </div>
+        </div>
+
+        <div style="background:rgba(168,132,58,0.08);border:1px solid var(--border);padding:16px 20px;margin:18px 0;text-align:center">
+          <p style="font-family:'Raleway',sans-serif;font-size:0.9rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);line-height:1.8" class="en">A faint scent from prior storage may sometimes be noticeable on arrival.<br>It fades naturally after a few days in a dry, well-ventilated space.</p>
+          <p style="font-family:'Raleway',sans-serif;font-size:0.9rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);line-height:1.8" class="fr">Une légère odeur liée à l'ancien stockage peut parfois être perceptible à la réception.<br>Elle s'estompe naturellement après quelques jours dans un endroit sec et bien aéré.</p>
+        </div>
+
+        <p class="care-note en" style="font-size:0.98rem;line-height:1.8">We select each obi with the greatest care, always favouring textiles of very fine quality. However, as these are antique pieces, a discreet mark of time may occasionally remain — a slight variation in tone, a small pulled thread, or a very small mark. When these details are minor and do not affect the beauty or decorative use of the piece, we choose to preserve the textile rather than set it aside.<br><br>These subtle singularities are proof of each obi's authenticity, and make every La Cofu creation a truly one-of-a-kind piece — where time, craftsmanship, and the beauty of imperfection meet.</p>
+        <p class="care-note fr" style="font-size:0.98rem;line-height:1.8">Nous sélectionnons chaque obi avec le plus grand soin et privilégions toujours des textiles de très belle qualité. Toutefois, comme il s'agit de pièces anciennes, il peut exceptionnellement subsister une discrète marque du temps — une légère variation de couleur, un petit fil tiré ou une très petite tache. Lorsque ces détails restent minimes et ne nuisent ni à l'esthétique ni à l'usage décoratif de la pièce, nous choisissons de préserver le textile plutôt que de l'écarter.<br><br>Ces légères singularités témoignent de l'authenticité de chaque obi et font de chaque création La Cofu une pièce véritablement unique, où le temps, l'artisanat et la beauté de l'imperfection se rencontrent.</p>
+      </div>
+    </details>
+
   </div>
 </div>
 
