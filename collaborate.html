@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devenir revendeur — La Cofu | Boutique &amp; Pop-up Partnerships</title>
+  <meta name="description" content="Vous avez découvert La Cofu et souhaitez proposer nos pièces en boutique ? Découvrez nos deux formats de collaboration : pop-up découverte et dépôt-vente.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="La Cofu — M Global Japan">
+  <link rel="canonical" href="https://lacofu.com/collaborate.html">
+  <link rel="icon" href="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/editor/official-logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Noto+Serif+JP:wght@300;400&family=Raleway:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#F5F0E6;--cream-d:#EDE7D8;--ink:#1C1714;--ink-mid:#3a3530;
+  --muted:#857a6f;--gold:#A8843A;--gold-l:#C9A84C;
+  --border:rgba(168,132,58,0.22);--white:#FDFAF5;--dark:#2C2416;--dark2:#3A3020;
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:'Jost',sans-serif;
+  font-weight:300;font-size:16px;line-height:1.7;padding-top:68px}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+strong{font-weight:500;color:var(--ink)}
+
+/* ── LANG ── */
+.fr{display:none!important}
+body.lang-fr .fr{display:block!important}
+body.lang-fr .en{display:none!important}
+span.fr{display:none!important}
+body.lang-fr span.fr{display:inline!important}
+body.lang-fr span.en{display:none!important}
+a.fr{display:none!important}
+body.lang-fr a.fr{display:block!important}
+body.lang-fr a.en{display:none!important}
+
+/* ── NAV (identical to rest of site) ── */
+#lc-nav{position:fixed;top:0;left:0;right:0;z-index:900;
+  background:var(--white);border-bottom:1px solid var(--border);
+  box-shadow:0 1px 18px rgba(0,0,0,0.07)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;height:68px;
+  display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-logo img{width:42px;height:42px;object-fit:cover;border-radius:4px;
+  border:1px solid var(--border)}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-size:0.9rem;font-weight:500;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--muted);transition:color 0.2s;
+  position:relative;padding-bottom:3px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;right:0;
+  height:1px;background:var(--gold);transform:scaleX(0);transition:transform 0.25s}
+.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-right{display:flex;align-items:center;gap:14px}
+.lang-toggle{display:flex;align-items:center;gap:2px}
+.lang-toggle button{background:none;border:none;font-family:'Jost',sans-serif;
+  font-size:0.92rem;letter-spacing:0.1em;cursor:pointer;color:var(--muted);
+  padding:5px 8px;transition:color 0.2s}
+.lang-toggle button.active{color:var(--gold);font-weight:500}
+.lang-sep{font-size:0.7rem;color:var(--border)}
+.burger{display:none;flex-direction:column;justify-content:center;
+  align-items:center;gap:5px;width:42px;height:42px;cursor:pointer;
+  background:none;border:1px solid var(--border)}
+.burger span{width:18px;height:1.5px;background:var(--ink);display:block}
+#nav-overlay{display:none;position:fixed;inset:0;background:var(--white);
+  z-index:1000;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+#nav-overlay.open{display:flex}
+#nav-overlay a{font-family:'Cormorant Garamond',serif;font-size:1.6rem;
+  letter-spacing:0.2em;color:var(--ink);font-weight:300;transition:color 0.2s}
+#nav-overlay a:hover{color:var(--gold)}
+#nav-close{position:absolute;top:22px;right:28px;font-size:1.4rem;
+  color:var(--muted);cursor:pointer;background:none;border:none}
+
+/* ── LAYOUT ── */
+.sec{padding:64px 32px}
+.sec-inner{max-width:900px;margin:0 auto}
+.lbl{font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:800;
+  letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px}
+.lbl-dark{color:rgba(201,168,76,0.75)}
+h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;color:var(--ink)}
+.intro-text{font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.85;
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;color:var(--ink-mid)}
+.body-text{font-size:1.02rem;line-height:1.85;color:var(--ink-mid)}
+
+/* ── MODEL CARDS ── */
+.model-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:32px;
+  background:var(--border)}
+.model-card{background:var(--white);padding:40px 32px}
+.model-kanji{font-family:'Noto Serif JP',serif;font-size:2rem;color:var(--gold);opacity:.55;margin-bottom:14px}
+.model-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--ink);margin-bottom:14px}
+.model-tag{display:inline-block;font-family:'Raleway',sans-serif;font-size:0.62rem;font-weight:800;
+  letter-spacing:.14em;text-transform:uppercase;background:var(--gold);color:var(--white);
+  padding:3px 10px;margin-bottom:16px}
+.model-desc{font-size:0.95rem;line-height:1.75;color:var(--ink-mid);margin-bottom:18px}
+.model-list{list-style:none}
+.model-list li{font-size:0.88rem;line-height:1.7;color:var(--ink-mid);
+  padding:8px 0;border-top:1px solid var(--border);display:flex;gap:10px}
+.model-list li:first-child{border-top:none}
+.model-list li span.mk{color:var(--gold);flex-shrink:0}
+
+@media(max-width:720px){
+  .model-grid{grid-template-columns:1fr}
+  .sec{padding:44px 20px}
+}
+
+/* ── PRICE / RULES ── */
+.rule-card{background:var(--white);border:1px solid var(--border);padding:32px 28px;margin-bottom:20px}
+.rule-title{font-family:'Raleway',sans-serif;font-size:0.72rem;font-weight:800;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block}
+.rule-body{font-size:0.96rem;line-height:1.8;color:var(--ink-mid)}
+.note-box{background:rgba(168,132,58,0.08);border:1px solid var(--border);
+  padding:18px 22px;margin-top:24px;font-size:0.92rem;line-height:1.8;color:var(--ink-mid);font-style:italic}
+
+/* ── POSTCARD BLOCK ── */
+.postcard-wrap{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-top:20px}
+.postcard-visual{flex:0 0 auto;width:180px;height:120px;border:1px solid var(--border);
+  background:var(--white);display:flex;align-items:center;justify-content:center;
+  font-family:'Noto Serif JP',serif;font-size:2.2rem;color:var(--gold);opacity:.4}
+.postcard-text{flex:1;min-width:260px}
+
+/* ── DARK CTA ── */
+.sec-dark{background:var(--dark);border-top:2px solid var(--gold)}
+.sec-dark .body-text{color:rgba(245,240,230,0.75)}
+.sec-dark h2{color:var(--white)}
+.btn-solid{display:inline-flex;align-items:center;gap:10px;font-family:'Raleway',sans-serif;
+  font-size:0.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+  background:var(--gold);color:var(--white);padding:15px 34px;margin-top:24px;transition:background .2s}
+.btn-solid:hover{background:var(--gold-l)}
+
+/* ── FOOTER ── */
+.footer-grid{padding:52px 48px 40px;display:grid;grid-template-columns:1fr auto 1fr;
+  gap:24px;align-items:start;background:var(--dark);border-top:2px solid #A0622A}
+@media(max-width:720px){
+  .footer-grid{grid-template-columns:1fr!important;padding:36px 24px 32px;text-align:left}
+  .footer-grid > div:nth-child(2){text-align:left}
+  .footer-grid > div:nth-child(3){text-align:left}
+  .footer-grid > div:nth-child(2) > div:first-child{justify-content:flex-start}
+}
+@media(max-width:900px){
+  .nav-links,.lang-toggle{display:none}
+  .burger{display:flex}
+}
+</style>
+</head>
+<body class="lang-fr">
+
+<!-- NAV -->
+<nav id="lc-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://lacofu.com/index.html">
+      <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-04-26-at-16-18-09_orig.png" alt="La Cofu">
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://lacofu.com/index.html"><span class="en">Home</span><span class="fr">Accueil</span></a></li>
+      <li><a href="https://lacofu.com/about.html"><span class="en">About</span><span class="fr">À Propos</span></a></li>
+      <li><a href="https://lacofu.com/experiences.html"><span class="en">Experiences</span><span class="fr">Expériences</span></a></li>
+      <li><a href="https://lacofu.com/residencies.html"><span class="en">Residencies</span><span class="fr">Résidences</span></a></li>
+      <li><a href="https://lacofu.com/locations.html"><span class="en">Locations</span><span class="fr">Lieux</span></a></li>
+      <li><a href="https://lacofu.com/shop.html"><span class="en">Shop</span><span class="fr">Boutique</span></a></li>
+      <li><a href="https://lacofu.com/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button id="btn-en" data-lang="en">EN</button>
+        <span class="lang-sep">/</span>
+        <button id="btn-fr" class="active" data-lang="fr">FR</button>
+      </div>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE OVERLAY -->
+<div id="nav-overlay">
+  <button id="nav-close">✕</button>
+  <a href="https://lacofu.com/index.html"><span class="en">Home</span><span class="fr">Accueil</span></a>
+  <a href="https://lacofu.com/about.html"><span class="en">About</span><span class="fr">À Propos</span></a>
+  <a href="https://lacofu.com/experiences.html"><span class="en">Experiences</span><span class="fr">Expériences</span></a>
+  <a href="https://lacofu.com/residencies.html"><span class="en">Residencies</span><span class="fr">Résidences</span></a>
+  <a href="https://lacofu.com/locations.html"><span class="en">Locations</span><span class="fr">Lieux</span></a>
+  <a href="https://lacofu.com/shop.html"><span class="en">Shop</span><span class="fr">Boutique</span></a>
+  <a href="https://lacofu.com/contact.html">Contact</a>
+</div>
+
+<!-- HERO -->
+<div style="width:100%;overflow:hidden;line-height:0;border-bottom:2px solid var(--gold)">
+  <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-04-23-at-16-43-45_orig.png"
+       alt="La Cofu"
+       style="width:100%;max-height:420px;object-fit:cover;object-position:center;display:block">
+</div>
+
+<!-- INTRO — discovery framing -->
+<div class="sec" style="background:var(--cream-d);border-bottom:1px solid var(--border)">
+  <div class="sec-inner">
+    <span class="lbl en">— For Boutiques &amp; Hosts</span>
+    <span class="lbl fr">— Pour les boutiques &amp; les lieux</span>
+    <p class="intro-text en">Perhaps you discovered La Cofu during a visit, a meeting, or through a shared contact — a fabric, a piece, a story that stayed with you. If the quality and the world behind it spoke to you, and you're now wondering "what next?" — this is the place.<br><br>We're looking for shops and spaces that share this sensibility. Let's work together — or with your own contacts, if someone comes to mind.</p>
+    <p class="intro-text fr">Vous avez peut-être découvert La Cofu lors d'une visite, d'un rendez-vous, ou par un contact commun — un tissu, une pièce, une histoire qui vous a marqué. Si la qualité et l'univers vous ont plu, et que vous vous demandez maintenant « et après ? » — c'est le bon endroit.<br><br>Nous cherchons des boutiques et des lieux qui partagent cette sensibilité. Travaillons ensemble — ou avec vos propres contacts, si quelqu'un vous vient à l'esprit.</p>
+  </div>
+</div>
+
+<!-- TWO MODELS -->
+<div class="sec">
+  <div class="sec-inner">
+    <span class="lbl en">— Two ways to work together</span>
+    <span class="lbl fr">— Deux façons de collaborer</span>
+    <h2 style="font-size:clamp(1.6rem,3vw,2.1rem)" class="en">Pop-up Discovery &amp; Consignment</h2>
+    <h2 style="font-size:clamp(1.6rem,3vw,2.1rem)" class="fr">Pop-up Découverte &amp; Dépôt-vente</h2>
+    <p class="body-text" style="margin-top:16px" >
+      <span class="en">Sometimes this starts with a planned visit. Sometimes we simply walk into a shop that feels right during our travels through France — either way can lead to a pop-up, or directly to leaving a selection of pieces on consignment.</span>
+      <span class="fr">Parfois cela commence par une visite planifiée. Parfois nous entrons simplement dans une boutique qui nous semble être la bonne, au fil de nos passages en France — dans les deux cas, cela peut mener à un pop-up, ou directement à laisser une sélection de pièces en dépôt-vente.</span>
+    </p>
+
+    <div class="model-grid">
+      <!-- POP-UP -->
+      <div class="model-card">
+        <div class="model-kanji">縁</div>
+        <p class="model-tag en">Pop-up Discovery</p>
+        <p class="model-tag fr">Pop-up Découverte</p>
+        <p class="model-desc en">A spontaneous, in-person collaboration during our travels through France. We set things up together, on-site, and figure out what feels right for your space in the moment.</p>
+        <p class="model-desc fr">Une collaboration spontanée et en personne, au fil de nos passages en France. Nous installons ensemble, sur place, et déterminons ce qui convient le mieux à votre lieu.</p>
+        <ul class="model-list">
+          <li><span class="mk en">＋</span><span class="mk fr">＋</span><span class="en">Set up together during our visit</span><span class="fr">Installation faite ensemble lors de notre passage</span></li>
+          <li><span class="mk en">＋</span><span class="mk fr">＋</span><span class="en">Ideal for a first, informal encounter</span><span class="fr">Idéal pour une première rencontre informelle</span></li>
+          <li><span class="mk en">＋</span><span class="mk fr">＋</span><span class="en">Runs without us once set up</span><span class="fr">Fonctionne sans nous une fois en place</span></li>
+        </ul>
+      </div>
+
+      <!-- CONSIGNMENT -->
+      <div class="model-card">
+        <div class="model-kanji">託</div>
+        <p class="model-tag en">Consignment</p>
+        <p class="model-tag fr">Dépôt-vente</p>
+        <p class="model-desc en">A more structured arrangement: a curated batch of pieces sent to your shop, a price agreed together in advance, for a minimum period of 10 days.</p>
+        <p class="model-desc fr">Une formule plus structurée : un lot de pièces sélectionnées envoyé à votre boutique, un prix convenu ensemble à l'avance, pour une durée minimum de 10 jours.</p>
+        <ul class="model-list">
+          <li><span class="mk en">＋</span><span class="mk fr">＋</span><span class="en">Minimum 5–6 pieces per category (Obi Tees, Bags)</span><span class="fr">Minimum 5–6 pièces par catégorie (Obi Tees, Sacs)</span></li>
+          <li><span class="mk en">＋</span><span class="mk fr">＋</span><span class="en">Price set together before shipping</span><span class="fr">Prix fixé ensemble avant l'envoi</span></li>
+          <li><span class="mk en">＋</span><span class="mk fr">＋</span><span class="en">Minimum 10-day display period</span><span class="fr">Durée d'exposition minimum de 10 jours</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICE MECHANISM -->
+<div class="sec" style="background:var(--cream-d);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+  <div class="sec-inner">
+    <span class="lbl en">— Pricing, together</span>
+    <span class="lbl fr">— Le prix, ensemble</span>
+
+    <div class="rule-card">
+      <span class="rule-title en">A shared starting point</span>
+      <span class="rule-title fr">Un point de départ partagé</span>
+      <p class="rule-body en">We start from a base price reflecting the fabric, craftsmanship, and shipping. From there, the final price is adjusted together once we understand your target market — you know your customers and your local pricing far better than we do.</p>
+      <p class="rule-body fr">Nous partons d'un prix de base qui reflète le tissu, le savoir-faire et l'envoi. À partir de là, le prix final est ajusté ensemble une fois votre marché cible connu — vous connaissez vos clients et les prix pratiqués localement bien mieux que nous.</p>
+    </div>
+
+    <div class="rule-card">
+      <span class="rule-title en">Your margin, your call</span>
+      <span class="rule-title fr">Votre marge, votre décision</span>
+      <p class="rule-body en">Once the price we cede per piece is agreed, what you charge your own customers — and the margin you build on top — is entirely up to you. A higher price for your customers is good for everyone: it reflects the piece's true value, and rewards your judgement of your own market.</p>
+      <p class="rule-body fr">Une fois le prix cédé par pièce convenu, ce que vous facturez à vos propres clients — et la marge que vous construisez dessus — vous appartient entièrement. Un prix plus élevé pour votre clientèle est bénéfique pour tous : il reflète la vraie valeur de la pièce, et récompense votre connaissance de votre marché.</p>
+    </div>
+
+    <div class="note-box">
+      <span class="en">The prices shown on our own website may not reflect your commercial reality — we're listening, and open to finding what works for you.</span>
+      <span class="fr">Les prix affichés sur notre site ne reflètent pas nécessairement votre réalité commerciale — nous sommes à l'écoute, et ouverts à construire ce qui fonctionne pour vous.</span>
+    </div>
+  </div>
+</div>
+
+<!-- NO RETURNS + POSTCARD -->
+<div class="sec">
+  <div class="sec-inner">
+    <span class="lbl en">— A few practical notes</span>
+    <span class="lbl fr">— Quelques précisions pratiques</span>
+
+    <div class="rule-card">
+      <span class="rule-title en">No upfront purchase, no customer returns</span>
+      <span class="rule-title fr">Aucun achat à l'avance, aucun retour client</span>
+      <p class="rule-body en">Consigned stock is never purchased upfront — you only owe us for what actually sells. Once a piece is sold to a customer, the sale is final: as these are one-of-a-kind vintage pieces, we do not offer a return system. Any unsold stock at the end of the consignment period is simply collected and returned to our France contact, rather than shipped back to Japan.</p>
+      <p class="rule-body fr">Le stock en dépôt-vente n'est jamais acheté à l'avance — vous ne nous devez que ce qui se vend réellement. Une fois une pièce vendue à un client, la vente est définitive : s'agissant de pièces vintage uniques, nous ne proposons pas de système de retour. Le stock invendu à la fin de la période est simplement récupéré et retourné vers notre contact en France, plutôt que renvoyé au Japon.</p>
+    </div>
+
+    <div class="rule-card">
+      <span class="rule-title en">A product card for every piece</span>
+      <span class="rule-title fr">Une fiche produit pour chaque pièce</span>
+      <div class="postcard-wrap">
+        <div class="postcard-visual">古布</div>
+        <div class="postcard-text">
+          <p class="rule-body en">Every item comes with its own tag and a small product card, in postcard format — a name of its own, and a short story to go with it. It helps the piece stand on its own, even when we're not there in person.</p>
+          <p class="rule-body fr">Chaque pièce est accompagnée de son étiquette et d'une fiche produit au format carte postale — un nom qui lui est propre, et une courte histoire. Cela aide la pièce à exister par elle-même, même en notre absence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="sec sec-dark">
+  <div class="sec-inner" style="text-align:center">
+    <span class="lbl lbl-dark en">— Let's talk</span>
+    <span class="lbl lbl-dark fr">— Parlons-en</span>
+    <h2 style="font-size:clamp(1.6rem,3vw,2.1rem);margin-bottom:18px" class="en">If your space feels right, we'd love to hear from you</h2>
+    <h2 style="font-size:clamp(1.6rem,3vw,2.1rem);margin-bottom:18px" class="fr">Si votre lieu vous semble être le bon endroit, parlons-en</h2>
+    <p class="body-text en" style="max-width:600px;margin:0 auto">No pitch deck, no pressure — just a conversation. And if you know another shop that might be a fit, we're always glad to hear about it too.</p>
+    <p class="body-text fr" style="max-width:600px;margin:0 auto">Sans dossier commercial, sans pression — juste un échange. Et si vous connaissez une autre boutique qui pourrait correspondre, nous serions ravis d'en entendre parler aussi.</p>
+    <a href="https://lacofu.com/contact.html" class="btn-solid en">Get in touch</a>
+    <a href="https://lacofu.com/contact.html" class="btn-solid fr">Nous contacter</a>
+  </div>
+</div>
+
+<!-- RESIDENCIES CROSS-LINK -->
+<div class="sec" style="background:var(--cream-d);border-top:1px solid var(--border)">
+  <div class="sec-inner">
+    <span class="lbl en">— One more thing</span>
+    <span class="lbl fr">— Autre chose</span>
+    <p class="body-text en">Beyond objects, La Cofu also runs itinerant Japanese cultural residencies across Europe — tea ceremony, wagashi, onigiri, hands-on ateliers. If your space is large enough to host something like this, or if it makes you think of someone who might, it's worth a look.</p>
+    <p class="body-text fr">Au-delà des objets, La Cofu propose aussi des résidences culturelles japonaises itinérantes à travers l'Europe — cérémonie du thé, wagashi, onigiri, ateliers pratiques. Si votre lieu est assez grand pour en accueillir une, ou si cela vous fait penser à quelqu'un, ça vaut le coup d'y jeter un œil.</p>
+    <a href="https://lacofu.com/residencies.html" class="btn en" style="display:inline-flex;align-items:center;gap:10px;font-family:'Raleway',sans-serif;font-size:0.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:14px">Discover the Residencies →</a>
+    <a href="https://lacofu.com/residencies.html" class="fr" style="display:inline-flex;align-items:center;gap:10px;font-family:'Raleway',sans-serif;font-size:0.72rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin-top:14px">Découvrir les Résidences →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-grid">
+  <div>
+    <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;letter-spacing:.1em;color:#F5F0E8;margin-bottom:10px">La Cofu</div>
+    <div style="font-family:'Noto Serif JP',serif;font-size:12px;color:#D8CCBA;letter-spacing:.16em;line-height:1.9">古きを尊び<br>新しき命を吹き込む</div>
+  </div>
+  <div style="text-align:center">
+    <div style="display:flex;gap:22px;justify-content:center;margin-bottom:14px">
+      <a href="https://instagram.com/lacofu" target="_blank" aria-label="Instagram" style="color:#D8CCBA">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://youtube.com/@basecampkyushu" target="_blank" aria-label="YouTube" style="color:#D8CCBA">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+      </a>
+    </div>
+    <div style="font-family:'Raleway',sans-serif;font-size:12px;letter-spacing:.1em;color:#EAE0D0" id="footer-email"></div>
+  </div>
+  <div style="text-align:right">
+    <div style="font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#EAE0D0;line-height:2.5">
+      More about our region — visit:<br>
+      <a href="https://basecampkyushu.com" target="_blank" style="color:#EAE0D0">Basecamp Kyushu</a><br><br>
+      A project by <a href="https://mglobaljapan.weebly.com" target="_blank" style="color:#EAE0D0">M Global Japan</a>
+    </div>
+  </div>
+</div>
+<div style="background:#3A3020;padding:14px 48px;display:flex;justify-content:center">
+  <span style="font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#D8CCBA">© 2026 La Cofu &nbsp;·&nbsp; All rights reserved &nbsp;·&nbsp; Tous droits réservés</span>
+</div>
+
+<script>
+(function(){
+  // ── Language ──
+  var btns = document.querySelectorAll('[data-lang]');
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var l = this.getAttribute('data-lang');
+      document.body.classList.remove('lang-fr');
+      if(l === 'fr') document.body.classList.add('lang-fr');
+      btns.forEach(function(x){ x.classList.remove('active') });
+      this.classList.add('active');
+      try{ localStorage.setItem('lc-lang', l) }catch(e){}
+    });
+  });
+  try{
+    if(localStorage.getItem('lc-lang') === 'fr' || !localStorage.getItem('lc-lang')){
+      document.body.classList.add('lang-fr');
+      document.getElementById('btn-fr').classList.add('active');
+      document.getElementById('btn-en').classList.remove('active');
+    } else {
+      document.body.classList.remove('lang-fr');
+    }
+  }catch(e){}
+
+  // ── Burger ──
+  var burger = document.getElementById('burger'),
+      overlay = document.getElementById('nav-overlay'),
+      closeBtn = document.getElementById('nav-close');
+  function openMenu(){ overlay.classList.add('open'); document.body.style.overflow = 'hidden' }
+  function closeMenu(){ overlay.classList.remove('open'); document.body.style.overflow = '' }
+  burger.addEventListener('click', openMenu);
+  burger.addEventListener('touchend', function(e){ e.preventDefault(); openMenu() }, {passive:false});
+  closeBtn.addEventListener('click', closeMenu);
+  closeBtn.addEventListener('touchend', function(e){ e.preventDefault(); closeMenu() }, {passive:false});
+  overlay.addEventListener('click', function(e){ if(e.target === overlay) closeMenu() });
+  overlay.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu) });
+
+  // ── Footer email ──
+  var fe = document.getElementById('footer-email');
+  if(fe){ fe.textContent = 'info\u0040mglobaljapan.com'; }
+})();
+</script>
+</body>
+</html>
