@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entretien & Soin · La Cofu 古布</title>
+  <meta name="description" content="Instructions d'entretien pour vos créations La Cofu — Obi Tees et chemins de table en tissu kimono et obi vintage.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Noto+Serif+JP:wght@300;400&family=Raleway:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#F5F0E6;--cream-d:#EDE7D8;--ink:#1C1714;--ink-mid:#3a3530;
+  --muted:#857a6f;--gold:#A8843A;--gold-l:#C9A84C;
+  --border:rgba(168,132,58,0.22);--white:#FDFAF5;
+}
+html{scroll-behavior:smooth}
+#section-bags,#section-obi{scroll-margin-top:140px}
+body{background:var(--cream);color:var(--ink);font-family:'Jost',sans-serif;
+  font-weight:300;font-size:16px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+strong{font-weight:500;color:var(--ink)}
+
+/* ── LANG ── */
+.fr{display:none!important}
+body.lang-fr .fr{display:block!important}
+body.lang-fr .en{display:none!important}
+span.fr{display:none!important}
+body.lang-fr span.fr{display:inline!important}
+body.lang-fr span.en{display:none!important}
+a.fr,a.bag-btn.fr{display:none!important}
+body.lang-fr a.fr,body.lang-fr a.bag-btn.fr{display:block!important}
+body.lang-fr a.en,body.lang-fr a.bag-btn.en{display:none!important}
+
+/* ── NAV ── */
+#lc-nav{position:fixed;top:0;left:0;right:0;z-index:900;
+  background:var(--white);border-bottom:1px solid var(--border);
+  box-shadow:0 1px 18px rgba(0,0,0,0.07)}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 32px;height:68px;
+  display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.nav-logo img{width:42px;height:42px;object-fit:cover;border-radius:4px;
+  border:1px solid var(--border)}
+.nav-logo-text{font-family:'Cormorant Garamond',serif;font-size:1.45rem;
+  font-weight:400;letter-spacing:0.15em;color:var(--ink)}
+.nav-links{display:flex;gap:28px;list-style:none;align-items:center}
+.nav-links a{font-size:0.9rem;font-weight:500;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--muted);transition:color 0.2s;
+  position:relative;padding-bottom:3px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;right:0;
+  height:1px;background:var(--gold);transform:scaleX(0);transition:transform 0.25s}
+.nav-links a:hover,.nav-links a.active{color:var(--ink)}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-right{display:flex;align-items:center;gap:14px}
+.lang-toggle{display:flex;align-items:center;gap:2px}
+.lang-toggle button{background:none;border:none;font-family:'Jost',sans-serif;
+  font-size:0.92rem;letter-spacing:0.1em;cursor:pointer;color:var(--muted);
+  padding:5px 8px;transition:color 0.2s}
+.lang-toggle button.active{color:var(--gold);font-weight:500}
+.lang-sep{font-size:0.7rem;color:var(--border)}
+.burger{display:none;flex-direction:column;justify-content:center;
+  align-items:center;gap:5px;width:42px;height:42px;cursor:pointer;
+  background:none;border:1px solid var(--border)}
+.burger span{width:18px;height:1.5px;background:var(--ink);display:block}
+#nav-overlay{display:none;position:fixed;inset:0;background:var(--white);
+  z-index:1000;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+#nav-overlay.open{display:flex}
+#nav-overlay a{font-family:'Cormorant Garamond',serif;font-size:1.6rem;
+  letter-spacing:0.2em;color:var(--ink);font-weight:300;transition:color 0.2s}
+#nav-overlay a:hover{color:var(--gold)}
+#nav-close{position:absolute;top:22px;right:28px;font-size:1.4rem;
+  color:var(--muted);cursor:pointer;background:none;border:none}
+
+/* ── LAYOUT ── */
+.page-wrap{max-width:1200px;margin:0 auto;padding:0 32px 56px}
+
+/* ── PAGE HEADER ── */
+.shop-header{text-align:center;padding-bottom:52px;margin-bottom:60px;
+  border-bottom:1px solid var(--border)}
+.eyebrow{font-size:0.74rem;letter-spacing:0.4em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px;display:block}
+.shop-title{font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.4rem,5vw,3.8rem);font-weight:300;letter-spacing:0.1em;
+  color:var(--ink);line-height:1.1;margin-bottom:20px}
+.shop-title em{font-style:italic;color:var(--gold)}
+.h-rule{width:48px;height:1px;background:var(--gold);margin:0 auto 22px}
+.shop-intro{font-size:1rem;color:var(--muted);max-width:580px;margin:0 auto;line-height:1.9}
+
+/* ── SECTION HEADER ── */
+.sec-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,4.5vw,4rem);
+  font-weight:300;font-style:italic;letter-spacing:0.04em;color:var(--ink);
+  margin-bottom:8px;line-height:1.05}
+.shirt-section .sec-h2{color:#F5F0E8!important}
+.sec-lbl{font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:800;
+  letter-spacing:0.32em;text-transform:uppercase;color:var(--gold);
+  display:block;margin-bottom:18px}
+.sec-sub{font-size:0.72rem;letter-spacing:0.26em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:20px;font-family:'Raleway',sans-serif;font-weight:400}
+.sec-desc{font-size:clamp(1rem,1.6vw,1.15rem);color:var(--ink-mid);
+  line-height:1.9;margin-bottom:32px;font-family:'Cormorant Garamond',serif;
+  font-weight:400;max-width:800px}
+.g-rule{width:52px;height:2px;background:var(--gold);margin-bottom:40px;opacity:0.7}
+
+/* ── BAND TREATMENTS ── */
+.band-collection{background:var(--cream);padding:80px 0 60px;
+  border-bottom:1px solid var(--border)}
+.band-shirts{background:#2C2416;padding:80px 0}
+.band-inner{max-width:1200px;margin:0 auto;padding:0 32px}
+
+/* ── CURRENCY STRIP ── */
+.currency-divider{border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  padding:18px 32px;margin:48px 0;text-align:center;background:var(--cream-d)}
+.c-label{font-size:0.68rem;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:0;text-align:center;display:block}
+.c-main{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ink)}
+.c-main .eur{color:var(--gold)}
+.c-rate{font-size:0.72rem;color:var(--muted)}
+
+/* ── BAG GRID ── */
+.bag-section{margin-bottom:0}
+.bag-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:48px}
+.bag-card{display:flex;flex-direction:column;background:var(--white);
+  border:1px solid var(--border);overflow:hidden;
+  transition:box-shadow 0.3s,transform 0.3s}
+.bag-card:hover{box-shadow:0 8px 32px rgba(0,0,0,0.1);transform:translateY(-3px)}
+
+.bag-img-wrap{width:100%;aspect-ratio:3/4;overflow:hidden;background:var(--cream-d);
+  position:relative}
+.bag-img-wrap img.bag-main-img{position:absolute;top:0;left:0;
+  width:100%;height:100%;object-fit:cover;object-position:center top;
+  transition:transform 0.65s ease}
+.bag-card:hover .bag-img-wrap img.bag-main-img{transform:scale(1.05)}
+.bag-img-wrap.is-sold::after{
+  content:'SOLD';position:absolute;top:14px;right:0;
+  background:var(--ink);color:var(--cream);
+  font-family:'Jost',sans-serif;font-size:0.62rem;font-weight:400;
+  letter-spacing:0.3em;padding:5px 14px 5px 12px;z-index:2}
+
+.bag-thumbs{display:flex;gap:5px;padding:7px 8px;
+  background:var(--cream-d);border-top:1px solid var(--border);overflow-x:auto;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none}
+.bag-thumbs::-webkit-scrollbar{display:none}
+.bag-thumb{width:48px;height:48px;flex-shrink:0;cursor:pointer;
+  border:1.5px solid transparent;opacity:0.55;
+  transition:opacity 0.2s,border-color 0.2s;
+  position:relative;overflow:hidden}
+.bag-thumb img{position:absolute;top:0;left:0;width:100%;height:100%;
+  object-fit:cover;object-position:center top}
+.bag-thumb:hover{opacity:0.9}
+.bag-thumb.active{opacity:1;border-color:var(--gold)}
+
+.bag-body{padding:20px 18px 22px;flex:1;display:flex;flex-direction:column;
+  border-top:1px solid var(--border)}
+.bag-jp{font-family:'Noto Serif JP',serif;font-size:0.82rem;color:var(--gold);
+  letter-spacing:0.1em;margin-bottom:5px}
+.bag-name{font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:500;
+  letter-spacing:0.05em;color:var(--ink);margin-bottom:10px}
+.bag-desc{font-size:0.86rem;color:var(--muted);line-height:1.75;flex:1;margin-bottom:18px}
+.bag-price-jpy{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ink)}
+.bag-price-eur{font-size:0.86rem;color:var(--gold);margin-top:2px;margin-bottom:16px}
+.bag-ship{font-size:0.82rem;color:var(--gold);letter-spacing:0.06em;
+  margin-bottom:14px;margin-top:-10px;font-weight:400}
+.bag-btn{display:block;text-align:center;font-family:'Jost',sans-serif;
+  font-size:0.76rem;font-weight:400;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--white);background:var(--ink);border:1px solid var(--ink);padding:12px;
+  transition:background 0.3s,border-color 0.3s}
+.bag-btn:hover{background:var(--gold);border-color:var(--gold)}
+/* ── CARD INFO STRIP (price + EUR + specs) ── */
+.card-info-strip{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;
+  padding:12px 14px;background:var(--cream-d);border-top:1px solid var(--border);
+  font-size:0.82rem;color:var(--muted);line-height:1.4}
+.card-info-strip .cis-price{font-family:'Cormorant Garamond',serif;font-size:1.55rem;
+  color:var(--ink);font-weight:400;line-height:1}
+.card-info-strip .cis-eur{color:var(--gold)}
+.card-info-strip .cis-sep{color:var(--border)}
+.card-info-strip .cis-spec{letter-spacing:0.04em}
+
+.bag-sold{display:block;text-align:center;font-family:'Jost',sans-serif;
+  font-size:0.72rem;font-weight:400;letter-spacing:0.32em;text-transform:uppercase;
+  color:var(--muted);background:var(--cream-d);border:1px solid var(--border);
+  padding:12px;cursor:default;pointer-events:none}
+
+/* ══════════════════════════════════════════
+   SHIRT SECTION — 5 identical cards
+══════════════════════════════════════════ */
+.shirt-section{margin-bottom:80px}
+.shirt-visual{margin-bottom:0}
+
+/* 5-card column inside the left half of shirt-layout */
+.shirt-cards-col{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+
+/* each shirt card — identical, no exceptions */
+.shirt-card{display:flex;flex-direction:column;background:var(--white);
+  border:1px solid var(--border);overflow:hidden;
+  transition:box-shadow 0.3s,transform 0.3s}
+.shirt-card:hover{box-shadow:0 6px 24px rgba(0,0,0,0.09);transform:translateY(-2px)}
+.shirt-card-img{width:100%;aspect-ratio:3/4;position:relative;overflow:hidden;
+  background:var(--cream-d)}
+
+/* thumbnail strip inside each card */
+.shirt-card-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:5px 6px;
+  background:var(--cream-d);border-top:1px solid var(--border)}
+.sct{width:100%;aspect-ratio:1/1;cursor:pointer;position:relative;
+  overflow:hidden;border:1.5px solid transparent;opacity:0.55;
+  transition:opacity 0.2s,border-color 0.2s;background:var(--cream-d)}
+.sct img{position:absolute;top:0;left:0;width:100%;height:100%;
+  object-fit:cover;object-position:center top}
+.sct:hover{opacity:0.9}
+.sct.active{opacity:1;border-color:var(--gold)}
+
+/* acquire button on each card */
+.shirt-acquire-btn{display:block;text-align:center;font-family:'Jost',sans-serif;
+  font-size:0.76rem;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;
+  color:var(--white);background:var(--gold);padding:14px 10px;
+  transition:background 0.3s,transform 0.2s;border:none;margin-top:auto}
+.shirt-acquire-btn:hover{background:#A0622A;transform:translateY(-1px)}
+
+/* video below all 5 shirts */
+.shirt-video-block{background:var(--ink);margin-top:16px;padding:24px 16px;
+  display:flex;flex-direction:column;align-items:center}
+.shirt-video-label{font-size:0.68rem;letter-spacing:0.32em;text-transform:uppercase;
+  color:var(--gold-l);margin-bottom:14px;text-align:center}
+.shirt-video-frame{width:100%;max-width:100%;position:relative;
+  aspect-ratio:9/16;overflow:hidden;background:#000}
+
+/* ── SECTION DIVIDER ── */
+.section-divider{border:none;border-top:1px solid var(--border);margin:72px 0}
+
+/* shirt content grid: left=visual, right=info */
+.shirt-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.shirt-layout > *{min-width:0}
+
+/* shirt info */
+.shirt-series{font-size:0.76rem;letter-spacing:0.3em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:12px;display:block}
+.shirt-title{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:300;
+  letter-spacing:0.12em;color:var(--ink);margin-bottom:4px}
+.shirt-kanji{font-family:'Noto Serif JP',serif;font-size:1rem;letter-spacing:0.5em;
+  color:var(--muted);margin-bottom:22px}
+.shirt-desc{font-size:0.92rem;line-height:1.9;color:var(--muted);margin-bottom:28px}
+
+.shirt-specs{border:1px solid var(--border);margin-bottom:28px}
+.spec-row{display:grid;grid-template-columns:120px 1fr;border-bottom:1px solid var(--border)}
+.spec-row:last-child{border-bottom:none}
+.spec-label,.spec-val{padding:11px 16px;font-size:0.84rem}
+.spec-label{background:var(--cream-d);border-right:1px solid var(--border);
+  color:var(--muted);font-size:0.73rem;letter-spacing:0.15em;text-transform:uppercase}
+.spec-val{color:var(--ink)}
+.shirt-section .spec-label{background:rgba(255,255,255,0.05);
+  border-right:1px solid rgba(201,168,76,0.25);
+  color:rgba(201,168,76,0.75);font-family:'Raleway',sans-serif}
+.shirt-section .spec-val{color:#F5F0E8!important;
+  font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:400}
+.shirt-section .spec-row{border-bottom:1px solid rgba(201,168,76,0.2)!important}
+.shirt-section .spec-row{border-bottom:1px solid rgba(201,168,76,0.15)}
+
+.shirt-price{font-family:'Cormorant Garamond',serif;font-size:1.5rem;
+  color:var(--ink);margin-bottom:4px}
+.shirt-note{font-size:0.84rem;color:var(--muted);margin-bottom:24px}
+.shirt-note a{color:var(--gold)}
+
+.btn-dark{display:inline-block;font-family:'Jost',sans-serif;font-size:0.78rem;
+  letter-spacing:0.25em;text-transform:uppercase;background:var(--ink);color:var(--white);
+  padding:13px 28px;border:1px solid var(--ink);transition:background 0.3s,border-color 0.3s}
+.btn-dark:hover{background:var(--gold);border-color:var(--gold)}
+.btn-ghost{display:inline-block;font-family:'Jost',sans-serif;font-size:0.78rem;
+  letter-spacing:0.25em;text-transform:uppercase;background:none;color:var(--muted);
+  padding:13px 28px;border:1px solid var(--border);transition:all 0.3s}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ── HOW IT'S MADE ── */
+.edition-block{margin-top:0}
+.edition-title{font-family:'Jost',sans-serif;font-size:0.73rem;font-weight:400;
+  letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:24px}
+.ed-step{padding:18px 0;border-bottom:1px solid var(--border)}
+.ed-step:last-child{border-bottom:none}
+.ed-num{font-family:'Cormorant Garamond',serif;font-size:1.8rem;
+  color:var(--border);line-height:1;margin-bottom:4px}
+.ed-label{font-size:0.73rem;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:5px}
+.ed-text{font-size:0.87rem;color:var(--muted);line-height:1.75}
+.shirt-section .ed-step{border-bottom:1px solid rgba(201,168,76,0.15)}
+.shirt-section .ed-num{color:rgba(201,168,76,0.4)}
+.shirt-section .ed-label{color:#C9A84C}
+.shirt-section .ed-text{color:rgba(245,240,230,0.82)!important}
+.shirt-section strong{color:rgba(245,240,230,0.95)}
+
+/* ── CARE CARD ── */
+.care-card{background:var(--cream-d);border:1px solid var(--border);
+  margin-top:40px;padding:32px 36px;position:relative}
+.care-card::before{content:'お手入れ';position:absolute;top:-11px;left:50%;
+  transform:translateX(-50%);background:var(--cream-d);padding:0 14px;
+  font-family:'Noto Serif JP',serif;font-size:0.78rem;color:var(--gold);
+  letter-spacing:0.2em;white-space:nowrap}
+.care-title{font-family:'Cormorant Garamond',serif;font-size:1rem;
+  font-style:italic;color:var(--ink);margin-bottom:20px;text-align:center}
+.shirt-section .care-title{color:#F5F0E8!important}
+.shirt-section .care-section-label{color:#C9A84C}
+.shirt-section .care-text{color:rgba(245,240,230,0.85)!important}
+.shirt-section .care-icon{color:#C9A84C}
+.shirt-section .care-note{color:rgba(245,240,230,0.65)!important;border-top-color:rgba(201,168,76,0.2)}
+.shirt-section .care-text{color:rgba(245,240,230,0.85)!important}
+.shirt-section .care-icon{color:#C9A84C}
+.shirt-section .care-note{color:rgba(245,240,230,0.65)!important;border-top-color:rgba(201,168,76,0.2)}
+.shirt-section .care-section:first-child{border-right-color:rgba(201,168,76,0.2)}
+.care-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;
+  border:1px solid var(--border)}
+.care-section{padding:20px 24px}
+.care-section:first-child{border-right:1px solid var(--border)}
+.care-section-label{font-size:0.68rem;letter-spacing:0.3em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:14px;display:block}
+.care-row{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px}
+.care-row:last-child{margin-bottom:0}
+.care-icon{font-size:0.72rem;flex-shrink:0;margin-top:4px;min-width:18px;
+  text-align:center;color:var(--gold);font-weight:500;letter-spacing:0.05em}
+.care-text{font-size:0.82rem;color:var(--muted);line-height:1.6}
+.care-note{font-size:0.76rem;color:var(--muted);font-style:italic;
+  margin-top:16px;padding-top:14px;border-top:1px solid var(--border);
+  text-align:center;line-height:1.7}
+.acc-summary{cursor:pointer;list-style:none;display:flex;align-items:center;
+  justify-content:center;gap:10px}
+.acc-summary::-webkit-details-marker{display:none}
+.acc-arrow{display:inline-block;transition:transform .2s}
+details[open] .acc-arrow{transform:rotate(180deg)}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;
+  grid-template-columns:1.2fr 1fr 1fr;gap:48px;padding-bottom:36px;
+  border-bottom:1px solid rgba(255,255,255,0.07)}
+.f-logo{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.f-logo img{width:40px;height:40px;border-radius:50%;object-fit:cover;
+  border:1px solid rgba(255,255,255,0.15)}
+.f-logo-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;
+  letter-spacing:0.15em;color:var(--cream)}
+.f-tagline{font-family:'Noto Serif JP',serif;font-size:0.84rem;
+  color:rgba(245,240,230,0.45);line-height:1.9;margin-bottom:14px}
+.f-col-title{font-size:0.72rem;letter-spacing:0.28em;text-transform:uppercase;
+  color:var(--gold-l);margin-bottom:16px}
+.f-links{list-style:none}
+.f-links li{margin-bottom:10px}
+.f-links a{font-size:0.87rem;color:rgba(245,240,230,0.55);
+  transition:color 0.2s;letter-spacing:0.03em}
+.f-links a:hover{color:var(--gold-l)}
+.footer-bottom{max-width:1200px;margin:24px auto 0;display:flex;
+  justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.f-copy{font-size:0.78rem;color:rgba(245,240,230,0.32);letter-spacing:0.06em}
+.f-credit{font-size:0.78rem;color:rgba(245,240,230,0.32)}
+.f-credit a{color:rgba(201,168,76,0.65);transition:color 0.2s}
+.f-credit a:hover{color:var(--gold-l)}
+
+
+
+
+/* ── SHIRT CARD NAME ── */
+.shirt-card-name{padding:12px 14px 6px;background:var(--white)}
+.shirt-card-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;
+  font-weight:500;letter-spacing:0.05em;color:var(--ink);margin-bottom:4px}
+.shirt-card-desc{font-size:0.78rem;color:var(--muted);line-height:1.65}
+
+/* ── VIDEO MODAL ── */
+.vid-trigger{display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;padding:16px 12px;background:rgba(201,168,76,0.18);
+  border:none;border-top:1px solid rgba(201,168,76,0.5);
+  border-bottom:1px solid rgba(201,168,76,0.5);
+  cursor:pointer;transition:all 0.25s;margin-top:0;
+  grid-column:1/-1}
+.vid-trigger:hover{background:rgba(201,168,76,0.38);border-color:rgba(201,168,76,0.8)}
+.vid-trigger svg{flex-shrink:0;width:22px;height:22px}
+.vid-trigger span{font-family:'Raleway',sans-serif;font-size:0.72rem;
+  font-weight:800;letter-spacing:0.28em;text-transform:uppercase;
+  color:#C9A84C}
+#vid-modal{display:none;position:fixed;inset:0;background:rgba(10,6,3,0.94);
+  z-index:9999;align-items:center;justify-content:center;padding:2rem}
+#vid-modal.active{display:flex}
+#vid-modal-inner{position:relative;width:min(360px,90vw);aspect-ratio:9/16}
+#vid-modal-inner iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+#vid-modal-close{position:absolute;top:-2.2rem;right:0;color:rgba(255,255,255,0.6);
+  font-size:1.8rem;cursor:pointer;background:none;border:none;line-height:1;
+  transition:color 0.2s}
+#vid-modal-close:hover{color:var(--gold-l)}
+
+/* ── SHOP SECTION NAV ── */
+.shop-nav{display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:var(--border);margin-top:0}
+.shop-nav-card{display:flex;flex-direction:column;justify-content:flex-end;
+  position:relative;overflow:hidden;aspect-ratio:16/7;cursor:pointer;
+  text-decoration:none;transition:opacity 0.3s}
+.shop-nav-card img{position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;transition:transform 0.65s ease;
+  filter:brightness(0.55)}
+.shop-nav-card:hover img{transform:scale(1.04);filter:brightness(0.45)}
+.shop-nav-card-body{position:relative;z-index:2;padding:28px 36px;
+  background:linear-gradient(to top,rgba(28,20,10,0.82) 0%,transparent 100%)}
+.shop-nav-label{font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:800;
+  letter-spacing:0.32em;text-transform:uppercase;color:var(--gold-l);
+  display:block;margin-bottom:8px}
+.shop-nav-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.4rem);
+  font-weight:300;font-style:italic;color:#F5F0E6;line-height:1.1;margin-bottom:8px}
+.shop-nav-sub{font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase;
+  color:rgba(245,240,230,0.5);font-family:'Raleway',sans-serif}
+.shop-nav-arrow{display:inline-block;margin-left:10px;
+  transition:transform 0.25s;color:var(--gold-l)}
+.shop-nav-card:hover .shop-nav-arrow{transform:translateX(5px)}
+@media(max-width:680px){
+  .shop-nav{grid-template-columns:1fr}
+  .shop-nav-card{aspect-ratio:16/9}
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .bag-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+  .shirt-layout{grid-template-columns:1fr;gap:36px}
+  .shirt-cards-col{grid-template-columns:repeat(2,1fr)!important}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:1024px){
+  .nav-links{display:none}
+  .burger{display:flex}
+  .page-wrap{padding:0 20px 60px}
+  .bag-grid{grid-template-columns:repeat(2,1fr)!important;gap:12px!important}
+  .bag-card{min-width:0}
+  .care-grid{grid-template-columns:1fr}
+  .care-section:first-child{border-right:none;border-bottom:1px solid var(--border)}
+  .footer-inner{grid-template-columns:1fr;gap:28px}
+  .currency-divider{padding:14px 20px}
+}
+@media(max-width:540px){
+  .sec-h2{font-size:clamp(1.8rem,7vw,2.8rem)!important}
+  .shirt-cards-col{grid-template-columns:repeat(2,1fr)!important}
+  .shirt-section .spec-val{font-size:0.85rem!important}
+  .size-dims{gap:0 8px}
+  .size-dim{font-size:0.65rem}
+  .bag-grid{grid-template-columns:repeat(2,1fr)!important;gap:8px!important}
+  .bag-card{min-width:0}
+  .bag-body{padding:12px 10px 14px}
+  .bag-name{font-size:0.95rem}
+  .bag-desc{font-size:0.76rem}
+  .bag-price-jpy{font-size:0.9rem}
+  .bag-ship{font-size:0.66rem}
+  .bag-btn,.bag-sold{font-size:0.65rem;padding:9px 6px}
+  .bag-thumb{width:36px;height:36px}
+  .sct{width:32px;height:32px}
+  .care-card{padding:24px 18px}
+  .care-grid{grid-template-columns:1fr}
+  .care-section:first-child{border-right:none;border-bottom:1px solid var(--border)}
+  .shirt-specs .spec-row{grid-template-columns:100px 1fr}
+}
+
+/* ── NEXT EDITION GRID ── */
+.next-ed-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+
+/* ── SPECS 2-COL ── */
+.specs-2col{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:28px}
+
+/* ── FOOTER GRID ── */
+.footer-grid{padding:52px 48px 40px;display:grid;
+  grid-template-columns:1fr auto 1fr;gap:24px;align-items:start}
+
+
+/* ── SECTION OBI BAND ── */
+.section-obi-band{background:#2C2416;padding:72px 32px 80px}
+
+@media(max-width:540px){
+  .next-ed-grid{grid-template-columns:1fr!important}
+  .section-obi-band{padding:48px 16px 56px}
+  .shirt-card-thumbs{grid-template-columns:repeat(4,1fr)!important}
+  .care-card{padding:24px 14px}
+  .shirt-info{padding:0}
+  /* Azuma section intro */
+  .sec-desc{font-size:0.9rem!important}
+  /* About sizes */
+  #section-bags ~ div img{max-height:260px}
+}
+@media(max-width:380px){
+  .shirt-cards-col{grid-template-columns:1fr!important}
+  .bag-grid{grid-template-columns:1fr!important}
+}
+
+@media(max-width:768px){
+  .next-ed-grid{grid-template-columns:repeat(2,1fr)!important}
+  .specs-2col{grid-template-columns:1fr!important;gap:16px}
+  .footer-grid{grid-template-columns:1fr!important;padding:36px 24px 32px;text-align:left}
+  .footer-grid > div:nth-child(2){text-align:left}
+  .footer-grid > div:nth-child(3){text-align:left}
+  .footer-grid > div:nth-child(2) > div:first-child{justify-content:flex-start}
+}
+</style>
+  <style>
+    .care-page-hero{padding:100px 32px 48px;text-align:center;background:var(--cream)}
+    .care-page-section{max-width:900px;margin:0 auto;padding:52px 32px}
+    .care-page-section + .care-page-section{border-top:1px solid var(--border)}
+    .care-section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.2rem);
+      font-weight:300;font-style:italic;color:var(--ink);margin-bottom:8px}
+    .care-section-sub{font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:700;
+      letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:32px;display:block}
+    @media(max-width:540px){
+      .care-page-section{padding:36px 16px}
+      .care-page-hero{padding:100px 20px 36px}
+      .care-grid{grid-template-columns:1fr!important}
+    }
+  </style>
+</head>
+<body>
+
+<nav id="lc-nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://lacofu.com/index.html">
+      <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-04-26-at-16-18-09_orig.png" alt="La Cofu">
+    </a>
+    <ul class="nav-links">
+      <li><a href="https://lacofu.com/index.html"><span class="en">Home</span><span class="fr">Accueil</span></a></li>
+      <li><a href="https://lacofu.com/about.html"><span class="en">About</span><span class="fr">À Propos</span></a></li>
+      <li><a href="https://lacofu.com/experiences.html"><span class="en">Experiences</span><span class="fr">Expériences</span></a></li>
+      <li><a href="https://lacofu.com/residencies.html"><span class="en">Residencies</span><span class="fr">Résidences</span></a></li>
+      <li><a href="https://lacofu.com/locations.html"><span class="en">Locations</span><span class="fr">Lieux</span></a></li>
+      <li><a href="#" class="active"><span class="en">Shop</span><span class="fr">Boutique</span></a></li>
+      <li><a href="https://lacofu.com/contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button id="btn-en" data-lang="en">EN</button>
+        <span class="lang-sep">/</span>
+        <button id="btn-fr" class="active" data-lang="fr">FR</button>
+      </div>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="care-page-hero">
+  <span class="sec-lbl en" style="display:block;margin-bottom:8px">Care & Instructions</span>
+  <span class="sec-lbl fr" style="display:block;margin-bottom:8px">Entretien & Conseils</span>
+  <h1 class="sec-h2 en" style="margin-top:12px">Care Instructions</h1>
+  <h1 class="sec-h2 fr" style="margin-top:12px">Instructions d'entretien</h1>
+  <p class="sec-sub en" style="max-width:560px;margin:16px auto 0">Your La Cofu creation is made from authentic vintage Japanese textile — a living material with its own history. Handle with care and it will last a lifetime.</p>
+  <p class="sec-sub fr" style="max-width:560px;margin:16px auto 0">Votre création La Cofu est réalisée à partir d'un textile japonais vintage authentique — une matière vivante avec sa propre histoire. Traitée avec soin, elle vous accompagnera toute une vie.</p>
+</div>
+
+<!-- OBI TEES -->
+<div class="care-page-section" style="background:var(--cream)">
+  <p class="care-section-title en">Obi Tees</p>
+  <p class="care-section-title fr">Obi Tees</p>
+  <span class="care-section-sub en">Cotton &amp; silk obi / kimono · Heavyweight cotton base</span>
+  <span class="care-section-sub fr">Obi / kimono coton &amp; soie · Base coton épais</span>
+
+  <!-- QR note -->
+  <div style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.35);padding:14px 20px;margin-bottom:32px;text-align:center">
+    <p style="font-family:'Raleway',sans-serif;font-size:0.76rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#C9A84C;line-height:1.8;margin:0">
+      <span class="en">Each shirt carries a QR code tag linking to this page.<br>When in doubt about your fabric piece — treat it as silk.</span>
+      <span class="fr">Chaque t-shirt porte une étiquette QR renvoyant à cette page.<br>En cas de doute sur le tissu — traitez-le comme de la soie.</span>
+    </p>
+  </div>
+
+  <div class="care-card" style="background:rgba(44,36,22,0.04);border-color:rgba(201,168,76,0.25);max-width:100%">
+    <p class="care-title en">The obi / kimono piece is the precious part</p>
+    <p class="care-title fr">La pièce obi / kimono est la partie précieuse</p>
+    <div class="care-grid">
+      <div class="care-section">
+        <span class="care-section-label en">Cotton obi / kimono</span>
+        <span class="care-section-label fr">Coton &amp; soie obi / kimono</span>
+        <div class="care-row"><span class="care-icon">W</span><span class="care-text en">Machine wash cold, gentle cycle — use a mesh laundry bag</span><span class="care-text fr">Lavage machine froid, cycle délicat — utiliser un filet de lavage</span></div>
+        <div class="care-row"><span class="care-icon">◈</span><span class="care-text en">Wash with similar colours — dye may run slightly at first</span><span class="care-text fr">Laver avec couleurs similaires — la teinture peut légèrement déteindre au début</span></div>
+        <div class="care-row"><span class="care-icon">×</span><span class="care-text en">No bleach · No tumble dry · No dry clean</span><span class="care-text fr">Sans javel · Sans sèche-linge · Sans nettoyage à sec</span></div>
+        <div class="care-row"><span class="care-icon">↓</span><span class="care-text en">Line dry in shade — reshape while damp</span><span class="care-text fr">Sécher à l'ombre — remettre en forme humide</span></div>
+        <div class="care-row"><span class="care-icon">△</span><span class="care-text en">Iron medium — never iron directly on the obi / kimono fabric</span><span class="care-text fr">Fer moyen — ne jamais repasser directement la pièce de tissu</span></div>
+      </div>
+      <div class="care-section">
+        <span class="care-section-label en">Silk obi / kimono — extra care</span>
+        <span class="care-section-label fr">Soie obi / kimono — précautions supplémentaires</span>
+        <div class="care-row"><span class="care-icon">○</span><span class="care-text en">Hand wash only — turn inside out before washing</span><span class="care-text fr">Lavage à la main uniquement — retourner avant lavage</span></div>
+        <div class="care-row"><span class="care-icon">◻</span><span class="care-text en">Always use a mesh laundry bag — even for hand washing</span><span class="care-text fr">Toujours utiliser un filet — même pour le lavage à la main</span></div>
+        <div class="care-row"><span class="care-icon">×</span><span class="care-text en">No washing machine · No bleach · No tumble dry</span><span class="care-text fr">Pas de machine · Sans javel · Sans sèche-linge</span></div>
+        <div class="care-row"><span class="care-icon">↓</span><span class="care-text en">Dry flat, away from direct sunlight — silk fades quickly</span><span class="care-text fr">Sécher à plat, à l'abri du soleil direct — la soie se décolore rapidement</span></div>
+        <div class="care-row"><span class="care-icon">△</span><span class="care-text en">Do not iron the fabric piece directly — use a pressing cloth</span><span class="care-text fr">Ne pas repasser la pièce directement — utiliser un tissu de protection</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CHEMIN DE TABLE -->
+<div class="care-page-section" style="background:var(--cream-d)">
+  <p class="care-section-title en">Table Runners · Chemin de table</p>
+  <p class="care-section-title fr">Chemins de table</p>
+  <span class="care-section-sub en">Vintage Japanese obi · Decorative use</span>
+  <span class="care-section-sub fr">Obi japonais vintage · Usage décoratif</span>
+
+  <div class="care-card" style="background:rgba(44,36,22,0.04);border-color:rgba(201,168,76,0.25);max-width:100%">
+    <div class="care-grid">
+      <div class="care-section">
+        <span class="care-section-label en" style="font-size:0.8rem">Use</span>
+        <span class="care-section-label fr" style="font-size:0.8rem">Utilisation</span>
+        <div class="care-row"><span class="care-icon" style="font-size:0.9rem">◆</span><span class="care-text en" style="font-size:1rem;line-height:1.7">For decorative use only.</span><span class="care-text fr" style="font-size:1rem;line-height:1.7">Usage exclusivement décoratif.</span></div>
+        <div class="care-row"><span class="care-icon" style="font-size:0.9rem">×</span><span class="care-text en" style="font-size:1rem;line-height:1.7">Do not place food directly on the textile. Always use plates, serving dishes, trivets, or trays.</span><span class="care-text fr" style="font-size:1rem;line-height:1.7">Ne posez jamais d'aliments directement sur le textile. Utilisez toujours des assiettes, plats de service, dessous-de-plat ou plateaux.</span></div>
+      </div>
+      <div class="care-section">
+        <span class="care-section-label en" style="font-size:0.8rem">Conseils</span>
+        <span class="care-section-label fr" style="font-size:0.8rem">Conseils</span>
+        <div class="care-row"><span class="care-icon" style="font-size:0.9rem">×</span><span class="care-text en" style="font-size:1rem;line-height:1.7">Do not wash. Traditional dyes used in vintage Japanese textiles may release some color when exposed to water.</span><span class="care-text fr" style="font-size:1rem;line-height:1.7">Ne pas laver. Les teintures traditionnelles utilisées sur les textiles japonais vintage peuvent légèrement dégorger au contact de l'eau.</span></div>
+        <div class="care-row"><span class="care-icon" style="font-size:0.9rem">◈</span><span class="care-text en" style="font-size:1rem;line-height:1.7">Gently dust when needed, or spot clean only if necessary.</span><span class="care-text fr" style="font-size:1rem;line-height:1.7">Dépoussiérez délicatement si nécessaire, ou nettoyez localement uniquement en cas de besoin.</span></div>
+        <div class="care-row"><span class="care-icon" style="font-size:0.9rem">◈</span><span class="care-text en" style="font-size:1rem;line-height:1.7">On rare occasions, a vintage obi may retain a slight odor from long-term storage. If present, it will usually fade naturally after a few days in a dry, well-ventilated area.</span><span class="care-text fr" style="font-size:1rem;line-height:1.7">Il arrive, rarement, qu'un obi vintage conserve une légère odeur liée à un stockage prolongé. Le cas échéant, elle s'estompe généralement après quelques jours dans un endroit sec et bien aéré.</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- BACK TO SHOP -->
+<div style="text-align:center;padding:52px 32px;background:var(--cream)">
+  <a href="shop.html" style="display:inline-block;font-family:'Raleway',sans-serif;font-size:0.72rem;font-weight:800;letter-spacing:0.28em;text-transform:uppercase;color:var(--ink);border:1px solid var(--ink);padding:14px 36px;text-decoration:none;transition:all 0.2s" onmouseover="this.style.background='var(--ink)';this.style.color='var(--cream)'" onmouseout="this.style.background='';this.style.color='var(--ink)'">
+    <span class="en">← Back to Shop</span>
+    <span class="fr">← Retour à la boutique</span>
+  </a>
+</div>
+
+
+
+<script>
+// ── Language ──
+  var btns = document.querySelectorAll('[data-lang]');
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var l = this.getAttribute('data-lang');
+      document.body.classList.remove('lang-fr');
+      if(l === 'fr') document.body.classList.add('lang-fr');
+      btns.forEach(function(x){ x.classList.remove('active') });
+      this.classList.add('active');
+      try{ localStorage.setItem('lc-lang', l) }catch(e){}
+    });
+  });
+  try{
+    if(localStorage.getItem('lc-lang') === 'fr' || !localStorage.getItem('lc-lang')){
+      document.body.classList.add('lang-fr');
+      document.getElementById('btn-fr').classList.add('active');
+      document.getElementById('btn-en').classList.remove('active');
+    }
+  }catch(e){}
+
+  // ── Burger ──
+  var burger = document.getElementById('burger'),
+      overlay = document.getElementById('nav-overlay'),
+      closeBtn = document.getElementById('nav-close');
+  function openMenu(){ overlay.classList.add('open'); document.body.style.overflow = 'hidden' }
+  function closeMenu(){ overlay.classList.remove('open'); document.body.style.overflow = '' }
+  burger.addEventListener('click', openMenu);
+  burger.addEventListener('touchend', function(e){ e.preventDefault(); openMenu() }, {passive:false});
+  closeBtn.addEventListener('click', closeMenu);
+  closeBtn.addEventListener('touchend', function(e){ e.preventDefault(); closeMenu() }, {passive:false});
+  overlay.addEventListener('click', function(e){ if(e.target === overlay) closeMenu() });
+  overlay.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu) });
+
+  // ── Live exchange rate ──
+  var rate = null;
+  function fetchRate(){
+    fetch('https://api.frankfurter.app/latest?from=JPY&to=EUR')
+      .then(function(r){ return r.json() })
+      .then(function(d){
+        if(d && d.rates && d.rates.EUR){
+          rate = d.rates.EUR;
+        } else {
+          rate = 0.00538;
+        }
+        updatePrices();
+      })
+      .catch(function(){
+        rate = 0.00538;
+        updatePrices();
+      });
+  }
+  fetchRate();
+  setInterval(fetchRate, 30 * 60 * 1000);
+
+  function updatePrices(){
+    if(!rate) return;
+    var bagEur = (18000 * rate).toFixed(0);
+    document.querySelectorAll('.bag-eur-rate').forEach(function(el){
+      el.textContent = bagEur;
+    });
+    document.querySelectorAll('.shirt-eur-rate').forEach(function(el){
+      var strip = el.closest('.card-info-strip');
+      if(!strip) return;
+      var priceEl = strip.querySelector('.cis-price');
+      if(!priceEl) return;
+      var jpy = parseInt(priceEl.textContent.replace(/[¥,]/g,''), 10);
+      if(jpy) el.textContent = (jpy * rate).toFixed(0);
+    });
+  }
+})();
+
+
+(function(){
+  var lang = localStorage.getItem('lacofu-lang') || 'fr';
+  document.documentElement.setAttribute('data-lang', lang);
+})();
+</script>
+</body>
+</html>
