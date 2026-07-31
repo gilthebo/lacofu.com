@@ -492,7 +492,7 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
     .care-page-hero{padding:100px 32px 48px;text-align:center;background:var(--cream)}
     .care-page-section{max-width:900px;margin:0 auto;padding:52px 32px}
     .care-page-section + .care-page-section{border-top:1px solid var(--border)}
-    .care-section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.2rem);
+    .care-section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.5vw,2.8rem);
       font-weight:300;font-style:italic;color:var(--ink);margin-bottom:8px}
     .care-section-sub{font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:700;
       letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:32px;display:block}
@@ -503,7 +503,7 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
     }
   </style>
 </head>
-<body>
+<body class="lang-fr">
 
 <nav id="lc-nav">
   <div class="nav-inner">
@@ -536,8 +536,8 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
 <div class="care-page-hero">
   <span class="sec-lbl en" style="display:block;margin-bottom:8px">Care & Instructions</span>
   <span class="sec-lbl fr" style="display:block;margin-bottom:8px">Entretien & Conseils</span>
-  <h1 class="sec-h2 en" style="margin-top:12px">Care Instructions</h1>
-  <h1 class="sec-h2 fr" style="margin-top:12px">Instructions d'entretien</h1>
+  <h1 class="sec-h2 en" style="margin-top:12px;font-size:clamp(2.4rem,5vw,4rem)">Care Instructions</h1>
+  <h1 class="sec-h2 fr" style="margin-top:12px;font-size:clamp(2.4rem,5vw,4rem)">Instructions d'entretien</h1>
   <p class="sec-sub en" style="max-width:560px;margin:16px auto 0">Your La Cofu creation is made from authentic vintage Japanese textile — a living material with its own history. Handle with care and it will last a lifetime.</p>
   <p class="sec-sub fr" style="max-width:560px;margin:16px auto 0">Votre création La Cofu est réalisée à partir d'un textile japonais vintage authentique — une matière vivante avec sa propre histoire. Traitée avec soin, elle vous accompagnera toute une vie.</p>
 </div>
@@ -621,7 +621,8 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
 
 
 <script>
-// ── Language ──
+(function(){
+  // ── Language ──
   var btns = document.querySelectorAll('[data-lang]');
   btns.forEach(function(b){
     b.addEventListener('click', function(){
@@ -634,10 +635,19 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
     });
   });
   try{
-    if(localStorage.getItem('lc-lang') === 'fr' || !localStorage.getItem('lc-lang')){
+    var saved = localStorage.getItem('lc-lang');
+    if(saved === 'fr' || !saved){
       document.body.classList.add('lang-fr');
-      document.getElementById('btn-fr').classList.add('active');
-      document.getElementById('btn-en').classList.remove('active');
+      var btnFr = document.getElementById('btn-fr');
+      var btnEn = document.getElementById('btn-en');
+      if(btnFr) btnFr.classList.add('active');
+      if(btnEn) btnEn.classList.remove('active');
+    } else {
+      document.body.classList.remove('lang-fr');
+      var btnFr = document.getElementById('btn-fr');
+      var btnEn = document.getElementById('btn-en');
+      if(btnEn) btnEn.classList.add('active');
+      if(btnFr) btnFr.classList.remove('active');
     }
   }catch(e){}
 
@@ -645,57 +655,14 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
   var burger = document.getElementById('burger'),
       overlay = document.getElementById('nav-overlay'),
       closeBtn = document.getElementById('nav-close');
-  function openMenu(){ overlay.classList.add('open'); document.body.style.overflow = 'hidden' }
-  function closeMenu(){ overlay.classList.remove('open'); document.body.style.overflow = '' }
-  burger.addEventListener('click', openMenu);
-  burger.addEventListener('touchend', function(e){ e.preventDefault(); openMenu() }, {passive:false});
-  closeBtn.addEventListener('click', closeMenu);
-  closeBtn.addEventListener('touchend', function(e){ e.preventDefault(); closeMenu() }, {passive:false});
-  overlay.addEventListener('click', function(e){ if(e.target === overlay) closeMenu() });
-  overlay.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu) });
-
-  // ── Live exchange rate ──
-  var rate = null;
-  function fetchRate(){
-    fetch('https://api.frankfurter.app/latest?from=JPY&to=EUR')
-      .then(function(r){ return r.json() })
-      .then(function(d){
-        if(d && d.rates && d.rates.EUR){
-          rate = d.rates.EUR;
-        } else {
-          rate = 0.00538;
-        }
-        updatePrices();
-      })
-      .catch(function(){
-        rate = 0.00538;
-        updatePrices();
-      });
+  if(burger){
+    function openMenu(){ overlay.classList.add('open'); document.body.style.overflow='hidden' }
+    function closeMenu(){ overlay.classList.remove('open'); document.body.style.overflow='' }
+    burger.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', function(e){ if(e.target===overlay) closeMenu() });
+    overlay.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu) });
   }
-  fetchRate();
-  setInterval(fetchRate, 30 * 60 * 1000);
-
-  function updatePrices(){
-    if(!rate) return;
-    var bagEur = (18000 * rate).toFixed(0);
-    document.querySelectorAll('.bag-eur-rate').forEach(function(el){
-      el.textContent = bagEur;
-    });
-    document.querySelectorAll('.shirt-eur-rate').forEach(function(el){
-      var strip = el.closest('.card-info-strip');
-      if(!strip) return;
-      var priceEl = strip.querySelector('.cis-price');
-      if(!priceEl) return;
-      var jpy = parseInt(priceEl.textContent.replace(/[¥,]/g,''), 10);
-      if(jpy) el.textContent = (jpy * rate).toFixed(0);
-    });
-  }
-})();
-
-
-(function(){
-  var lang = localStorage.getItem('lacofu-lang') || 'fr';
-  document.documentElement.setAttribute('data-lang', lang);
 })();
 </script>
 </body>
