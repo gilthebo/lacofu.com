@@ -140,9 +140,9 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;col
 .hero-sub{font-family:'Raleway',sans-serif;font-size:0.72rem;font-weight:700;
   letter-spacing:.2em;text-transform:uppercase;color:var(--gold-l);margin-bottom:14px;display:block;
   text-shadow:0 1px 6px rgba(0,0,0,0.7)}
-@media(max-width:720px){
+@media(max-width:900px){
   .hero-wrap{grid-template-columns:1fr}
-  .hero-half{height:230px}
+  .hero-half{height:260px}
 }
 
 /* ── OFFER SPLIT CARDS ── */
@@ -243,6 +243,7 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;col
   .nav-links,.lang-toggle{display:none}
   .burger{display:flex}
 }
+#nav-overlay .lang-toggle{display:flex!important}
 @media(max-width:720px){
   .sec{padding:44px 20px}
 }
@@ -282,6 +283,11 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;col
 <!-- MOBILE OVERLAY -->
 <div id="nav-overlay">
   <button id="nav-close">✕</button>
+  <div class="lang-toggle" style="margin-bottom:16px">
+    <button id="btn-en-m" data-lang="en">EN</button>
+    <span class="lang-sep">/</span>
+    <button id="btn-fr-m" class="active" data-lang="fr">FR</button>
+  </div>
   <a href="https://lacofu.com/index.html"><span class="en">Home</span><span class="fr">Accueil</span></a>
   <a href="https://lacofu.com/about.html"><span class="en">About</span><span class="fr">À Propos</span></a>
   <a href="https://lacofu.com/experiences.html"><span class="en">Experiences</span><span class="fr">Expériences</span></a>
@@ -447,8 +453,8 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;col
       <p class="small-text en" style="margin-top:18px;color:rgba(245,240,230,0.75)">Photos for every size and setup type are available on our <a href="https://mglobaljapan.weebly.com/projection-spheres.html" target="_blank" style="color:var(--gold-l);text-decoration:underline">official Video-Balloon site</a>.</p>
       <p class="small-text fr" style="margin-top:18px;color:rgba(245,240,230,0.75)">Les photos pour chaque taille et type d'installation sont disponibles sur notre <a href="https://mglobaljapan.weebly.com/projection-spheres.html" target="_blank" style="color:var(--gold-l);text-decoration:underline">site officiel Video-Balloon</a>.</p>
 
-      <p class="small-text en" style="margin-top:10px;color:rgba(245,240,230,0.75)">Deployed for more than 20 years across 17 countries — Japan, France, Singapore, UAE, China, Korea, Thailand, Russia, Turkmenistan, Greece, UK, Portugal, Turkey, Canada, Switzerland, Monaco, and Hong Kong. Client references are available on our <a href="https://mglobaljapan.weebly.com/work.html" target="_blank" style="color:var(--gold-l);text-decoration:underline">work page</a>.</p>
-      <p class="small-text fr" style="margin-top:10px;color:rgba(245,240,230,0.75)">Déployé depuis plus de 20 ans dans 17 pays — Japon, France, Singapour, Émirats arabes unis, Chine, Corée, Thaïlande, Russie, Turkménistan, Grèce, Royaume-Uni, Portugal, Turquie, Canada, Suisse, Monaco, et Hong Kong. Les références clients sont disponibles sur notre <a href="https://mglobaljapan.weebly.com/work.html" target="_blank" style="color:var(--gold-l);text-decoration:underline">page réalisations</a>.</p>
+      <p class="small-text en" style="margin-top:10px;color:rgba(245,240,230,0.75)">Deployed for more than 20 years across 17 countries — Japan, France, Singapore, UAE, China, Korea, Thailand, Russia, Turkmenistan, Greece, UK, Portugal, Turkey, Canada, Switzerland, Monaco, and Hong Kong. Client references are available on our <a href="https://mglobaljapan.weebly.com/work.html" target="_blank" style="color:var(--gold-l);text-decoration:underline">portfolio</a>.</p>
+      <p class="small-text fr" style="margin-top:10px;color:rgba(245,240,230,0.75)">Déployé depuis plus de 20 ans dans 17 pays — Japon, France, Singapour, Émirats arabes unis, Chine, Corée, Thaïlande, Russie, Turkménistan, Grèce, Royaume-Uni, Portugal, Turquie, Canada, Suisse, Monaco, et Hong Kong. Les références clients sont disponibles sur notre <a href="https://mglobaljapan.weebly.com/work.html" target="_blank" style="color:var(--gold-l);text-decoration:underline">portfolio</a>.</p>
     </div>
 
     <p class="small-text en" style="margin-top:24px;color:rgba(245,240,230,0.75)">Any type of visual content can be projected — live feed, sponsor branding, graphics, and more. The content itself is provided by you; a limited selection of existing stock content may be available on request. Custom content creation is not included.</p>
@@ -635,6 +641,8 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;col
       document.body.classList.add('lang-fr');
       document.getElementById('btn-fr').classList.add('active');
       document.getElementById('btn-en').classList.remove('active');
+      document.getElementById('btn-fr-m').classList.add('active');
+      document.getElementById('btn-en-m').classList.remove('active');
     } else {
       document.body.classList.remove('lang-fr');
     }
