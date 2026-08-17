@@ -81,7 +81,7 @@ body.lang-fr a.en{display:none!important}
 /* ── LAYOUT ── */
 .sec{padding:64px 32px}
 .sec-inner{max-width:900px;margin:0 auto}
-.lbl{font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:800;
+.lbl{font-family:'Raleway',sans-serif;font-size:0.75rem;font-weight:800;
   letter-spacing:.3em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px}
 .lbl-dark{color:rgba(201,168,76,0.75)}
 h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;color:var(--ink)}
@@ -95,13 +95,13 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;col
 .model-card{background:var(--white);padding:40px 32px}
 .model-kanji{font-family:'Noto Serif JP',serif;font-size:2rem;color:var(--gold);opacity:.55;margin-bottom:14px}
 .model-title{font-family:'Cormorant Garamond',serif;font-size:1.6rem;color:var(--ink);margin-bottom:14px}
-.model-tag{display:inline-block;font-family:'Raleway',sans-serif;font-size:0.62rem;font-weight:800;
+.model-tag{display:inline-block;font-family:'Raleway',sans-serif;font-size:0.7rem;font-weight:800;
   letter-spacing:.14em;text-transform:uppercase;background:var(--gold);color:var(--white);
-  padding:3px 10px;margin-bottom:16px}
-.model-desc{font-size:0.95rem;line-height:1.75;color:var(--ink-mid);margin-bottom:18px}
+  padding:4px 12px;margin-bottom:16px}
+.model-desc{font-size:1.05rem;line-height:1.8;color:var(--ink-mid);margin-bottom:20px}
 .model-list{list-style:none}
-.model-list li{font-size:0.88rem;line-height:1.7;color:var(--ink-mid);
-  padding:8px 0;border-top:1px solid var(--border);display:flex;gap:10px}
+.model-list li{font-size:1rem;line-height:1.75;color:var(--ink-mid);
+  padding:10px 0;border-top:1px solid var(--border);display:flex;gap:10px}
 .model-list li:first-child{border-top:none}
 .model-list li span.mk{color:var(--gold);flex-shrink:0}
 
@@ -112,11 +112,11 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;col
 
 /* ── PRICE / RULES ── */
 .rule-card{background:var(--white);border:1px solid var(--border);padding:32px 28px;margin-bottom:20px}
-.rule-title{font-family:'Raleway',sans-serif;font-size:0.72rem;font-weight:800;
+.rule-title{font-family:'Raleway',sans-serif;font-size:0.8rem;font-weight:800;
   letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block}
-.rule-body{font-size:0.96rem;line-height:1.8;color:var(--ink-mid)}
+.rule-body{font-size:1.05rem;line-height:1.85;color:var(--ink-mid)}
 .note-box{background:rgba(168,132,58,0.08);border:1px solid var(--border);
-  padding:18px 22px;margin-top:24px;font-size:0.92rem;line-height:1.8;color:var(--ink-mid);font-style:italic}
+  padding:20px 24px;margin-top:24px;font-size:1rem;line-height:1.85;color:var(--ink-mid);font-style:italic}
 
 /* ── POSTCARD BLOCK ── */
 .postcard-wrap{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-top:20px}
@@ -207,29 +207,66 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;col
     padding:4px 14px">PRO</span>
 </div>
 
-<!-- INTRO — discovery framing -->
-<div class="sec" style="background:var(--cream-d);border-bottom:1px solid var(--border);padding-top:20px">
+<!-- WHO IS THIS FOR — two visual cards -->
+<style>
+.who-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border)}
+.who-card{background:var(--white);padding:40px 36px;display:flex;flex-direction:column;gap:16px}
+.who-card-dark{background:var(--dark2)}
+.who-kanji{font-family:'Noto Serif JP',serif;font-size:3rem;color:var(--gold);opacity:.4;line-height:1}
+.who-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.35rem,2.5vw,1.75rem);font-weight:400;color:var(--ink);line-height:1.25}
+.who-card-dark .who-title{color:var(--white)}
+.who-body{font-size:1rem;line-height:1.85;color:var(--ink-mid)}
+.who-card-dark .who-body{color:rgba(245,240,230,0.78)}
+.who-tag{display:inline-block;font-family:'Raleway',sans-serif;font-size:0.7rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(168,132,58,0.35);padding:4px 12px;align-self:flex-start}
+.who-note{font-size:0.95rem;line-height:1.8;color:var(--muted);font-style:italic;border-left:2px solid var(--gold);padding-left:14px;margin-top:4px}
+.who-card-dark .who-note{color:rgba(245,240,230,0.55)}
+.who-link{font-family:'Raleway',sans-serif;font-size:0.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-top:auto;padding-top:8px}
+@media(max-width:680px){
+  .who-grid{grid-template-columns:1fr}
+}
+</style>
+
+<div class="sec" style="background:var(--cream-d);border-bottom:1px solid var(--border);padding-bottom:0">
   <div class="sec-inner">
-    <span class="lbl en">— For Shops &amp; Places</span>
-    <span class="lbl fr">— Pour les boutiques &amp; adresses</span>
-    <p class="intro-text en">Perhaps you discovered La Cofu during a visit, a meeting, or through a shared contact — a fabric, a piece, a story that stayed with you. If the quality and the world behind it spoke to you, and you're now wondering "what next?" — this is the place.<br><br>We're looking for shops and spaces that share this sensibility. Let's work together — or with your own contacts, if someone comes to mind.</p>
-    <p class="intro-text fr">Vous avez peut-être découvert La Cofu lors d'une visite, d'un rendez-vous, ou par un contact commun — un tissu, une pièce, une histoire qui vous a marqué. Si la qualité et l'univers vous ont plu, et que vous vous demandez maintenant « et après ? » — c'est le bon endroit.<br><br>Nous cherchons des boutiques et des lieux qui partagent cette sensibilité. Travaillons ensemble — ou avec vos propres contacts, si quelqu'un vous vient à l'esprit.</p>
+    <span class="lbl en">— Who is this for?</span>
+    <span class="lbl fr">— À qui s'adresse cette page ?</span>
   </div>
 </div>
+<div class="who-grid">
 
-<!-- INTERIOR DESIGNERS -->
-<div class="sec" style="border-bottom:1px solid var(--border)">
-  <div class="sec-inner">
-    <span class="lbl en">— Also for interior decorators &amp; designers</span>
-    <span class="lbl fr">— Aussi pour les professionnels de la décoration &amp; de l'architecture d'intérieure</span>
-    <p class="body-text en">Not just for shops. Interior decorators and designers are often searching for pieces with real character — something unrepeatable to bring into a home, a boutique, or a space they're designing. Because each object we source exists in only one or a few pieces, it's exactly the kind of find that gives a room its own story.</p>
-    <p class="body-text fr">Pas seulement pour les boutiques. Les professionnels de la décoration et de l'architecture d'intérieure sont souvent à la recherche de pièces avec du caractère — quelque chose d'unique à apporter dans une maison, une boutique, ou un espace en cours d'aménagement. Comme chaque objet que nous sourçons n'existe qu'en une ou quelques pièces, c'est exactement le type de trouvaille qui donne à un lieu sa propre histoire.</p>
-    <div class="note-box">
-      <span class="en">Working on a specific project? Direct purchase of individual pieces is possible — no consignment structure needed.</span>
-      <span class="fr">Vous travaillez sur un projet précis ? L'achat direct de pièces individuelles est possible — sans structure de dépôt-vente.</span>
+  <!-- CARD 1 — Boutiques -->
+  <div class="who-card" style="background:var(--cream-d)">
+    <div class="who-kanji">店</div>
+    <div class="who-tag en">Shops &amp; Concept Stores</div>
+    <div class="who-tag fr">Boutiques &amp; Concept Stores</div>
+    <p class="who-title en">You discovered La Cofu — and you're wondering what comes next</p>
+    <p class="who-title fr">Vous avez découvert La Cofu — et vous vous demandez ce qui vient après</p>
+    <p class="who-body en">A fabric, a piece, a story that stayed with you. If the quality and the world behind it spoke to you, this is the place. We're looking for independent shops, concept stores, lifestyle boutiques — places whose universe can naturally meet ours.</p>
+    <p class="who-body fr">Un tissu, une pièce, une histoire qui vous a marqué. Si la qualité et l'univers vous ont plu, c'est le bon endroit. Nous cherchons des boutiques indépendantes, concept stores, adresses lifestyle — des lieux dont l'univers peut naturellement rencontrer celui de La Cofu.</p>
+    <p class="who-note en">We don't aim to be everywhere. A few partners who understand the pieces and their story — that's what we're after.</p>
+    <p class="who-note fr">Nous ne cherchons pas à être présents partout. Quelques partenaires qui comprennent les pièces et leur histoire — c'est ce que nous recherchons.</p>
+  </div>
+
+  <!-- CARD 2 — Interior designers -->
+  <div class="who-card who-card-dark">
+    <div class="who-kanji" style="opacity:.25;color:#C9A84C">匠</div>
+    <div class="who-tag" style="border-color:rgba(201,168,76,0.3)">
+      <span class="en">Interior Decorators &amp; Designers</span>
+      <span class="fr">Décorateurs &amp; Architectes d'intérieur</span>
     </div>
-    <p class="body-text en" style="margin-top:16px">Have something specific in mind? Feel free to reach out — we're always happy to hear what you're looking for.</p>
-    <p class="body-text fr" style="margin-top:16px">Une idée précise en tête ? N'hésitez pas à nous contacter — nous sommes toujours ravis d'entendre ce que vous recherchez.</p>
+    <p class="who-title en">You're looking for a piece with real character — something unrepeatable</p>
+    <p class="who-title fr">Vous cherchez une pièce avec du caractère — quelque chose d'introuvable ailleurs</p>
+    <p class="who-body en">Each object we source exists in only one or a few examples. It's exactly the kind of find that gives a space its own story — a home, a boutique, a project you're designing. No need for consignment: direct purchase of individual pieces is possible.</p>
+    <p class="who-body fr">Chaque objet que nous sourçons n'existe qu'en une ou quelques pièces. C'est exactement le type de trouvaille qui donne à un lieu sa propre histoire — une maison, une boutique, un espace en cours d'aménagement. Sans structure de dépôt-vente : l'achat direct de pièces individuelles est possible.</p>
+    <p class="who-note en">Have something specific in mind? We're always glad to hear what you're looking for.</p>
+    <p class="who-note fr">Une idée précise en tête ? Nous sommes toujours ravis d'entendre ce que vous recherchez.</p>
+  </div>
+
+</div>
+<div style="background:var(--cream-d);border-bottom:1px solid var(--border);padding:20px 32px 32px">
+  <div style="max-width:900px;margin:0 auto">
+    <p class="body-text en" style="font-style:italic;color:var(--muted)">If you know another shop or space that might be a fit — we're always glad to hear about it too.</p>
+    <p class="body-text fr" style="font-style:italic;color:var(--muted)">Si vous connaissez une autre boutique ou un lieu qui pourrait correspondre — nous serions ravis d'en entendre parler aussi.</p>
   </div>
 </div>
 
@@ -240,39 +277,57 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;col
     <span class="lbl fr">— Deux façons de collaborer</span>
     <h2 style="font-size:clamp(1.6rem,3vw,2.1rem)" class="en">Pop-up Discovery &amp; Consignment</h2>
     <h2 style="font-size:clamp(1.6rem,3vw,2.1rem)" class="fr">Pop-up Découverte &amp; Dépôt-vente</h2>
-    <p class="body-text" style="margin-top:16px" >
-      <span class="en">Sometimes this starts with a planned visit. Sometimes we simply walk into a shop that feels right during our travels through France — either way can lead to a pop-up, or directly to leaving a selection of pieces on consignment.</span>
-      <span class="fr">Parfois cela commence par une visite planifiée. Parfois nous entrons simplement dans une boutique qui nous semble être la bonne, au fil de nos passages en France — dans les deux cas, cela peut mener à un pop-up, ou directement à laisser une sélection de pièces en dépôt-vente.</span>
-    </p>
 
-    <div class="model-grid">
+    <div class="model-grid" style="margin-top:32px">
       <!-- POP-UP -->
       <div class="model-card">
         <div class="model-kanji">縁</div>
+        <div style="font-family:'Jost',sans-serif;font-size:1rem;letter-spacing:.06em;color:var(--muted);margin-bottom:16px">
+          <span class="en"><em style="color:var(--gold);font-style:italic;letter-spacing:.05em">En</em> — the bond, the encounter</span>
+          <span class="fr"><em style="color:var(--gold);font-style:italic;letter-spacing:.05em">En</em> — le lien, la rencontre</span>
+        </div>
         <p class="model-tag en">Pop-up Discovery</p>
         <p class="model-tag fr">Pop-up Découverte</p>
-        <p class="model-desc en">A spontaneous, in-person collaboration during our travels through France. We set things up together, on-site, and figure out what feels right for your space in the moment.</p>
-        <p class="model-desc fr">Une collaboration spontanée et en personne, au fil de nos passages en France. Nous installons ensemble, sur place, et déterminons ce qui convient le mieux à votre lieu.</p>
+        <p class="model-desc en">A collaboration that begins with a meeting. During our travels through France, we may visit a shop, a concept store, a hotel — any space that feels like it belongs to the La Cofu world. Together we discover the space and work out what makes sense: a presentation of our pieces, a curated selection, a temporary pop-up, or another form of collaboration entirely.</p>
+        <p class="model-desc fr">Une collaboration qui commence par une rencontre. Lors de nos passages en France, nous pouvons venir à la rencontre d'une boutique, d'un concept store, d'un hôtel ou d'un autre lieu qui pourrait correspondre à l'univers de La Cofu. Nous découvrons ensemble l'espace et déterminons ce qui peut fonctionner : présentation de nos créations, sélection de pièces, pop-up temporaire ou autre forme de collaboration.</p>
         <ul class="model-list">
-          <li><span class="mk en">＋</span><span class="mk fr">＋</span><span class="en">Set up together during our visit</span><span class="fr">Installation faite ensemble lors de notre passage</span></li>
-          <li><span class="mk en">＋</span><span class="mk fr">＋</span><span class="en">Ideal for a first, informal encounter</span><span class="fr">Idéal pour une première rencontre informelle</span></li>
-          <li><span class="mk en">＋</span><span class="mk fr">＋</span><span class="en">Runs without us once set up</span><span class="fr">Fonctionne sans nous une fois en place</span></li>
+          <li><span class="mk">＋</span><span class="en">Installation set up together during our visit</span><span class="fr">Installation réalisée ensemble lors de notre passage</span></li>
+          <li><span class="mk">＋</span><span class="en">Selection adapted to the space and its clientele</span><span class="fr">Sélection adaptée au lieu et à sa clientèle</span></li>
+          <li><span class="mk">＋</span><span class="en">Ideal for a first, informal encounter</span><span class="fr">Idéal pour une première rencontre</span></li>
+          <li><span class="mk">＋</span><span class="en">Can lead to an ongoing consignment arrangement</span><span class="fr">Possibilité de poursuivre ensuite avec une autre forme de collaboration</span></li>
         </ul>
       </div>
 
       <!-- CONSIGNMENT -->
       <div class="model-card">
         <div class="model-kanji">託</div>
+        <div style="font-family:'Jost',sans-serif;font-size:1rem;letter-spacing:.06em;color:var(--muted);margin-bottom:16px">
+          <span class="en"><em style="color:var(--gold);font-style:italic;letter-spacing:.05em">Taku</em> — to entrust, to confide</span>
+          <span class="fr"><em style="color:var(--gold);font-style:italic;letter-spacing:.05em">Taku</em> — confier, faire confiance</span>
+        </div>
         <p class="model-tag en">Consignment</p>
         <p class="model-tag fr">Dépôt-vente</p>
-        <p class="model-desc en">A more structured arrangement: a curated batch of pieces sent to your shop, a price agreed together in advance, for a minimum period of 10 days.</p>
-        <p class="model-desc fr">Une formule plus structurée : un lot de pièces sélectionnées envoyé à votre boutique, un prix convenu ensemble à l'avance, pour une durée minimum de 10 jours.</p>
+        <p class="model-desc en">A more structured arrangement allowing a shop to present a La Cofu selection without buying stock upfront. A curated batch of pieces is entrusted to the shop for an agreed period. The pieces remain La Cofu's property until sold. Each consignment comes with an inventory detailing the pieces and their prices.</p>
+        <p class="model-desc fr">Une formule plus structurée permettant à une boutique de présenter une sélection La Cofu sans acheter le stock à l'avance. Une sélection de pièces est confiée à la boutique pour une période définie ensemble. Les pièces restent la propriété de La Cofu jusqu'à leur vente. Chaque dépôt fait l'objet d'un inventaire précisant les pièces confiées et leurs prix.</p>
         <ul class="model-list">
-          <li><span class="mk en">＋</span><span class="mk fr">＋</span><span class="en">Minimum 5–6 pieces per category (Obi Tees, Bags)</span><span class="fr">Minimum 5–6 pièces par catégorie (Obi Tees, Sacs)</span></li>
-          <li><span class="mk en">＋</span><span class="mk fr">＋</span><span class="en">Price set together before shipping</span><span class="fr">Prix fixé ensemble avant l'envoi</span></li>
-          <li><span class="mk en">＋</span><span class="mk fr">＋</span><span class="en">Minimum 10-day display period</span><span class="fr">Durée d'exposition minimum de 10 jours</span></li>
+          <li><span class="mk">＋</span><span class="en">Selection adapted to your shop</span><span class="fr">Sélection adaptée à votre boutique</span></li>
+          <li><span class="mk">＋</span><span class="en">Prices and commission agreed before the deposit</span><span class="fr">Prix et commission convenus avant le dépôt</span></li>
+          <li><span class="mk">＋</span><span class="en">Inventory established at the time of handover</span><span class="fr">Inventaire établi au moment du dépôt</span></li>
+          <li><span class="mk">＋</span><span class="en">Initial period of approximately 30 days, renewable by mutual agreement</span><span class="fr">Durée initiale généralement de 30 jours, renouvelable d'un commun accord</span></li>
         </ul>
+        <p class="model-desc" style="margin-top:20px;font-size:0.92rem;color:var(--muted);font-style:italic">
+          <span class="en">Specific terms regarding liability, insurance, payment, and end of consignment are agreed with each partner individually.</span>
+          <span class="fr">Les modalités concernant la responsabilité, l'assurance, le règlement et la fin du dépôt sont définies avec chaque partenaire.</span>
+        </p>
       </div>
+    </div>
+
+    <!-- EVOLVING SELECTION -->
+    <div style="margin-top:40px;padding:32px;background:var(--white);border:1px solid var(--border)">
+      <span class="rule-title en">A selection that evolves</span>
+      <span class="rule-title fr">Une sélection qui évolue</span>
+      <p class="rule-body en">La Cofu works with small quantities and vintage textiles whose availability is naturally limited. A piece may sometimes be one of a kind. Another may exist in only a few examples, depending on the fabric available. This is why we prefer to let selections evolve rather than maintain permanent stock.<br><br>As our network develops, unsold pieces from one location may, with the agreement of all partners concerned, be redirected to another partner shop in France rather than sent back to our French address. Any such rotation is organised by La Cofu and always agreed in advance with the partners involved.</p>
+      <p class="rule-body fr">La Cofu travaille avec de petites quantités et des textiles anciens dont la disponibilité est naturellement limitée. Une pièce peut parfois être unique. Une autre peut exister en quelques exemplaires seulement, selon la quantité de textile disponible. C'est pourquoi nous préférons faire évoluer les sélections plutôt que de chercher à maintenir un stock permanent.<br><br>Au fur et à mesure que notre réseau se développe, certaines pièces invendues pourront ainsi circuler entre différents lieux partenaires en France, plutôt que d'être renvoyées à notre adresse en France. Cette rotation éventuelle est organisée par La Cofu et toujours définie en accord avec les partenaires concernés.</p>
     </div>
   </div>
 </div>
