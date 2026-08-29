@@ -667,7 +667,7 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
 .cat-card:hover img{transform:scale(1.05);filter:brightness(.4)}
 .cat-card-body{position:relative;z-index:2;padding:20px 22px;background:linear-gradient(to top,rgba(20,14,6,.85) 0%,transparent 100%)}
 .cat-tag{font-family:'Raleway',sans-serif;font-size:0.68rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;background:var(--gold);color:#1C1714;padding:3px 10px;margin-bottom:8px}
-.cat-tag.en,.cat-tag.fr{display:inline-block!important;width:auto!important}
+body.lang-fr .cat-tag.fr{display:inline-block!important;width:auto!important}
 .cat-tag-soon{background:rgba(168,132,58,.55);color:#1C1714;border:1px solid rgba(168,132,58,.7)}
 .cat-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2vw,1.5rem);font-weight:300;font-style:italic;color:#F5F0E6;line-height:1.15;margin-bottom:4px}
 .cat-sub{font-size:0.78rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,240,230,.6);font-family:'Raleway',sans-serif}
@@ -675,6 +675,13 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
 .cat-card:hover .cat-arrow{transform:translateX(4px)}
 @media(max-width:768px){.cat-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.cat-grid{grid-template-columns:1fr}}
+
+/* ── EBAY CTA (centered, below grid) ── */
+.ebay-cta-wrap{background:var(--cream);text-align:center;padding:36px 20px 44px}
+.ebay-cta-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Raleway',sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;background:var(--gold);color:#1C1714;padding:13px 30px;text-decoration:none;transition:background .25s,transform .25s}
+.ebay-cta-btn:hover{background:var(--gold-l);transform:translateY(-1px)}
+.ebay-cta-arrow{transition:transform .25s;display:inline-block}
+.ebay-cta-btn:hover .ebay-cta-arrow{transform:translateX(4px)}
 
 /* ── THUMB LAYOUT : vertical strip LEFT of main image ── */
 .prod-media{display:flex;gap:0;align-items:stretch}
@@ -749,6 +756,16 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
   </a>
 
 </div>
+
+<!-- ═══ EBAY CTA — centered below the grid ═══ -->
+<div class="ebay-cta-wrap">
+  <!-- TODO: replace href="#" with your live eBay shop URL once ready -->
+  <a class="ebay-cta-btn" href="#" target="_blank" rel="noopener">
+    <span class="en">Shop on eBay</span><span class="fr">Voir sur eBay</span>
+    <span class="ebay-cta-arrow">→</span>
+  </a>
+</div>
+
 <!-- ═══════════════════ PHILOSOPHY (short) ═══════════════════ -->
 <div style="background:#2C2416;padding:32px 32px;border-bottom:2px solid #A8843A">
   <div style="max-width:900px;margin:0 auto;display:flex;align-items:baseline;gap:32px;flex-wrap:wrap">
