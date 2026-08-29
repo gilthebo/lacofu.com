@@ -677,11 +677,13 @@ body.lang-fr .cat-tag.fr{display:inline-block!important;width:auto!important}
 @media(max-width:480px){.cat-grid{grid-template-columns:1fr}}
 
 /* ── EBAY CTA (centered, below grid) ── */
-.ebay-cta-wrap{background:var(--cream);text-align:center;padding:36px 20px 44px}
-.ebay-cta-btn{display:inline-flex;align-items:center;gap:6px;font-family:'Raleway',sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;background:var(--gold);color:#1C1714;padding:13px 30px;text-decoration:none;transition:background .25s,transform .25s}
-.ebay-cta-btn:hover{background:var(--gold-l);transform:translateY(-1px)}
-.ebay-cta-arrow{transition:transform .25s;display:inline-block}
-.ebay-cta-btn:hover .ebay-cta-arrow{transform:translateX(4px)}
+<div class="ebay-cta-wrap">
+  <!-- TODO: replace href="#" with your live eBay shop URL once ready -->
+  <a class="ebay-cta-btn" href="#" target="_blank" rel="noopener">
+    <span class="en">Shop on eBay</span><span class="fr">Voir sur eBay</span>
+    <span class="ebay-cta-arrow">→</span>
+  </a>
+</div>
 
 /* ── THUMB LAYOUT : vertical strip LEFT of main image ── */
 .prod-media{display:flex;gap:0;align-items:stretch}
