@@ -1,0 +1,434 @@
+<title>Profit Obi</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: sticky result bar on top, inputs left, live breakdown right; one column on phones. Palette: indigo ink on cool grey, green for profit, rust for warnings. */
+:root {
+  --bg: #F2F4F8;
+  --surface: #FFFFFF;
+  --surface2: #E9EDF5;
+  --ink: #171C2B;
+  --muted: #586078;
+  --line: #D9DEE9;
+  --accent: #26407F;
+  --accent-ink: #FFFFFF;
+  --good: #1B7A4B;
+  --good-bg: #E1F2E8;
+  --warn: #A8461B;
+  --warn-bg: #FBEAE1;
+  --display: 'Zen Kaku Gothic New', 'Hiragino Sans', 'Yu Gothic', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11141B; --surface: #1A1F2A; --surface2: #242B39; --ink: #E7EAF2; --muted: #9AA3B8;
+    --line: #2D3445; --accent: #8CA6EE; --accent-ink: #0F1522; --good: #62CB92; --good-bg: #173126;
+    --warn: #F2A173; --warn-bg: #3A241A; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11141B; --surface: #1A1F2A; --surface2: #242B39; --ink: #E7EAF2; --muted: #9AA3B8;
+  --line: #2D3445; --accent: #8CA6EE; --accent-ink: #0F1522; --good: #62CB92; --good-bg: #173126;
+  --warn: #F2A173; --warn-bg: #3A241A; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--display); font-size: 15px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 18px 40px;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 1080px; margin: 0 auto; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 16px; margin-bottom: 14px; }
+h1 { font-size: 22px; font-weight: 700; margin: 0; letter-spacing: 0.01em; }
+.sub { color: var(--muted); font-size: 13px; }
+.num, .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+/* sticky result bar */
+.summary {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 12px 16px; display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: center; justify-content: space-between;
+  margin-bottom: 14px;
+}
+.lbl { display: block; font-size: 12px; color: var(--muted); letter-spacing: 0.04em; }
+.big { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 14px; }
+.big .y { font-family: var(--mono); font-size: 32px; font-weight: 500; line-height: 1.15; }
+.big .e { font-family: var(--mono); font-size: 18px; color: var(--muted); }
+.pos { color: var(--good); } .neg { color: var(--warn); }
+.side { display: flex; gap: 24px; }
+.side b { font-family: var(--mono); font-weight: 500; font-size: 17px; }
+
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 14px; align-items: start; }
+@media (max-width: 860px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+.col { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; min-width: 0; }
+h2 { font-size: 13px; font-weight: 700; margin: 0 0 12px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+
+.field { display: grid; gap: 4px; margin-bottom: 12px; }
+.field:last-child { margin-bottom: 0; }
+.field > label, .fl { font-size: 13px; font-weight: 500; }
+.hint { font-size: 12px; color: var(--muted); }
+.inp { display: flex; align-items: center; gap: 8px; }
+.inp input[type=number] {
+  width: 118px; flex: none; font: inherit; font-family: var(--mono); font-size: 15px; color: var(--ink);
+  background: var(--bg); border: 1px solid var(--line); border-radius: 7px; padding: 7px 9px; text-align: right;
+}
+.inp .u { color: var(--muted); font-size: 13px; width: 38px; flex: none; }
+.inp input[type=range] { flex: 1; min-width: 0; accent-color: var(--accent); }
+input:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.two .field { margin-bottom: 0; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--bg); }
+.seg button {
+  font: inherit; font-size: 14px; color: var(--muted); background: none; border: 0; padding: 7px 14px; cursor: pointer;
+}
+.seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); font-weight: 500; }
+.chk { display: flex; align-items: flex-start; gap: 9px; font-size: 14px; margin-bottom: 8px; cursor: pointer; }
+.chk input { margin-top: 4px; accent-color: var(--accent); }
+.chk small { display: block; color: var(--muted); font-size: 12px; }
+
+/* shipping mode cards */
+.modes { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+.mode {
+  text-align: left; font: inherit; color: inherit; background: var(--bg); border: 1px solid var(--line); border-radius: 9px;
+  padding: 12px; cursor: pointer; display: grid; gap: 3px;
+}
+.mode[aria-pressed="true"] { border: 2px solid var(--accent); background: var(--surface2); padding: 11px; }
+.mode .t { font-weight: 700; font-size: 14px; display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+.tag { font-size: 11px; font-weight: 500; color: var(--good); background: var(--good-bg); border-radius: 99px; padding: 1px 8px; }
+.mode .p { font-family: var(--mono); font-size: 20px; }
+.mode .m { font-size: 12px; color: var(--muted); }
+
+/* breakdown table */
+.tw { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+td, th { padding: 6px 4px; text-align: right; font-variant-numeric: tabular-nums; }
+td:first-child, th:first-child { text-align: left; }
+td.n, th.n { font-family: var(--mono); white-space: nowrap; }
+th { font-size: 12px; color: var(--muted); font-weight: 500; border-bottom: 1px solid var(--line); }
+tr.grp td { padding-top: 14px; font-size: 12px; font-weight: 700; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; }
+tr.sum td { border-top: 1px solid var(--line); font-weight: 700; }
+tr.fin td { border-top: 2px solid var(--ink); font-weight: 700; font-size: 16px; padding-top: 9px; }
+tr.sub td:first-child { color: var(--muted); padding-left: 12px; }
+
+.notes { display: grid; gap: 8px; }
+.note { font-size: 13px; border-radius: 8px; padding: 9px 12px; background: var(--surface2); }
+.note.warn { background: var(--warn-bg); color: var(--warn); }
+.targets { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
+.tg { background: var(--bg); border-radius: 8px; padding: 10px 12px; }
+.tg b { display: block; font-family: var(--mono); font-weight: 500; font-size: 20px; }
+.tg span { font-size: 12px; color: var(--muted); }
+details summary { cursor: pointer; font-size: 13px; font-weight: 700; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+details[open] summary { margin-bottom: 12px; }
+.btn { font: inherit; font-size: 13px; color: var(--accent); background: none; border: 1px solid var(--line); border-radius: 7px; padding: 6px 12px; cursor: pointer; }
+.foot { color: var(--muted); font-size: 12px; margin-top: 16px; display: grid; gap: 4px; }
+@media (prefers-reduced-motion: no-preference) { .mode, .seg button { transition: background 0.12s, border-color 0.12s; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Profit Obi</h1>
+    <div class="sub">Un obi à la fois · bénéfice net après frais Etsy, port et coûts</div>
+  </header>
+
+  <section class="summary" aria-live="polite">
+    <div>
+      <span class="lbl">Bénéfice net · <span id="sMode">Air Packet</span></span>
+      <div class="big"><span class="y" id="sYen">0 ¥</span><span class="e" id="sEur">0 €</span></div>
+    </div>
+    <div class="side">
+      <div><span class="lbl">Marge</span><b id="sMargin">0 %</b></div>
+      <div><span class="lbl">Prix client TVA comprise</span><b id="sTtc">0 €</b></div>
+    </div>
+  </section>
+
+  <div class="grid">
+    <div class="col">
+      <div class="card">
+        <h2>L'obi</h2>
+        <div class="field">
+          <label for="price">Prix de vente, hors TVA</label>
+          <div class="inp"><input type="number" id="price" inputmode="decimal" min="0" step="1"><span class="u">€</span><input type="range" id="priceR" min="20" max="250" step="1" aria-label="Prix de vente, curseur"></div>
+        </div>
+        <div class="field">
+          <label for="weight">Poids du colis</label>
+          <div class="inp"><input type="number" id="weight" inputmode="numeric" min="100" max="2000" step="100"><span class="u">g</span><input type="range" id="weightR" min="100" max="2000" step="100" aria-label="Poids, curseur"></div>
+          <span class="hint">Tarifs par tranche de 100 g (Air Packet) ou selon le tableau EMS. Maximum 2 kg.</span>
+        </div>
+        <div class="field">
+          <span class="fl">Destination</span>
+          <div class="seg" data-key="zone" role="group" aria-label="Destination">
+            <button type="button" data-v="3">Europe (zone 3)</button>
+            <button type="button" data-v="4">États-Unis (zone 4)</button>
+          </div>
+        </div>
+        <div class="field" id="vatField">
+          <label for="vat">TVA du pays de l'acheteur</label>
+          <div class="inp"><input type="number" id="vat" inputmode="decimal" min="0" step="0.5"><span class="u">%</span></div>
+          <span class="hint">France 20 %, Italie 22 %, Espagne 21 %, Portugal 23 %.</span>
+        </div>
+        <div class="field">
+          <label for="shipC">Port facturé à l'acheteur (0 = livraison incluse)</label>
+          <div class="inp"><input type="number" id="shipC" inputmode="decimal" min="0" step="1"><span class="u">€</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Mes coûts</h2>
+        <div class="two">
+          <div class="field"><label for="buy">Achat de l'obi</label><div class="inp"><input type="number" id="buy" inputmode="numeric" min="0" step="100"><span class="u">¥</span></div></div>
+          <div class="field"><label for="fix">Retouches, couture</label><div class="inp"><input type="number" id="fix" inputmode="numeric" min="0" step="100"><span class="u">¥</span></div></div>
+          <div class="field"><label for="pack">Emballage</label><div class="inp"><input type="number" id="pack" inputmode="numeric" min="0" step="100"><span class="u">¥</span></div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Options Etsy</h2>
+        <label class="chk"><input type="checkbox" id="conv"><span>Conversion de devise<small>2,5 % si la boutique est en € et le versement en ¥</small></span></label>
+        <label class="chk"><input type="checkbox" id="procVat"><span>Frais de paiement sur le total TVA comprise<small>Hypothèse prudente, à vérifier dans vos relevés Etsy</small></span></label>
+        <label class="chk"><input type="checkbox" id="ads"><span>Vente venue d'une pub hors Etsy<small>15 % en plus, uniquement sur ces ventes</small></span></label>
+        <label class="chk"><input type="checkbox" id="emsIns"><span>Assurer l'EMS à la valeur de l'obi<small>Gratuit jusqu'à 20 000 ¥, puis 50 ¥ par tranche de 20 000 ¥</small></span></label>
+      </div>
+
+      <div class="card">
+        <details>
+          <summary>Réglages fixes</summary>
+          <div class="two">
+            <div class="field"><label for="rate">Taux</label><div class="inp"><input type="number" id="rate" inputmode="decimal" step="0.1"><span class="u">¥/€</span></div></div>
+            <div class="field"><label for="usdfee">0,30 $ de frais fixe</label><div class="inp"><input type="number" id="usdfee" inputmode="decimal" step="1"><span class="u">¥</span></div></div>
+            <div class="field"><label for="tr">Transaction</label><div class="inp"><input type="number" id="tr" inputmode="decimal" step="0.1"><span class="u">%</span></div></div>
+            <div class="field"><label for="pr">Paiement</label><div class="inp"><input type="number" id="pr" inputmode="decimal" step="0.1"><span class="u">%</span></div></div>
+            <div class="field"><label for="cv">Conversion</label><div class="inp"><input type="number" id="cv" inputmode="decimal" step="0.1"><span class="u">%</span></div></div>
+            <div class="field"><label for="adsr">Pub hors Etsy</label><div class="inp"><input type="number" id="adsr" inputmode="decimal" step="0.5"><span class="u">%</span></div></div>
+            <div class="field"><label for="listing">Mise en vente</label><div class="inp"><input type="number" id="listing" inputmode="numeric" step="1"><span class="u">¥</span></div></div>
+          </div>
+          <p style="margin:14px 0 0"><button class="btn" type="button" id="reset">Remettre les valeurs de départ</button></p>
+        </details>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <h2>Mode d'envoi</h2>
+        <div class="modes" id="modes"></div>
+      </div>
+
+      <div class="card">
+        <h2>Détail du calcul</h2>
+        <div class="tw"><table id="tbl"></table></div>
+      </div>
+
+      <div class="card">
+        <h2>Fixer le prix</h2>
+        <div class="field">
+          <label for="target">Bénéfice visé</label>
+          <div class="inp"><input type="number" id="target" inputmode="numeric" step="500"><span class="u">¥</span></div>
+        </div>
+        <div class="targets" id="targets"></div>
+      </div>
+
+      <div class="notes" id="notes"></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Air Packet : tarifs de la grille La Poste japonaise fournie (zones 3 et 4, 370 ¥ de recommandé inclus). EMS et colis aérien (1 kg : 3 850 ¥ Europe, 4 200 ¥ USA ; 2 kg : 6 000 ¥ / 6 700 ¥) : tableaux La Poste japonaise, suppléments temporaires compris.</span>
+    <span>Frais Etsy Japon : 6,5 % de transaction, 6 % + 0,30 $ de paiement, 32 ¥ de mise en vente. Ni la TVA, ni les droits de douane de l'acheteur ne sont des revenus.</span>
+  </div>
+</div>
+
+<script>
+(function () {
+  var DEFAULTS = {
+    price: 129, weight: 1000, zone: 3, vat: 20, shipC: 0, buy: 3000, fix: 0, pack: 0,
+    conv: true, procVat: true, ads: false, emsIns: true, target: 10000,
+    rate: 177.5, usdfee: 46, tr: 6.5, pr: 6, cv: 2.5, adsr: 15, listing: 32, mode: 'air'
+  };
+  var S = Object.assign({}, DEFAULTS);
+
+  var EMS = {
+    3: [[500,3150],[600,3400],[700,3650],[800,3900],[900,4150],[1000,4400],[1250,5000],[1500,5550],[2000,6700]],
+    4: [[500,3900],[600,4180],[700,4460],[800,4740],[900,5020],[1000,5300],[1250,5990],[1500,6600],[2000,7900]]
+  };
+  function airCost(zone, w) {
+    var n = Math.max(1, Math.ceil(w / 100));
+    return zone === 3 ? 880 + 180 * (n - 1) : 1200 + 210 * (n - 1);
+  }
+  function emsCost(zone, w) {
+    var t = EMS[zone];
+    for (var i = 0; i < t.length; i++) if (w <= t[i][0]) return t[i][1];
+    return t[t.length - 1][1];
+  }
+
+  var PARCEL = { 3: [3850, 6000], 4: [4200, 6700] };
+  function parcelCost(zone, w) { return PARCEL[zone][w <= 1000 ? 0 : 1]; }
+  var MODE_NAME = { air: 'Air Packet', ems: 'EMS', parcel: 'Colis aérien' };
+
+  function calc(P, mode) {
+    var vat = S.zone === 3 ? S.vat / 100 : 0;
+    var base = P + S.shipC;
+    var rev = base * S.rate;
+    var trans = S.tr / 100 * rev;
+    var procBase = (S.procVat ? base * (1 + vat) : base) * S.rate;
+    var proc = S.pr / 100 * procBase + S.usdfee;
+    var listing = S.listing;
+    var conv = S.conv ? S.cv / 100 * rev : 0;
+    var ads = S.ads ? S.adsr / 100 * rev : 0;
+    var fees = trans + proc + listing + conv + ads;
+    var ship = mode === 'air' ? airCost(S.zone, S.weight) : mode === 'ems' ? emsCost(S.zone, S.weight) : parcelCost(S.zone, S.weight);
+    var val = P * S.rate, ins = 0;
+    if (mode === 'ems' && S.emsIns && val > 20000) ins = Math.ceil((val - 20000) / 20000) * 50;
+    var own = S.buy + S.fix + S.pack;
+    var costs = own + ship + ins;
+    return { P: P, vat: vat, base: base, rev: rev, trans: trans, proc: proc, listing: listing, conv: conv, ads: ads,
+             fees: fees, ship: ship, ins: ins, own: own, costs: costs, profit: rev - fees - costs, val: val };
+  }
+  function solve(target, mode) {
+    var lo = 0, hi = 3000;
+    if (calc(hi, mode).profit < target) return null;
+    for (var i = 0; i < 50; i++) {
+      var mid = (lo + hi) / 2;
+      if (calc(mid, mode).profit >= target) hi = mid; else lo = mid;
+    }
+    return hi;
+  }
+
+  var nf = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 });
+  var nf2 = new Intl.NumberFormat('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  function sign(n) { return n < 0 ? '−' : ''; }
+  function yen(n) { return sign(Math.round(n)) + nf.format(Math.abs(Math.round(n))) + ' ¥'; }
+  function eur(n) { return sign(n) + nf2.format(Math.abs(n)) + ' €'; }
+  function eur0(n) { return sign(n) + nf.format(Math.abs(Math.round(n))) + ' €'; }
+  function $(id) { return document.getElementById(id); }
+
+  function render() {
+    S.weight = Math.min(2000, Math.max(100, S.weight || 100));
+    var cur = calc(S.price, S.mode);
+    var air = calc(S.price, 'air'), ems = calc(S.price, 'ems'), parcel = calc(S.price, 'parcel');
+
+    // sticky summary
+    $('sMode').textContent = MODE_NAME[S.mode];
+    var ySpan = $('sYen');
+    ySpan.textContent = yen(cur.profit);
+    ySpan.className = 'y ' + (cur.profit >= 0 ? 'pos' : 'neg');
+    $('sEur').textContent = eur(cur.profit / S.rate);
+    $('sMargin').textContent = cur.rev > 0 ? Math.round(cur.profit / cur.rev * 100) + ' %' : '–';
+    $('sTtc').textContent = eur(cur.base * (1 + cur.vat));
+
+    // zone / vat visibility
+    $('vatField').hidden = S.zone !== 3;
+    document.querySelectorAll('.seg').forEach(function (seg) {
+      var key = seg.dataset.key;
+      seg.querySelectorAll('button').forEach(function (b) {
+        b.setAttribute('aria-pressed', String(String(S[key]) === b.dataset.v));
+      });
+    });
+
+    // mode cards
+    var bestId = air.profit >= ems.profit && air.profit >= parcel.profit ? 'air' : (ems.profit >= parcel.profit ? 'ems' : 'parcel');
+    function card(id, name, c, m, lossTxt) {
+      var best = id === bestId;
+      return '<button type="button" class="mode" data-mode="' + id + '" aria-pressed="' + (S.mode === id) + '">' +
+        '<span class="t">' + name + (best ? '<span class="tag">Meilleur bénéfice</span>' : '') + '</span>' +
+        '<span class="p ' + (c.profit >= 0 ? 'pos' : 'neg') + '">' + yen(c.profit) + '</span>' +
+        '<span class="m">Port ' + yen(c.ship + c.ins) + ' · ' + eur(c.profit / S.rate) + '</span>' +
+        '<span class="m">' + lossTxt + '</span></button>';
+    }
+    var covered = S.emsIns ? Math.max(20000, Math.ceil(ems.val / 20000) * 20000) : 20000;
+    $('modes').innerHTML =
+      card('air', 'Air Packet', air, 'air', 'Colis perdu : perte de ' + yen(air.own + air.ship) + ', sans indemnité') +
+      card('ems', 'EMS', ems, 'ems', 'Colis perdu : indemnisé jusqu\'à ' + yen(covered)) +
+      card('parcel', 'Colis aérien', parcel, 'parcel', 'Suivi et indemnisation : à vérifier');
+
+    // breakdown table
+    function row(cls, label, y, signed) {
+      var v = signed ? -y : y;
+      return '<tr class="' + cls + '"><td>' + label + '</td><td class="n">' + yen(v) + '</td><td class="n">' + eur(v / S.rate) + '</td></tr>';
+    }
+    function eurRow(cls, label, euro) {
+      return '<tr class="' + cls + '"><td>' + label + '</td><td class="n">' + yen(euro * S.rate) + '</td><td class="n">' + eur(euro) + '</td></tr>';
+    }
+    var h = '<thead><tr><th></th><th class="n">Yen</th><th class="n">Euros</th></tr></thead><tbody>';
+    h += '<tr class="grp"><td colspan="3">Encaissé</td></tr>';
+    h += eurRow('', 'Prix de vente (hors TVA)', S.price);
+    if (S.shipC > 0) h += eurRow('', 'Port facturé', S.shipC);
+    h += row('sum', 'Total encaissé', cur.rev, false);
+    h += '<tr class="grp"><td colspan="3">Frais Etsy</td></tr>';
+    h += row('sub', 'Transaction (' + S.tr + ' %)', cur.trans, true);
+    h += row('sub', 'Paiement (' + S.pr + ' % + 0,30 $)', cur.proc, true);
+    h += row('sub', 'Mise en vente', cur.listing, true);
+    if (S.conv) h += row('sub', 'Conversion (' + S.cv + ' %)', cur.conv, true);
+    if (S.ads) h += row('sub', 'Pub hors Etsy (' + S.adsr + ' %)', cur.ads, true);
+    h += row('sum', 'Total frais Etsy', cur.fees, true);
+    h += '<tr class="grp"><td colspan="3">Mes coûts</td></tr>';
+    h += row('sub', 'Achat de l\'obi', S.buy, true);
+    if (S.fix > 0) h += row('sub', 'Retouches, couture', S.fix, true);
+    if (S.pack > 0) h += row('sub', 'Emballage', S.pack, true);
+    h += row('sub', MODE_NAME[S.mode] + ', ' + S.weight + ' g', cur.ship, true);
+    if (cur.ins > 0) h += row('sub', 'Assurance EMS', cur.ins, true);
+    h += row('sum', 'Total coûts', cur.costs, true);
+    h += row('fin', 'Bénéfice net', cur.profit, false);
+    h += '</tbody>';
+    $('tbl').innerHTML = h;
+
+    // targets
+    var pt = solve(S.target, S.mode), p0 = solve(0, S.mode);
+    var ttc = function (p) { return p * (1 + cur.vat) + S.shipC * (1 + cur.vat); };
+    $('targets').innerHTML =
+      '<div class="tg"><b>' + (pt == null ? '–' : eur0(Math.ceil(pt))) + '</b><span>Prix hors TVA pour ' + yen(S.target) + ' de bénéfice' +
+        (pt == null ? '' : ' (client : ' + eur0(ttc(Math.ceil(pt))) + ')') + '</span></div>' +
+      '<div class="tg"><b>' + (p0 == null ? '–' : eur0(Math.ceil(p0))) + '</b><span>Prix hors TVA pour ne rien perdre</span></div>';
+
+    // notes
+    var n = [];
+    if (S.zone === 3 && S.price > 150) n.push(['warn', 'Au-dessus de 150 € hors port : la TVA et les droits peuvent être demandés à la livraison par le transporteur. L\'EMS est plus prudent.']);
+    if (S.zone === 4) n.push(['', 'États-Unis : les droits de douane sont souvent payés par l\'acheteur à la livraison, ils ne sont pas inclus ici.']);
+    if (S.mode === 'air') n.push(['', 'Air Packet : suivi sans signature, sans indemnisation. Maximum 2 kg.']);
+    if (S.mode === 'ems') n.push(['', 'EMS : suivi en ligne ; d\'après la poste, signature à la livraison ou avis de passage si absent. Cela protège en cas de litige "non reçu".']);
+    if (S.mode === 'parcel') n.push(['', 'Colis aérien : tarif par tranche de 1 kg, plus lent que l\'EMS. Suivi, signature et indemnisation non confirmés.']);
+    if (S.mode === 'ems' && S.price * S.rate > 20000 && !S.emsIns) n.push(['', 'L\'EMS n\'est indemnisé que jusqu\'à 20 000 ¥ sans assurance ; cochez l\'assurance pour couvrir tout le prix.']);
+    if (cur.profit < 0) n.push(['warn', 'À ce prix, cet obi se vend à perte.']);
+    $('notes').innerHTML = n.map(function (x) { return '<div class="note ' + x[0] + '">' + x[1] + '</div>'; }).join('');
+  }
+
+  // wiring
+  var numKeys = ['price','weight','vat','shipC','buy','fix','pack','target','rate','usdfee','tr','pr','cv','adsr','listing'];
+  var boolKeys = ['conv','procVat','ads','emsIns'];
+  function setInputs() {
+    numKeys.forEach(function (k) { $(k).value = S[k]; });
+    boolKeys.forEach(function (k) { $(k).checked = S[k]; });
+    $('priceR').value = S.price; $('weightR').value = S.weight;
+  }
+  numKeys.forEach(function (k) {
+    $(k).addEventListener('input', function () {
+      var v = parseFloat($(k).value);
+      S[k] = isNaN(v) ? 0 : v;
+      if (k === 'price') $('priceR').value = S.price;
+      if (k === 'weight') $('weightR').value = S.weight;
+      render();
+    });
+  });
+  $('priceR').addEventListener('input', function () { S.price = parseFloat($('priceR').value); $('price').value = S.price; render(); });
+  $('weightR').addEventListener('input', function () { S.weight = parseFloat($('weightR').value); $('weight').value = S.weight; render(); });
+  boolKeys.forEach(function (k) { $(k).addEventListener('change', function () { S[k] = $(k).checked; render(); }); });
+  document.querySelectorAll('.seg').forEach(function (seg) {
+    seg.addEventListener('click', function (e) {
+      var b = e.target.closest('button'); if (!b) return;
+      S[seg.dataset.key] = Number(b.dataset.v); render();
+    });
+  });
+  $('modes').addEventListener('click', function (e) {
+    var b = e.target.closest('.mode'); if (!b) return;
+    S.mode = b.dataset.mode; render();
+  });
+  $('reset').addEventListener('click', function () { S = Object.assign({}, DEFAULTS); setInputs(); render(); });
+
+  setInputs();
+  render();
+})();
+</script>
