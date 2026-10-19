@@ -1,3 +1,4 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Profit Obi</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,6 +35,7 @@
   --warn: #F2A173; --warn-bg: #3A241A; color-scheme: dark;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 body {
   background: var(--bg); color: var(--ink);
   font-family: var(--display); font-size: 15px; line-height: 1.5;
@@ -152,8 +154,12 @@ details[open] summary { margin-bottom: 12px; }
       <div class="card">
         <h2>L'obi</h2>
         <div class="field">
-          <label for="price">Prix de vente, hors TVA</label>
+          <label for="price" id="priceLbl">Prix de vente, hors TVA</label>
           <div class="inp"><input type="number" id="price" inputmode="decimal" min="0" step="1"><span class="u">€</span><input type="range" id="priceR" min="20" max="250" step="1" aria-label="Prix de vente, curseur"></div>
+        </div>
+        <div class="field">
+          <label class="chk"><input type="checkbox" id="promo"><span>Promotion de lancement de la boutique<small>Le prix ci-dessus devient le prix barré</small></span></label>
+          <div class="inp" id="discRow"><input type="number" id="disc" inputmode="decimal" min="0" max="75" step="1"><span class="u">%</span><span class="hint" id="discOut"></span></div>
         </div>
         <div class="field">
           <label for="weight">Poids du colis</label>
@@ -246,7 +252,7 @@ details[open] summary { margin-bottom: 12px; }
 (function () {
   var DEFAULTS = {
     price: 129, weight: 1000, zone: 3, vat: 20, shipC: 0, buy: 3000, fix: 0, pack: 0,
-    conv: true, procVat: true, ads: false, emsIns: true, target: 10000,
+    conv: true, procVat: true, ads: false, emsIns: true, target: 10000, promo: false, disc: 25,
     rate: 177.5, usdfee: 46, tr: 6.5, pr: 6, cv: 2.5, adsr: 15, listing: 32, mode: 'air'
   };
   var S = Object.assign({}, DEFAULTS);
@@ -268,6 +274,8 @@ details[open] summary { margin-bottom: 12px; }
   var PARCEL = { 3: [3850, 6000], 4: [4200, 6700] };
   function parcelCost(zone, w) { return PARCEL[zone][w <= 1000 ? 0 : 1]; }
   var MODE_NAME = { air: 'Air Packet', ems: 'EMS', parcel: 'Colis aérien' };
+
+  function effP() { return S.promo ? S.price * (1 - S.disc / 100) : S.price; }
 
   function calc(P, mode) {
     var vat = S.zone === 3 ? S.vat / 100 : 0;
@@ -308,8 +316,12 @@ details[open] summary { margin-bottom: 12px; }
 
   function render() {
     S.weight = Math.min(2000, Math.max(100, S.weight || 100));
-    var cur = calc(S.price, S.mode);
-    var air = calc(S.price, 'air'), ems = calc(S.price, 'ems'), parcel = calc(S.price, 'parcel');
+    var PE = effP();
+    var cur = calc(PE, S.mode);
+    var air = calc(PE, 'air'), ems = calc(PE, 'ems'), parcel = calc(PE, 'parcel');
+    $('discRow').hidden = !S.promo;
+    $('discOut').textContent = S.promo ? 'Prix affiché ' + eur(PE) + ' après promotion' : '';
+    $('priceLbl').textContent = S.promo ? 'Prix de départ (barré), hors TVA' : 'Prix de vente, hors TVA';
 
     // sticky summary
     $('sMode').textContent = MODE_NAME[S.mode];
@@ -355,7 +367,13 @@ details[open] summary { margin-bottom: 12px; }
     }
     var h = '<thead><tr><th></th><th class="n">Yen</th><th class="n">Euros</th></tr></thead><tbody>';
     h += '<tr class="grp"><td colspan="3">Encaissé</td></tr>';
-    h += eurRow('', 'Prix de vente (hors TVA)', S.price);
+    if (S.promo) {
+      h += eurRow('', 'Prix de départ (barré)', S.price);
+      h += eurRow('sub', 'Promotion de lancement (' + S.disc + ' %)', PE - S.price);
+      h += eurRow('', 'Prix de vente (hors TVA)', PE);
+    } else {
+      h += eurRow('', 'Prix de vente (hors TVA)', S.price);
+    }
     if (S.shipC > 0) h += eurRow('', 'Port facturé', S.shipC);
     h += row('sum', 'Total encaissé', cur.rev, false);
     h += '<tr class="grp"><td colspan="3">Frais Etsy</td></tr>';
@@ -381,24 +399,26 @@ details[open] summary { margin-bottom: 12px; }
     var ttc = function (p) { return p * (1 + cur.vat) + S.shipC * (1 + cur.vat); };
     $('targets').innerHTML =
       '<div class="tg"><b>' + (pt == null ? '–' : eur0(Math.ceil(pt))) + '</b><span>Prix hors TVA pour ' + yen(S.target) + ' de bénéfice' +
-        (pt == null ? '' : ' (client : ' + eur0(ttc(Math.ceil(pt))) + ')') + '</span></div>' +
+        (pt == null ? '' : ' (client : ' + eur0(ttc(Math.ceil(pt))) + ')') +
+        (S.promo && pt != null && S.disc < 100 ? ' · prix barré à afficher : ' + eur0(Math.ceil(pt / (1 - S.disc / 100))) : '') + '</span></div>' +
       '<div class="tg"><b>' + (p0 == null ? '–' : eur0(Math.ceil(p0))) + '</b><span>Prix hors TVA pour ne rien perdre</span></div>';
 
     // notes
     var n = [];
-    if (S.zone === 3 && S.price > 150) n.push(['warn', 'Au-dessus de 150 € hors port : la TVA et les droits peuvent être demandés à la livraison par le transporteur. L\'EMS est plus prudent.']);
+    if (S.promo && S.price > 150) n.push(['warn', 'Le prix barré dépasse 150 € : je ne sais pas si le seuil douanier se calcule sur lui ou sur le prix payé. Restez à 150 € ou moins. Les règles européennes sur les prix barrés sont à vérifier dans Etsy.']);
+    if (S.zone === 3 && PE > 150) n.push(['warn', 'Au-dessus de 150 € hors port : la TVA et les droits peuvent être demandés à la livraison par le transporteur. L\'EMS est plus prudent.']);
     if (S.zone === 4) n.push(['', 'États-Unis : les droits de douane sont souvent payés par l\'acheteur à la livraison, ils ne sont pas inclus ici.']);
     if (S.mode === 'air') n.push(['', 'Air Packet : suivi sans signature, sans indemnisation. Maximum 2 kg.']);
     if (S.mode === 'ems') n.push(['', 'EMS : suivi en ligne ; d\'après la poste, signature à la livraison ou avis de passage si absent. Cela protège en cas de litige "non reçu".']);
     if (S.mode === 'parcel') n.push(['', 'Colis aérien : tarif par tranche de 1 kg, plus lent que l\'EMS. Suivi, signature et indemnisation non confirmés.']);
-    if (S.mode === 'ems' && S.price * S.rate > 20000 && !S.emsIns) n.push(['', 'L\'EMS n\'est indemnisé que jusqu\'à 20 000 ¥ sans assurance ; cochez l\'assurance pour couvrir tout le prix.']);
+    if (S.mode === 'ems' && PE * S.rate > 20000 && !S.emsIns) n.push(['', 'L\'EMS n\'est indemnisé que jusqu\'à 20 000 ¥ sans assurance ; cochez l\'assurance pour couvrir tout le prix.']);
     if (cur.profit < 0) n.push(['warn', 'À ce prix, cet obi se vend à perte.']);
     $('notes').innerHTML = n.map(function (x) { return '<div class="note ' + x[0] + '">' + x[1] + '</div>'; }).join('');
   }
 
   // wiring
-  var numKeys = ['price','weight','vat','shipC','buy','fix','pack','target','rate','usdfee','tr','pr','cv','adsr','listing'];
-  var boolKeys = ['conv','procVat','ads','emsIns'];
+  var numKeys = ['price','disc','weight','vat','shipC','buy','fix','pack','target','rate','usdfee','tr','pr','cv','adsr','listing'];
+  var boolKeys = ['conv','procVat','ads','emsIns','promo'];
   function setInputs() {
     numKeys.forEach(function (k) { $(k).value = S[k]; });
     boolKeys.forEach(function (k) { $(k).checked = S[k]; });
@@ -432,3 +452,5 @@ details[open] summary { margin-bottom: 12px; }
   render();
 })();
 </script>
+
+</body></html>
