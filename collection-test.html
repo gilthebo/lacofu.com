@@ -3,19 +3,24 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>La Collection — La Cofu | Page test</title>
-<meta name="description" content="Textiles japonais vintage, céramiques et objets sélectionnés à Kyushu, au Japon.">
+<meta name="description" content="Tissus japonais vintage et récupérés, céramiques anciennes et objets de brocante chinés au Japon.">
 <meta name="robots" content="noindex,nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
 <style>
 :root{--cream:#F5F0E6;--cream-d:#EDE7D8;--ink:#1C1714;--ink-mid:#3a3530;--muted:#857a6f;--gold:#A8843A;--gold-l:#C9A84C;--border:rgba(168,132,58,.22);--white:#FDFAF5}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:95px}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;scroll-padding-top:105px}
 body{background:var(--cream);color:var(--ink);font:300 16px/1.75 Jost,sans-serif}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
 .fr{display:none}body.lang-fr .fr{display:block}body.lang-fr .en{display:none}
 header{position:sticky;top:0;z-index:20;background:var(--white);border-bottom:1px solid var(--border);box-shadow:0 1px 18px #0000000b}
 .nav{max-width:1200px;margin:auto;padding:0 30px;height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
 .brand{font:400 1.55rem 'Cormorant Garamond',serif;letter-spacing:.15em;white-space:nowrap}
-nav{display:flex;gap:22px;align-items:center;flex-wrap:wrap}nav a{font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}nav a:hover{color:var(--gold)}
+nav{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+nav a{font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+nav a:hover{color:var(--gold)}
+.site-nav{justify-content:center;flex:1;gap:10px 15px}
+.site-nav a{font-size:.62rem;letter-spacing:.055em}
+.lang{white-space:nowrap;flex-shrink:0}
 .lang button{background:none;border:0;padding:5px 7px;color:var(--muted);font:500 .8rem Jost;cursor:pointer}.lang button.active{color:var(--gold)}
 main{max-width:1200px;margin:auto;padding:0 30px 80px}
 .hero{padding:48px 0 58px;text-align:center;border-bottom:1px solid var(--border)}
@@ -25,18 +30,18 @@ h1{font:300 clamp(2.5rem,5vw,4.1rem)/1.05 'Cormorant Garamond',serif;letter-spac
 h1 em{color:var(--gold);font-weight:300}.intro{max-width:760px;margin:auto;color:var(--ink-mid);font-size:1rem;line-height:1.95}
 .story{max-width:850px;margin:52px auto 70px;text-align:center}.story h2,.section-title{font:300 clamp(2rem,4vw,3.1rem)/1.1 'Cormorant Garamond',serif;letter-spacing:.04em;margin-bottom:16px}
 .story p{color:var(--muted);line-height:1.95}
-.categories{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:0 auto 76px}
+.categories{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:28px auto 76px;padding:0 0 24px;border-bottom:1px solid var(--border)}
 .categories a{border-top:1px solid var(--gold);padding:13px 5px;text-align:center;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .categories a:hover{color:var(--gold)}
-.section-intro{text-align:center;padding:20px 0 34px}.section-intro p{max-width:720px;margin:auto;color:var(--muted)}
-.video-block{max-width:860px;margin:0 auto 64px;background:#2C2416;padding:28px}
+.section-intro{text-align:center;padding:45px 0 42px;scroll-margin-top:105px}.section-intro p{max-width:720px;margin:auto;color:var(--muted)}
+.video-block{max-width:860px;margin:0 auto 44px;background:#2C2416;padding:28px}
 .video-block h2{font:300 2rem 'Cormorant Garamond',serif;color:var(--cream);text-align:center;margin-bottom:18px}
 .video-frame{position:relative;aspect-ratio:16/9;max-width:760px;margin:auto}.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .collection-head{text-align:center;padding:20px 0 48px;border-top:1px solid var(--border)}
 .collection-head .eyebrow{font-size:.68rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase}
 .collection-head h2{font:300 clamp(2.4rem,4vw,3.5rem) 'Cormorant Garamond',serif;margin:8px 0}
 .collection-head p{max-width:760px;margin:auto;color:var(--muted)}
-.piece{padding:38px 0 52px;border-top:1px solid var(--border)}
+.piece{padding:38px 0 52px;scroll-margin-top:105px;border-top:1px solid var(--border)}
 .piece-heading{display:flex;align-items:flex-start;gap:18px;margin-bottom:14px}
 .piece-no{font:300 2rem 'Cormorant Garamond',serif;color:var(--gold);line-height:1.1}
 .piece h3{font:400 clamp(1.55rem,3vw,2.15rem)/1.15 'Cormorant Garamond',serif}
@@ -46,10 +51,10 @@ h1 em{color:var(--gold);font-weight:300}.intro{max-width:760px;margin:auto;color
 .photo-grid figure{aspect-ratio:1/1;overflow:hidden;background:var(--cream-d);cursor:zoom-in}
 .photo-grid img{width:100%;height:100%;object-fit:cover;transition:transform .45s}
 .photo-grid figure:hover img{transform:scale(1.045)}
-.other-cats{margin:70px 0 55px;padding:42px;background:var(--cream-d);border:1px solid var(--border)}
+.other-cats{margin:70px 0 55px;scroll-margin-top:105px;padding:42px;background:var(--cream-d);border:1px solid var(--border)}
 .other-cats h2{font:300 2.3rem 'Cormorant Garamond',serif;text-align:center;margin-bottom:28px}
 .other-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.other-grid h3{font:400 1.35rem 'Cormorant Garamond',serif;color:var(--gold);margin-bottom:6px}
+.category-detail{scroll-margin-top:105px}.other-grid h3{font:400 1.35rem 'Cormorant Garamond',serif;color:var(--gold);margin-bottom:6px}
 .other-grid p{font-size:.88rem;color:var(--muted)}
 .bottom-note{text-align:center;padding:45px 15px;border-top:1px solid var(--border)}
 .bottom-note h2{font:300 2.2rem 'Cormorant Garamond',serif;margin-bottom:8px}
@@ -58,27 +63,51 @@ h1 em{color:var(--gold);font-weight:300}.intro{max-width:760px;margin:auto;color
 footer{background:#2C2416;color:#EAE0D0;padding:38px 30px;text-align:center;font-size:.78rem;letter-spacing:.08em}
 .lightbox{display:none;position:fixed;inset:0;background:#100e0cf2;z-index:100;align-items:center;justify-content:center;padding:5vh 5vw}
 .lightbox.open{display:flex}.lightbox img{max-width:90vw;max-height:88vh;object-fit:contain}.lightbox button{position:absolute;right:25px;top:14px;color:white;background:none;border:0;font-size:2.5rem;cursor:pointer}
-@media(max-width:900px){.nav{height:auto;min-height:68px;flex-wrap:wrap;padding:12px 20px}nav{order:3;width:100%;justify-content:center;gap:12px 18px}.photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.categories{grid-template-columns:repeat(3,1fr)}.other-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:560px){main{padding:0 16px 55px}.nav{padding:10px 15px}nav a{font-size:.65rem}.hero{padding-top:25px}.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.piece-copy{margin-left:0}.piece-heading{gap:12px}.categories{grid-template-columns:repeat(2,1fr);margin-bottom:48px}.other-cats{padding:25px 18px}.other-grid{grid-template-columns:1fr}.video-block{padding:18px 10px}}
+@media(max-width:1100px){.nav{height:auto;min-height:68px;flex-wrap:wrap;padding:12px 20px}.site-nav{order:3;width:100%;flex-basis:100%;justify-content:center;gap:10px 16px}.photo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.categories{grid-template-columns:repeat(3,1fr)}.other-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){main{padding:0 16px 55px}.nav{padding:10px 15px}.site-nav{gap:8px 12px}.site-nav a{font-size:.58rem}.hero{padding-top:25px}.photo-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.piece-copy{margin-left:0}.piece-heading{gap:12px}.categories{grid-template-columns:repeat(2,1fr);margin-bottom:48px}.other-cats{padding:25px 18px}.other-grid{grid-template-columns:1fr}.video-block{padding:18px 10px}}
 </style></head>
 <body class="lang-fr">
-<header><div class="nav"><a class="brand" href="https://lacofu.com/index.html">La Cofu</a>
-<nav aria-label="Navigation collection"><a href="#obi-tee">Obi Tee</a><a href="#bags">Bags</a><a href="#table-runners">Table runners</a><a href="#ceramics">Ceramics</a><a href="#objects">Objects & Finds</a></nav>
-<div class="lang"><button id="btn-fr" class="active">FR</button><span> / </span><button id="btn-en">EN</button></div></div></header>
+<header><div class="nav">
+<a class="brand" href="https://lacofu.com/index.html">La Cofu</a>
+<nav class="site-nav" aria-label="Navigation principale">
+  <a href="https://lacofu.com/index.html"><span class="fr">Accueil</span><span class="en">Home</span></a>
+  <a href="https://lacofu.com/about.html">About us</a>
+  <a href="https://lacofu.com/experiences.html">Experiences</a>
+  <a href="https://lacofu.com/residencies.html">Residencies</a>
+  <a href="https://lacofu.com/locations.html">Locations</a>
+  <a href="https://lacofu.com/campings.html">Camping &amp; Resort</a>
+  <a href="https://lacofu.com/shop.html">Shop</a>
+  <a href="https://lacofu.com/contact.html">Contact</a>
+</nav>
+<div class="lang"><button id="btn-fr" class="active">FR</button><span> / </span><button id="btn-en">EN</button></div>
+</div></header>
 <main>
 <section class="hero">
 <img src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-10-at-12-48-14_orig.png" alt="Sélection La Cofu — textiles et objets japonais">
 <div class="kicker">Textiles · Objets · Histoires du Japon</div>
 <h1><span class="fr">La Collection <em>La Cofu</em></span><span class="en">The La Cofu <em>Collection</em></span></h1>
-<p class="intro fr">Textiles japonais vintage, céramiques, antiquités et objets chinés — sélectionnés à Kyushu, au Japon. La Cofu est un petit atelier basé à Itoshima, sur l’île de Kyushu. Nous cherchons des pièces pour leurs couleurs, leurs matières, leurs formes et la présence qu’elles peuvent apporter à un intérieur.</p>
-<p class="intro en">Vintage Japanese textiles, ceramics, antiques and found objects — selected in Kyushu, Japan. La Cofu is a small studio based in Itoshima, on the island of Kyushu. We look for pieces for their colours, materials, forms and the atmosphere they can bring to an interior.</p>
+<p class="intro fr">La Cofu rassemble des tissus, des vêtements, des céramiques et des objets anciens ou d’occasion, chinés au Japon. Une collection vivante, faite de trouvailles de brocante, de pièces vintage, de matières à réutiliser et d’objets qui ont déjà une histoire. Tout n’est pas neuf, parfait ou intact : les traces du temps, les petites irrégularités et les différences d’état font aussi partie de leur caractère.</p>
+<p class="intro en">La Cofu brings together fabrics, clothing, ceramics and vintage or second-hand objects found in Japan. A living collection of flea-market finds, vintage pieces, materials to reuse and objects that already have a story. Not everything is new, perfect or untouched: signs of age, small irregularities and differences in condition are part of their character too.</p>
 </section>
-<section class="story"><h2><span class="fr">Un regard, une sélection</span><span class="en">An eye for finding</span></h2>
-<p class="fr">Chineur, dénicheur, fouineur : l’idée est simple. Trouver un objet qui arrête le regard, puis imaginer comment il peut vivre dans une maison. Certaines pièces restent telles quelles ; d’autres sont légèrement adaptées ou associées à d’autres textiles lorsque l’ensemble y gagne. La Cofu présente ses sélections en France à travers des événements, des pop-ups et des collaborations avec des boutiques et des lieux partenaires.</p>
-<p class="en">The idea is simple: find an object that catches the eye, then imagine how it might live in a home. Some pieces remain just as they are; others are lightly adapted or combined with textiles when the whole becomes more harmonious. La Cofu presents its selections in France through events, pop-ups and collaborations with shops and partner venues.</p></section>
-<div class="categories"><a href="#obi-tee">Obi Tee</a><a href="#bags">Bags</a><a href="#table-runners">Table runners</a><a href="#ceramics">Ceramics</a><a href="#objects">Objects & Finds</a></div>
-<section id="obi-tee" class="section-intro"><h2 class="section-title">Obi Tee</h2><p class="fr">T-shirts en coton épais, associés à des fragments de textiles vintage japonais sélectionnés pour leurs motifs, leurs couleurs et leur caractère. Chaque tissu est différent ; les petites séries s’arrêtent lorsque la matière est épuisée.</p><p class="en">Thick cotton T-shirts combined with vintage Japanese textile panels selected for their patterns, colours and character. Each fabric is different; small runs end when the material is gone.</p></section>
-<section id="bags" class="section-intro"><h2 class="section-title">Bags</h2><p class="fr">Des sacs réalisés à partir de textiles de kimono ou d’obi choisis pour leur motif, leur texture et leur caractère, pensés pour accompagner le quotidien.</p><p class="en">Bags made from kimono or obi textiles chosen for their pattern, texture and character, designed for everyday use.</p></section>
+
+<nav class="categories" aria-label="Explorer les catégories">
+  <a href="#fabrics"><span class="fr">Tissus</span><span class="en">Fabrics</span></a>
+  <a href="#obi-tee">Obi Tee</a>
+  <a href="#bags"><span class="fr">Sacs</span><span class="en">Bags</span></a>
+  <a href="#table-runners"><span class="fr">Chemins de table</span><span class="en">Table runners</span></a>
+  <a href="#ceramics"><span class="fr">Céramiques</span><span class="en">Ceramics</span></a>
+  <a href="#objects"><span class="fr">Objets &amp; trouvailles</span><span class="en">Objects &amp; Finds</span></a>
+</nav>
+
+
+
+<section id="fabrics" class="section-intro">
+<h2 class="section-title"><span class="fr">Tissus &amp; matières</span><span class="en">Fabrics &amp; materials</span></h2>
+<p class="fr">Des rouleaux de tissu destinés à la confection de kimono, des textiles vintage issus de kimono anciens et des tissus récupérés, ainsi que d’autres matières à choisir selon vos projets. Certains sont proposés en rouleaux ou en coupons ; d’autres sont des textiles anciens qui peuvent être réemployés pour créer quelque chose de nouveau. Les dimensions, la composition et l’état varient d’une pièce à l’autre.</p>
+<p class="en">Kimono fabric rolls, vintage textiles recovered from older kimono, reclaimed fabrics and other materials for your own projects. Some are offered as rolls or lengths; others are older textiles that can be reused to make something new. Measurements, composition and condition vary from piece to piece.</p>
+</section>
+<section id="obi-tee" class="section-intro"><h2 class="section-title">Obi Tee</h2><p class="fr">T-shirts en coton épais associés à des morceaux de tissus japonais vintage ou récupérés. Les motifs, les couleurs et les matières changent selon les textiles disponibles ; chaque série est donc différente.</p><p class="en">Thick cotton T-shirts combined with vintage or reclaimed Japanese fabrics. Patterns, colours and materials vary according to the textiles available, so every small run is different.</p></section>
+<section id="bags" class="section-intro"><h2 class="section-title">Bags</h2><p class="fr">Des sacs confectionnés à partir de textiles de kimono, d’obi ou d’autres tissus japonais anciens et récupérés. Les matières et leur état sont variables : chaque pièce dépend des tissus disponibles.</p><p class="en">Bags made from kimono, obi and other vintage or reclaimed Japanese fabrics. Materials and condition vary; each piece depends on the fabrics available.</p></section>
 <div class="video-block"><h2><span class="fr">Les textiles en situation</span><span class="en">The textiles in context</span></h2><div class="video-frame"><iframe src="https://www.youtube.com/embed/PL_GCXAH_7k" title="La Cofu — présentation de textiles" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div>
 <section id="table-runners">
 <div class="collection-head"><div class="eyebrow">La Cofu · Textiles japonais vintage</div><h2><span class="fr">Chemins de table & textiles muraux</span><span class="en">Table runners & wall textiles</span></h2>
@@ -129,9 +158,9 @@ footer{background:#2C2416;color:#EAE0D0;padding:38px 30px;text-align:center;font
 <section class="other-cats">
 <h2><span class="fr">Autres trouvailles</span><span class="en">Other finds</span></h2>
 <div class="other-grid">
-<div id="ceramics"><h3>Ceramics</h3><p class="fr">Céramiques chinées dans les brocantes, marchés et ventes de maisons, choisies pour leur forme, leur glaçure et leur caractère. Les marques d’atelier sont indiquées lorsqu’elles sont identifiables.</p><p class="en">Ceramics found at flea markets, antique markets and house clearances, selected for their form, glaze and character. Maker or kiln marks are noted when identifiable.</p></div>
-<div id="objects"><h3>Objects & Finds</h3><p class="fr">Laques, masques, petits objets de collection et trouvailles singulières. Une sélection guidée par le détail, la matière et ce qui attire le regard.</p><p class="en">Lacquerware, masks, small collectibles and unusual finds. A selection guided by detail, material and the things that catch the eye.</p></div>
-<div><h3>Textiles</h3><p class="fr">Des pièces vintage choisies individuellement à Kyushu, au Japon.</p><p class="en">Vintage pieces individually selected in Kyushu, Japan.</p></div>
+<div id="ceramics" class="category-detail"><h3>Ceramics</h3><p class="fr">Céramiques anciennes et d’occasion, trouvées dans les brocantes, marchés et ventes de maisons. Certaines portent des traces d’usage, des irrégularités ou des marques du temps. Elles sont présentées pour leur forme, leur glaçure et leur présence, pas comme des objets neufs sortis d’atelier.</p><p class="en">Vintage and second-hand ceramics found at flea markets, markets and house clearances. Some show signs of use, irregularities or marks of age. They are offered for their form, glaze and presence—not as pristine new studio pieces.</p></div>
+<div id="objects" class="category-detail"><h3>Objects & Finds</h3><p class="fr">Objets décoratifs anciens ou d’occasion, laques, masques, petits objets de collection et trouvailles de brocante. Il peut s’agir de pièces patinées, imparfaites ou marquées par leur usage. La collection évolue au fil des marchés et des occasions : certaines pièces sont choisies une à une, d’autres rejoignent simplement les trouvailles du moment.</p><p class="en">Vintage and second-hand decorative objects, lacquerware, masks, small collectibles and flea-market finds. Some pieces are patinated, imperfect or marked by use. The collection changes with markets and opportunities: some items are selected individually, while others simply become part of the finds of the moment.</p></div>
+
 <div><h3>La Cofu</h3><p class="fr">Une sélection à découvrir lors de nos présentations et collaborations en France.</p><p class="en">Discover the collection through our presentations and collaborations in France.</p></div>
 </div></section>
 <section class="bottom-note"><h2><span class="fr">Découvrir La Cofu</span><span class="en">Discover La Cofu</span></h2><p><span class="fr">Pour découvrir les pièces actuellement proposées en ligne, retrouvez également La Cofu sur Etsy.</span><span class="en">To see the pieces currently offered online, visit La Cofu on Etsy.</span></p><a class="etsy-link" href="https://www.etsy.com/shop/LaCofu" target="_blank" rel="noopener">Etsy · La Cofu ↗</a></section>
