@@ -195,6 +195,157 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;col
   text-transform:uppercase;color:rgba(245,240,230,0.7);margin-top:6px}
 @media(max-width:720px){.balloon-specs{grid-template-columns:1fr 1fr}}
 
+<!-- LA COFU — VIDEO BALLOON 3D SIMULATOR -->
+<style>
+.lc-simulator {
+  margin: 46px 0 52px;
+  max-width: 100%;
+}
+.lc-simulator * {
+  box-sizing: border-box;
+}
+.lc-simulator-heading {
+  text-align: center;
+  margin-bottom: 24px;
+}
+.lc-simulator-heading h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(30px, 3.6vw, 46px);
+  font-weight: 400;
+  color: #f5f0e6;
+  margin: 8px 0 12px;
+}
+.lc-simulator-heading p {
+  max-width: 740px;
+  margin: 0 auto;
+  color: rgba(245,240,230,.82);
+  font-size: clamp(16px,1.2vw,18px);
+  line-height: 1.7;
+}
+.lc-simulator-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(213,184,126,.45);
+  background: #171b24;
+}
+.lc-simulator-panel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.lc-simulator-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  padding: 24px;
+  background: #181d28;
+}
+.lc-simulator-actions p {
+  color: rgba(245,240,230,.78);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  flex: 1 1 260px;
+}
+.lc-simulator-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 24px;
+  background: #ad8945;
+  color: #fff !important;
+  text-decoration: none;
+  font: 600 14px/1.5 'Raleway', sans-serif;
+  letter-spacing: .04em;
+  text-align: center;
+  transition: background .2s;
+}
+.lc-simulator-button:hover {
+  background: #c29d58;
+}
+.lc-simulator-footer {
+  text-align: right;
+  margin-top: 12px;
+}
+.lc-simulator-footer a {
+  font-size: 14px;
+  color: #dfc48d;
+  text-decoration: underline;
+}
+@media(max-width:650px) {
+  .lc-simulator { margin: 34px 0 42px; }
+  .lc-simulator-actions { padding: 20px; }
+  .lc-simulator-button { width: 100%; }
+  .lc-simulator-footer { text-align: center; }
+}
+</style>
+
+<div class="lc-simulator" id="balloon-simulator">
+
+  <div class="lc-simulator-heading">
+    <h3 class="fr">Imaginez votre projection en 3D</h3>
+    <h3 class="en">Visualise your projection in 3D</h3>
+
+    <p class="fr">
+      Et si votre image prenait vie sur une sphère ?
+      Essayez notre simulateur interactif : importez
+      une photo ou une vidéo, choisissez la taille du
+      ballon, son installation et l'éclairage du lieu.
+    </p>
+    <p class="en">
+      What if your visuals came to life on a sphere?
+      Try our interactive simulator: upload a picture
+      or video, choose the balloon size, installation
+      type and ambient lighting.
+    </p>
+  </div>
+
+  <div class="lc-simulator-panel">
+    <img
+      src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-20-at-11-07-02_orig.png"
+      alt="Video-Balloon 3D simulator preview"
+      loading="lazy"
+    />
+
+    <div class="lc-simulator-actions">
+      <p class="fr">
+        Découvrez le rendu de votre contenu
+        sur un ballon de projection à 270°.
+      </p>
+      <p class="en">
+        See how your own content looks
+        on a 270° projection balloon.
+      </p>
+
+      <a
+        class="lc-simulator-button"
+        href="https://gilthebo.github.io/spheresimulator/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="fr">Lancer le simulateur 3D ↗</span>
+        <span class="en">Launch 3D simulator ↗</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="lc-simulator-footer">
+    <a
+      href="https://gilthebo.github.io/spheresimulator/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span class="fr">Ouvrir en plein écran ↗</span>
+      <span class="en">Open full screen ↗</span>
+    </a>
+  </div>
+
+</div>
+<!-- END LA COFU 3D SIMULATOR -->
+
 .balloon-use-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
 .balloon-use-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);padding:26px 24px}
 .balloon-use-title{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:var(--gold-l);margin-bottom:10px}
