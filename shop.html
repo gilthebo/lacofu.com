@@ -1045,7 +1045,47 @@ body[data-lang=en] #kyushu-in-motion .fr,body:has(#lc-lang-en:checked) #kyushu-i
 @media(max-width:900px){#cat-obitee .model-expand>summary{grid-template-columns:90px minmax(0,1fr) 28px!important}}
 @media(max-width:620px){#cat-obitee .model-expand>summary{grid-template-columns:68px minmax(0,1fr) 22px!important;gap:9px!important}#cat-obitee .tee-opening{gap:7px!important}#cat-tissus .fabrics-expand .fabrics-editorial-gallery{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}#cat-tissus .fabrics-video-actions{display:flex!important;flex-direction:row!important;flex-wrap:wrap!important;justify-content:center!important;gap:8px!important}#cat-tissus .fabrics-video-actions button{flex:0 1 auto!important;width:auto!important;max-width:46%!important;padding:8px!important;min-height:36px!important;font-size:11px!important}}
 @media(max-width:375px){#cat-obitee .model-expand>summary{grid-template-columns:60px minmax(0,1fr) 18px!important;gap:5px!important}}
-</style><meta content="V50 — Part 4 corrections" name="collection-test-version"/></head><body data-lang="fr"><header class="topbar"><div class="topinner"><a class="brand" href="https://lacofu.com/index.html">La Cofu</a><nav aria-label="Main navigation" class="site-links"><a href="https://lacofu.com/index.html"><span class="fr">Accueil</span><span class="en">Home</span></a><a href="https://lacofu.com/about.html"><span class="fr">Notre histoire</span><span class="en">About us</span></a><a href="https://lacofu.com/experiences.html"><span class="fr">Expériences</span><span class="en">Experiences</span></a><a href="https://lacofu.com/residencies.html"><span class="fr">Résidences</span><span class="en">Residencies</span></a><a href="https://lacofu.com/locations.html"><span class="fr">Lieux</span><span class="en">Locations</span></a><a href="https://lacofu.com/campings.html"><span class="fr">Camping &amp; Resort</span><span class="en">Camping &amp; Resort</span></a><a href="https://lacofu.com/shop.html"><span class="fr">Collection</span><span class="en">Collection</span></a><a href="https://lacofu.com/contact.html"><span class="fr">Contact</span><span class="en">Contact</span></a></nav><div class="toolbar"><div class="language"><input aria-label="FR" checked="checked" class="lang-radio" id="lc-lang-fr" name="lc-language" type="radio" value="fr"/><label class="lang-option" for="lc-lang-fr">FR</label><span class="lang-sep">/</span><input aria-label="EN" class="lang-radio" id="lc-lang-en" name="lc-language" type="radio" value="en"/><label class="lang-option" for="lc-lang-en">EN</label></div><details class="mobile-menu" id="mobile-menu"><summary aria-label="Ouvrir le menu de navigation" class="menu-btn">☰</summary><nav aria-label="Mobile navigation" class="mobile-links" id="mobile-nav"><a href="https://lacofu.com/index.html"><span class="fr">Accueil</span><span class="en">Home</span></a><a href="https://lacofu.com/about.html"><span class="fr">Notre histoire</span><span class="en">About us</span></a><a href="https://lacofu.com/experiences.html"><span class="fr">Expériences</span><span class="en">Experiences</span></a><a href="https://lacofu.com/residencies.html"><span class="fr">Résidences</span><span class="en">Residencies</span></a><a href="https://lacofu.com/locations.html"><span class="fr">Lieux</span><span class="en">Locations</span></a><a href="https://lacofu.com/campings.html"><span class="fr">Camping &amp; Resort</span><span class="en">Camping &amp; Resort</span></a><a href="https://lacofu.com/shop.html"><span class="fr">Collection</span><span class="en">Collection</span></a><a href="https://lacofu.com/contact.html"><span class="fr">Contact</span><span class="en">Contact</span></a></nav></details></div></div></header><div class="hero"><img alt="La Cofu — vintage objects and textiles" src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-10-at-12-48-14_orig.png"/></div><main><div class="wrap"><div class="intro"><div class="eyebrow"><span class="eyebrow-first">Textiles · Objets</span> · <span class="eyebrow-last">Histoires du Japon</span></div>
+</style><meta content="V50 — Part 4 corrections" name="collection-test-version"/><style id="lacofu-v52-mobile-obi-summary-fix">/* V52 — mobile Obi Tee summary: grid cell and thumbnail must have identical width. */
+@media (max-width: 680px) {
+  #cat-obitee .model-expand > summary {
+    display:grid!important;
+    grid-template-columns: clamp(64px,20vw,82px) minmax(0,1fr) 22px!important;
+    gap: 14px!important;
+    align-items:center!important;
+    padding:12px!important;
+  }
+  #cat-obitee .model-expand > summary .model-preview-photo {
+    display:block!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    height:auto!important;
+    aspect-ratio:4/5!important;
+    overflow:hidden!important;
+  }
+  #cat-obitee .model-expand > summary .model-preview-photo img {
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:cover!important;
+  }
+  #cat-obitee .model-expand > summary .model-preview-text {
+    min-width:0!important;
+    max-width:100%!important;
+    overflow-wrap:break-word!important;
+  }
+  #cat-obitee .model-expand > summary .model-preview-text strong {
+    font-size:clamp(22px,5.8vw,28px)!important;
+    line-height:1.12!important;
+    overflow-wrap:break-word!important;
+  }
+  #cat-obitee .model-expand > summary .model-preview-text small {
+    font-size:12px!important;
+    line-height:1.4!important;
+  }
+  #cat-obitee .model-expand > summary .model-open-glyph {justify-self:center!important;}
+}
+</style></head><body data-lang="fr"><header class="topbar"><div class="topinner"><a class="brand" href="https://lacofu.com/index.html">La Cofu</a><nav aria-label="Main navigation" class="site-links"><a href="https://lacofu.com/index.html"><span class="fr">Accueil</span><span class="en">Home</span></a><a href="https://lacofu.com/about.html"><span class="fr">Notre histoire</span><span class="en">About us</span></a><a href="https://lacofu.com/experiences.html"><span class="fr">Expériences</span><span class="en">Experiences</span></a><a href="https://lacofu.com/residencies.html"><span class="fr">Résidences</span><span class="en">Residencies</span></a><a href="https://lacofu.com/locations.html"><span class="fr">Lieux</span><span class="en">Locations</span></a><a href="https://lacofu.com/campings.html"><span class="fr">Camping &amp; Resort</span><span class="en">Camping &amp; Resort</span></a><a href="https://lacofu.com/shop.html"><span class="fr">Collection</span><span class="en">Collection</span></a><a href="https://lacofu.com/contact.html"><span class="fr">Contact</span><span class="en">Contact</span></a></nav><div class="toolbar"><div class="language"><input aria-label="FR" checked="checked" class="lang-radio" id="lc-lang-fr" name="lc-language" type="radio" value="fr"/><label class="lang-option" for="lc-lang-fr">FR</label><span class="lang-sep">/</span><input aria-label="EN" class="lang-radio" id="lc-lang-en" name="lc-language" type="radio" value="en"/><label class="lang-option" for="lc-lang-en">EN</label></div><details class="mobile-menu" id="mobile-menu"><summary aria-label="Ouvrir le menu de navigation" class="menu-btn">☰</summary><nav aria-label="Mobile navigation" class="mobile-links" id="mobile-nav"><a href="https://lacofu.com/index.html"><span class="fr">Accueil</span><span class="en">Home</span></a><a href="https://lacofu.com/about.html"><span class="fr">Notre histoire</span><span class="en">About us</span></a><a href="https://lacofu.com/experiences.html"><span class="fr">Expériences</span><span class="en">Experiences</span></a><a href="https://lacofu.com/residencies.html"><span class="fr">Résidences</span><span class="en">Residencies</span></a><a href="https://lacofu.com/locations.html"><span class="fr">Lieux</span><span class="en">Locations</span></a><a href="https://lacofu.com/campings.html"><span class="fr">Camping &amp; Resort</span><span class="en">Camping &amp; Resort</span></a><a href="https://lacofu.com/shop.html"><span class="fr">Collection</span><span class="en">Collection</span></a><a href="https://lacofu.com/contact.html"><span class="fr">Contact</span><span class="en">Contact</span></a></nav></details></div></div></header><div class="hero"><img alt="La Cofu — vintage objects and textiles" src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-10-at-12-48-14_orig.png"/></div><main><div class="wrap"><div class="intro"><div class="eyebrow"><span class="eyebrow-first">Textiles · Objets</span> · <span class="eyebrow-last">Histoires du Japon</span></div>
 <h1><span class="fr">La Collection</span><span class="en">The Collection</span></h1>
 <h2 class="intro-editorial-title"><span class="fr">Un regard, une sélection</span><span class="en">An eye for the unusual</span></h2>
 <div class="intro-reading"><p><span class="fr">Chineurs et amateurs de décoration, nous rapportons du Japon des textiles anciens, des objets du quotidien et des trouvailles qui attirent notre regard. Certains restent tels que nous les avons découverts ; d’autres sont adaptés dans notre atelier, ou associés à d’autres matières.</span><span class="en">With an eye for flea-market discoveries and interiors, we bring together vintage textiles, everyday objects and unusual finds from Japan. Some remain exactly as found; others are adapted in our atelier or combined with different materials.</span></p>
