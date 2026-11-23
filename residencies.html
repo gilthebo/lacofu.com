@@ -3,8 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Résidences — La Cofu</title>
-<meta name="description" content="Accueillez une résidence culturelle japonaise La Cofu dans votre lieu en Europe.">
+<title>Résidences culturelles japonaises & collaborations — La Cofu</title>
+<meta name="description" content="Comment accueillir La Cofu : organisation, durée, sessions et modèles de collaboration pour des expériences culturelles japonaises dans votre lieu.">
+<link rel="canonical" href="https://lacofu.com/residencies.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://lacofu.com/residencies.html">
+<meta property="og:title" content="Résidences et collaborations — La Cofu">
+<meta property="og:description" content="Formats, organisation et modalités pour accueillir les expériences culturelles de La Cofu.">
+<meta property="og:image" content="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-07-25-at-14-44-00_orig.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/editor/official-logo.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Raleway:wght@300;400;600;700;800&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
@@ -16,18 +25,22 @@
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--cream);color:var(--dark);font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;line-height:1.82;-webkit-font-smoothing:antialiased;padding-top:var(--nav-h)}
+body{background:var(--cream);color:var(--dark);font-family:'Raleway',Arial,sans-serif;font-size:19px;font-weight:400;line-height:1.72;-webkit-font-smoothing:antialiased;padding-top:var(--nav-h)}
 a{text-decoration:none;color:inherit}
 img{display:block;max-width:100%}
 
 /* LANGUAGE */
-.fr{display:none!important}.en{display:block}
-span.en,a.en{display:inline!important}
-span.fr,a.fr{display:none!important}
+.fr{display:block}.en{display:none!important}
+span.en,a.en{display:none!important}
+span.fr,a.fr{display:inline!important}
 body.lang-fr .fr{display:block!important}
 body.lang-fr .en{display:none!important}
 body.lang-fr span.fr,body.lang-fr a.fr{display:inline!important}
 body.lang-fr span.en,body.lang-fr a.en{display:none!important}
+body:not(.lang-fr) .fr{display:none!important}
+body:not(.lang-fr) .en{display:block!important}
+body:not(.lang-fr) span.en,body:not(.lang-fr) a.en{display:inline!important}
+body:not(.lang-fr) span.fr,body:not(.lang-fr) a.fr{display:none!important}
 
 /* HEADER */
 .site-header{position:fixed;top:0;left:0;right:0;height:var(--nav-h);z-index:500;background:rgba(44,36,22,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(160,98,42,.3);display:flex;align-items:center;justify-content:space-between;padding:0 40px;transition:border-color .3s}
@@ -73,11 +86,11 @@ body.lang-fr span.en,body.lang-fr a.en{display:none!important}
 .lbl-lt{color:rgba(201,149,42,.65)}
 .rl{width:36px;height:1px;background:var(--amber);margin:22px 0}
 .rl-lt{background:rgba(201,149,42,.35)}
-.body{font-size:clamp(17px,1.9vw,20px);line-height:1.82;color:var(--mid)}
+.body{font-size:clamp(17px,1.65vw,20px);line-height:1.72;color:var(--mid)}
 .body+.body{margin-top:14px}
-.body-lt{color:rgba(245,240,232,.72)}
-.sm{font-size:clamp(15px,1.6vw,17px);line-height:1.78;color:var(--mid)}
-.sm-lt{font-size:clamp(15px,1.6vw,17px);line-height:1.78;color:rgba(245,240,232,.65)}
+.body-lt{color:rgba(245,240,232,.93)}
+.sm{font-size:clamp(16px,1.5vw,18px);line-height:1.7;color:var(--mid)}
+.sm-lt{font-size:clamp(16px,1.5vw,18px);line-height:1.7;color:rgba(245,240,232,.9)}
 
 /* PANEL */
 .panel{background:var(--warm);padding:32px 36px;border-left:3px solid var(--rule)}
@@ -98,14 +111,14 @@ body.lang-fr span.en,body.lang-fr a.en{display:none!important}
 .sess-block{background:var(--dark);padding:28px 24px}
 .sess-block-b{background:var(--dark2)}
 .sess-n{font-style:italic;font-size:52px;font-weight:300;color:var(--gold);line-height:1;display:block}
-.sess-lbl{font-family:'Raleway',sans-serif;font-size:8.5px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,240,232,.4);margin-bottom:10px;display:block}
-.sess-sub{font-family:'Noto Serif JP',serif;font-size:10px;letter-spacing:.18em;color:rgba(245,240,232,.4);margin-top:6px}
+.sess-lbl{font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,240,232,.4);margin-bottom:10px;display:block}
+.sess-sub{font-family:'Noto Serif JP',serif;font-size:13px;letter-spacing:.18em;color:rgba(245,240,232,.4);margin-top:6px}
 
 /* COLLAB CARDS */
 .collab-card{background:var(--cream);padding:32px;border:1px solid var(--rule)}
 .collab-card-title{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:22px;color:var(--dark);margin-bottom:16px}
 .collab-list{list-style:none;padding-left:0}
-.collab-list li{margin-bottom:6px;position:relative;padding-left:16px;font-size:14px;color:var(--mid)}
+.collab-list li{margin-bottom:10px;position:relative;padding-left:16px;font-size:17px;line-height:1.65;color:var(--mid)}
 .collab-list li::before{content:'—';position:absolute;left:0;color:var(--amber)}
 
 /* FOOTER */
@@ -123,6 +136,7 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
 .ft-bottom{background:var(--dark2);padding:14px 48px;display:flex;justify-content:center}
 .ft-bottom span{font-family:'Raleway',sans-serif;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--rulelt)}
 
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 /* RESPONSIVE */
 @media(min-width:721px) and (max-width:1024px){
   .site-header{padding:0 28px}
@@ -148,6 +162,7 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
   .ft-social{justify-content:flex-start}
   .ft-bottom{padding:14px 22px}
   .collab-grid-wrap{grid-template-columns:1fr!important}
+  .body{font-size:17px}.sm,.sm-lt{font-size:16px}.collab-list li{font-size:16px}
 }
 </style>
 </head>
@@ -165,7 +180,7 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
     <a href="experiences.html"><span class="en">Experiences</span><span class="fr">Expériences</span></a>
     <a href="residencies.html" class="cur"><span class="en">Residencies</span><span class="fr">Résidences</span></a>
     <a href="locations.html"><span class="en">Locations &amp; venues</span><span class="fr">Lieux</span></a>
-    <li><a href="https://lacofu.com/campings.html" class="active nav-highlight"><span class="en">Camping &amp; Resort</span><span class="fr">Camping &amp; Resort</span></a></li>
+    <a href="campings.html"><span class="en">Camping &amp; Resort</span><span class="fr">Camping &amp; Resort</span></a>
     <a href="shop.html"><span class="en">Collection</span><span class="fr">Collection</span></a>
     <a href="contact.html">Contact</a>
     <div class="lang-toggle">
@@ -188,7 +203,7 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
   <a href="experiences.html" onclick="closeMob()"><span class="en">Experiences</span><span class="fr">Expériences</span></a>
   <a href="residencies.html" class="cur" onclick="closeMob()"><span class="en">Residencies</span><span class="fr">Résidences</span></a>
   <a href="locations.html" onclick="closeMob()"><span class="en">Locations &amp; venues</span><span class="fr">Lieux</span></a>
-  <li><a href="https://lacofu.com/campings.html" class="active nav-highlight"><span class="en">Camping &amp; Resort</span><span class="fr">Camping &amp; Resort</span></a></li>
+  <a href="campings.html"><span class="en">Camping &amp; Resort</span><span class="fr">Camping &amp; Resort</span></a>
   <a href="shop.html" onclick="closeMob()"><span class="en">Collection</span><span class="fr">Collection</span></a>
   <a href="contact.html" onclick="closeMob()">Contact</a>
 </nav>
@@ -200,6 +215,7 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
        style="width:100%;max-height:560px;object-fit:cover;object-position:center 30%;display:block">
 </div>
 
+<h1 class="sr-only">Résidences culturelles japonaises et collaborations La Cofu</h1>
 <!-- WHAT HOSTING LOOKS LIKE -->
 <div class="band-warm">
   <div class="wrap">
@@ -211,11 +227,11 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
         <p class="body en">We plan to work with boutique hotels, wine estates, wellness retreats, and private venues — but also with cultural centres, city partners, and local associations who want to bring a genuine Japanese cultural moment to their audience. The format adapts to the context.</p>
         <p class="body fr">Nous souhaitons travailler avec des hôtels boutique, des domaines viticoles, des centres de bien-être et des lieux privés — mais aussi avec des centres culturels, des partenaires municipaux et des associations locales qui souhaitent proposer un moment culturel japonais authentique à leur public. Le format s'adapte au contexte.</p>
         <div class="rl"></div>
-        <p class="body en">We arrive, we set up, and we handle everything within our scope — the sessions, the materials, the pace. We fit into your venue's rhythm rather than imposing one.</p>
-        <p class="body fr">Nous arrivons, nous nous installons et nous gérons tout ce qui nous concerne — les sessions, les matériaux, le rythme. Nous nous adaptons au fonctionnement de l'endroit plutôt que d'en imposer un.</p>
+        <p class="body en">La Cofu would handle its sessions, materials and their organisation, adapting to the host venue’s rhythm.</p>
+        <p class="body fr">La Cofu prévoit de prendre en charge ses sessions, son matériel et leur organisation, en s’adaptant au rythme du lieu d’accueil.</p>
         <div class="rl"></div>
-        <p class="body en">During a residency we are guests as much as we are practitioners. We take time to get to know our hosts, learn the rhythms of the place, and explore the surrounding area. We arrive as visitors and often leave as friends.</p>
-        <p class="body fr">Pendant une résidence, nous sommes autant des hôtes que des praticiens. Nous prenons le temps de vous connaître, d'apprendre les rythmes du lieu et de découvrir les alentours. Nous arrivons en visiteurs et repartons souvent en amis.</p>
+        <p class="body en">During a stay, we also hope to get to know our hosts and discover the surrounding area. That human connection is part of the project.</p>
+        <p class="body fr">Lors d’un séjour, nous souhaitons aussi prendre le temps de connaître nos hôtes et de découvrir leur région. Cette dimension humaine fait partie du projet.</p>
         <div class="rl"></div>
         <p class="body en" style="font-style:italic;color:var(--amber)">An extra hand on the ground is always welcome — for simple things, when the moment calls for it, in the spirit of a friendly volunteer.</p>
         <p class="body fr" style="font-style:italic;color:var(--amber)">Un coup de main supplémentaire sur le terrain est toujours le bienvenu — pour des choses simples, quand le moment s'y prête, dans l'esprit d'un bénévole de bonne volonté.</p>
@@ -264,14 +280,14 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
     <div class="g2">
       <div>
         <div class="rl rl-lt"></div>
-        <p class="body body-lt en">Each residency runs for 5 to 10 days — shorter or longer where the context is right. Sessions are typically offered twice a day, with a maximum of four depending on the programme. The rhythm is always adapted to the space, the host, and the guests.</p>
-        <p class="body body-lt fr">Chaque résidence dure de 5 à 10 jours — plus courte ou plus longue si le contexte s'y prête. Les sessions sont proposées deux fois par jour en standard, avec un maximum de quatre selon le programme. Le rythme est toujours adapté à l'espace, à l'hôte et aux participants.</p>
+        <p class="body body-lt en">We generally envisage stays of 5 to 10 days, with shorter formats possible. As a guide, two sessions a day could be offered, up to four depending on the activities and on-site conditions. The schedule would be agreed with each host.</p>
+        <p class="body body-lt fr">Nous envisageons généralement des séjours de 5 à 10 jours, avec la possibilité de formats plus courts. À titre indicatif, deux sessions par jour peuvent être prévues, jusqu’à quatre selon les activités et les conditions sur place. Le rythme reste à définir avec chaque lieu.</p>
         <div class="rl rl-lt"></div>
-        <p class="body body-lt en">Preferred seasons are June and September. Each trip typically covers at least two venues — keeping logistics simple and travel costs shared. <strong style="color:var(--cream)">Other timing is of course possible.</strong></p>
-        <p class="body body-lt fr">Nos saisons de prédilection sont juin et septembre. Chaque déplacement couvre généralement au moins deux lieux — simplifiant la logistique et partageant les coûts. <strong style="color:var(--cream)">D'autres périodes sont bien sûr possibles.</strong></p>
+        <p class="body body-lt en">June and September are among the periods being considered. Combining two venues in one trip could help with logistics, but is not a requirement. <strong style="color:var(--cream)">Dates remain open for discussion.</strong></p>
+        <p class="body body-lt fr">Juin et septembre sont des périodes envisagées. Regrouper deux lieux sur un même voyage pourrait faciliter la logistique, sans être une condition. <strong style="color:var(--cream)">Les dates restent ouvertes à la discussion.</strong></p>
         <div style="margin-top:28px">
-          <p class="sm-lt en">The full programme is detailed on the <a href="experiences.html" style="color:var(--gold);text-decoration:underline">Experiences page</a>.</p>
-          <p class="sm-lt fr">Le programme complet est détaillé sur la <a href="experiences.html" style="color:var(--gold);text-decoration:underline">page Expériences</a>.</p>
+          <p class="sm-lt en">The activities are presented on the <a href="experiences.html" style="color:var(--gold);text-decoration:underline">Experiences page</a>.</p>
+          <p class="sm-lt fr">Les activités proposées sont présentées sur la <a href="experiences.html" style="color:var(--gold);text-decoration:underline">page Expériences</a>.</p>
         </div>
       </div>
       <div>
@@ -328,8 +344,8 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
   <div class="wrap">
     <span class="lbl en">— Collaboration Models</span>
     <span class="lbl fr">— Modèles de Collaboration</span>
-    <p class="body en" style="margin-bottom:36px">Adapted to the nature of your venue, audience and objectives. Two primary structures — choose what aligns best with your context.</p>
-    <p class="body fr" style="margin-bottom:36px">Adapté à la nature de votre lieu, à votre public et à vos objectifs. Deux structures principales — choisissez celle qui correspond le mieux à votre contexte.</p>
+    <p class="body en" style="margin-bottom:36px">Adapted to the nature of your venue, audience and objectives. Two possible approaches, to be discussed according to the venue and project.</p>
+    <p class="body fr" style="margin-bottom:36px">Adapté à la nature de votre lieu, à votre public et à vos objectifs. Deux pistes de fonctionnement, à préciser ensemble selon le lieu et le projet.</p>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px" class="collab-grid-wrap">
 
@@ -353,8 +369,8 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
       <div class="collab-card">
         <p class="collab-card-title en">2. Shared Revenue Residency</p>
         <p class="collab-card-title fr">2. Résidence en Partage</p>
-        <p class="sm en" style="margin-bottom:20px"><strong>Best suited for</strong> private venues, hotels, and independent spaces with an active audience. No upfront fee — the residency is supported through participant bookings, with revenue shared after core costs. Designed for small-format, premium experiences.</p>
-        <p class="sm fr" style="margin-bottom:20px"><strong>Adapté aux</strong> lieux privés, hôtels et espaces indépendants avec une audience active. Aucun frais initial — la résidence est financée par les participants, avec un partage des revenus après couverture des coûts essentiels.</p>
+        <p class="sm en" style="margin-bottom:20px"><strong>Best suited for</strong> private venues, hotels, and independent spaces with an active audience. A participant-booking model may be considered, with any revenue sharing agreed according to costs and responsibilities. Designed for small-format, premium experiences.</p>
+        <p class="sm fr" style="margin-bottom:20px"><strong>Adapté aux</strong> lieux privés, hôtels et espaces indépendants avec une audience active. Une formule fondée sur les réservations des participants peut être envisagée, avec un éventuel partage de recettes selon les frais et responsabilités convenus.</p>
         <div style="border-top:1px solid var(--rule);padding-top:16px">
           <span style="font-family:'Raleway',sans-serif;font-size:9px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:12px"><span class="en">Requires</span><span class="fr">Nécessite</span></span>
           <ul class="collab-list">
@@ -367,20 +383,20 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
 
     </div>
 
-    <p class="sm en" style="color:var(--amber);font-style:italic;margin-top:32px">Residencies are confirmed based on a shared planning process, including timeline, communication, and participation expectations.</p>
-    <p class="sm fr" style="color:var(--amber);font-style:italic;margin-top:32px">Les résidences sont confirmées à travers un processus de planification partagé, incluant le calendrier, la communication et les conditions de participation.</p>
+    <p class="sm en" style="color:var(--amber);font-style:italic;margin-top:32px">These models are starting points for discussion, not confirmed offers or dates. Terms, scheduling and responsibilities would be agreed case by case.</p>
+    <p class="sm fr" style="color:var(--amber);font-style:italic;margin-top:32px">Ces modèles sont des bases de discussion, non des offres ou des dates déjà confirmées. Conditions, planning et responsabilités seront précisés au cas par cas.</p>
   </div>
 </div>
 
 <!-- CTA -->
 <div style="background:var(--warm);border-top:2px solid var(--amber);padding:60px 0">
   <div class="wrap" style="text-align:center">
-    <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(26px,3.5vw,40px);color:var(--dark);margin-bottom:20px" class="en">Ready to host a residency?</h2>
-    <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(26px,3.5vw,40px);color:var(--dark);margin-bottom:20px" class="fr">Prêt à accueillir une résidence ?</h2>
-    <p class="body en" style="margin-bottom:32px;max-width:560px;margin-left:auto;margin-right:auto">Not sure which model fits best? Start the conversation — we'll define the right structure together.</p>
-    <p class="body fr" style="margin-bottom:32px;max-width:560px;margin-left:auto;margin-right:auto">Vous ne savez pas quel modèle vous convient ? Commencez la conversation — nous définirons ensemble la structure adaptée.</p>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(26px,3.5vw,40px);color:var(--dark);margin-bottom:20px" class="en">Considering a project at your venue?</h2>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;font-size:clamp(26px,3.5vw,40px);color:var(--dark);margin-bottom:20px" class="fr">Un projet dans votre lieu ?</h2>
+    <p class="body en" style="margin-bottom:32px;max-width:560px;margin-left:auto;margin-right:auto">Tell us about your venue, constraints and ideas, and we can explore which format would be realistic.</p>
+    <p class="body fr" style="margin-bottom:32px;max-width:560px;margin-left:auto;margin-right:auto">Décrivez-nous votre lieu, vos contraintes et vos idées. Nous pourrons ensuite voir quel format serait réaliste.</p>
     <a href="contact.html" class="btn-solid en">Get in touch →</a>
-    <a href="contact.html" class="btn-solid fr">Nous contacter →</a>
+    <a href="contact.html" class="btn-solid fr">Parlons-en →</a>
 
     <div style="margin-top:40px;padding-top:32px;border-top:1px solid var(--rule)">
       <p class="sm en" style="color:var(--mid)"><strong style="color:var(--dark)">Know someone who might be interested?</strong><br>We welcome recommendations. <a href="contact.html" style="color:var(--amber)">Share the info →</a></p>
