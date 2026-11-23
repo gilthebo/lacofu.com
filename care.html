@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Entretien & Soin · La Cofu 古布</title>
-  <meta name="description" content="Instructions d'entretien pour vos créations La Cofu — Obi Tees et chemins de table en tissu kimono et obi vintage.">
+  <title>Entretien des textiles japonais vintage, obi et Obi Tees | La Cofu</title>
+  <meta name="description" content="Conseils pratiques pour entretenir textiles japonais vintage, obi, chemins de table et Obi Tees : lavage, repassage, lumière, séchage et conservation.">
+  <link rel="canonical" href="https://lacofu.com/care.html">
+  <meta name="robots" content="index, follow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Noto+Serif+JP:wght@300;400&family=Raleway:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -501,7 +503,23 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
       .care-page-hero{padding:100px 20px 36px}
       .care-grid{grid-template-columns:1fr!important}
     }
-  </style>
+  /* Care page: legible practical guidance */
+.care-page-section .care-card::before{content:none;display:none}
+.care-page-section .care-section-sub{position:relative;z-index:1;overflow-wrap:anywhere}
+.care-page-section{max-width:980px}
+.care-page-hero .care-lead{max-width:770px;margin:18px auto 0;font-family:'Raleway',sans-serif;font-size:clamp(16px,1.45vw,19px);line-height:1.8;color:var(--ink-mid);letter-spacing:normal;text-transform:none}
+.care-page-section .care-section-sub{font-size:13px;line-height:1.7;letter-spacing:.12em;margin-bottom:26px}
+.care-page-section .care-card{margin-top:0}
+.care-page-section .care-grid{grid-template-columns:1fr 1fr}
+.care-page-section .care-section{padding:25px 26px}
+.care-page-section .care-section-label{font-size:13px;letter-spacing:.12em}
+.care-page-section .care-text,.care-page-section .care-note{font-family:'Raleway',sans-serif;font-size:clamp(16px,1.3vw,18px);line-height:1.8;color:var(--ink-mid)}
+.care-page-section .care-row{gap:12px;margin-bottom:14px}
+.care-page-section .care-icon{font-family:'Raleway',sans-serif;font-size:15px;min-width:18px;line-height:1.7}
+.care-intro{font-family:'Raleway',sans-serif;font-size:clamp(16px,1.4vw,19px);line-height:1.8;color:var(--ink-mid);margin-bottom:23px}
+.care-note-box{border-left:3px solid var(--gold);background:rgba(168,132,58,.08);padding:18px 22px;margin-top:22px;font-family:'Raleway',sans-serif;font-size:clamp(15px,1.2vw,17px);line-height:1.8;color:var(--ink-mid)}
+@media(max-width:720px){.care-page-section .care-grid{grid-template-columns:1fr}.care-page-section .care-section:first-child{border-right:0;border-bottom:1px solid var(--border)}.care-page-section .care-section{padding:20px 18px}.care-page-hero{padding-top:100px}}
+</style>
 </head>
 <body class="lang-fr">
 
@@ -516,7 +534,7 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
       <li><a href="https://lacofu.com/experiences.html"><span class="en">Experiences</span><span class="fr">Expériences</span></a></li>
       <li><a href="https://lacofu.com/residencies.html"><span class="en">Residencies</span><span class="fr">Résidences</span></a></li>
       <li><a href="https://lacofu.com/locations.html"><span class="en">Locations</span><span class="fr">Lieux</span></a></li>
-      <li><a href="#" class="active"><span class="en">Collection</span><span class="fr">Collection</span></a></li>
+      <li><a href="shop.html"><span class="en">Collection</span><span class="fr">Collection</span></a></li>
       <li><a href="https://lacofu.com/contact.html">Contact</a></li>
     </ul>
     <div class="nav-right">
@@ -532,84 +550,52 @@ footer{background:var(--ink);color:var(--cream);padding:52px 32px 32px}
   </div>
 </nav>
 
+<div id="nav-overlay" aria-label="Menu mobile">
+  <button id="nav-close" type="button" aria-label="Fermer le menu">×</button>
+  <a href="index.html"><span class="fr">Accueil</span><span class="en">Home</span></a>
+  <a href="about.html"><span class="fr">Notre histoire</span><span class="en">About us</span></a>
+  <a href="experiences.html"><span class="fr">Expériences</span><span class="en">Experiences</span></a>
+  <a href="residencies.html"><span class="fr">Résidences</span><span class="en">Residencies</span></a>
+  <a href="locations.html"><span class="fr">Lieux</span><span class="en">Locations</span></a>
+  <a href="shop.html">Collection</a>
+  <a href="contact.html">Contact</a>
+</div>
+
 <!-- HERO -->
 <div class="care-page-hero">
-  <span class="sec-lbl en" style="display:block;margin-bottom:8px">Care & Instructions</span>
-  <span class="sec-lbl fr" style="display:block;margin-bottom:8px">Entretien & Conseils</span>
-  <h1 class="sec-h2 en" style="margin-top:12px;font-size:clamp(2.4rem,5vw,4rem)">Care Instructions</h1>
-  <h1 class="sec-h2 fr" style="margin-top:12px;font-size:clamp(2.4rem,5vw,4rem)">Instructions d'entretien</h1>
-  <p class="sec-sub en" style="max-width:560px;margin:16px auto 0">Your La Cofu creation is made from authentic vintage Japanese textile — a living material with its own history. Handle with care and it will last a lifetime.</p>
-  <p class="sec-sub fr" style="max-width:560px;margin:16px auto 0">Votre création La Cofu est réalisée à partir d'un textile japonais vintage authentique — une matière vivante avec sa propre histoire. Traitée avec soin, elle vous accompagnera toute une vie.</p>
+  <span class="sec-lbl fr">— Entretien & précautions</span><span class="sec-lbl en">— Care & precautions</span>
+  <h1 class="sec-h2 fr">Conseils d'entretien</h1><h1 class="sec-h2 en">Care instructions</h1>
+  <p class="care-lead fr">Soie, coton, broderies : chaque pièce ancienne est unique et parfois fragile. Quelques gestes simples permettent de mieux la préserver. Suivez en priorité les indications propres à votre pièce, lorsqu’elles sont disponibles.</p>
+  <p class="care-lead en">Silk, cotton, embroidery: every vintage piece is unique and may be delicate. A few simple precautions can help preserve it. Follow any care instructions specific to your piece when available.</p>
 </div>
-
-<!-- OBI TEES -->
-<div class="care-page-section" style="background:var(--cream)">
-  <p class="care-section-title en">Obi Tees</p>
-  <p class="care-section-title fr">Obi Tees</p>
-  <span class="care-section-sub en">Cotton &amp; silk obi / kimono · Heavyweight cotton base</span>
-  <span class="care-section-sub fr">Obi / kimono coton &amp; soie · Base coton épais</span>
-
-  <!-- QR note -->
-  <div style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.35);padding:14px 20px;margin-bottom:32px;text-align:center">
-    <p style="font-family:'Raleway',sans-serif;font-size:0.76rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#C9A84C;line-height:1.8;margin:0">
-      <span class="en">Each shirt carries a QR code tag linking to this page.<br>When in doubt about your fabric piece — treat it as silk.</span>
-      <span class="fr">Chaque t-shirt porte une étiquette QR renvoyant à cette page.<br>En cas de doute sur le tissu — traitez-le comme de la soie.</span>
-    </p>
-  </div>
-
-  <div class="care-card" style="background:rgba(44,36,22,0.04);border-color:rgba(201,168,76,0.25);max-width:100%">
-    <p class="care-title en">The obi / kimono piece is the precious part</p>
-    <p class="care-title fr">La pièce obi / kimono est la partie précieuse</p>
-    <div class="care-grid">
-      <div class="care-section">
-        <span class="care-section-label en">Cotton obi / kimono</span>
-        <span class="care-section-label fr">Coton &amp; soie obi / kimono</span>
-        <div class="care-row"><span class="care-icon">W</span><span class="care-text en">Machine wash cold, gentle cycle — use a mesh laundry bag</span><span class="care-text fr">Lavage machine froid, cycle délicat — utiliser un filet de lavage</span></div>
-        <div class="care-row"><span class="care-icon">◈</span><span class="care-text en">Wash with similar colours — dye may run slightly at first</span><span class="care-text fr">Laver avec couleurs similaires — la teinture peut légèrement déteindre au début</span></div>
-        <div class="care-row"><span class="care-icon">×</span><span class="care-text en">No bleach · No tumble dry · No dry clean</span><span class="care-text fr">Sans javel · Sans sèche-linge · Sans nettoyage à sec</span></div>
-        <div class="care-row"><span class="care-icon">↓</span><span class="care-text en">Line dry in shade — reshape while damp</span><span class="care-text fr">Sécher à l'ombre — remettre en forme humide</span></div>
-        <div class="care-row"><span class="care-icon">△</span><span class="care-text en">Iron medium — never iron directly on the obi / kimono fabric</span><span class="care-text fr">Fer moyen — ne jamais repasser directement la pièce de tissu</span></div>
-      </div>
-      <div class="care-section">
-        <span class="care-section-label en">Silk obi / kimono — extra care</span>
-        <span class="care-section-label fr">Soie obi / kimono — précautions supplémentaires</span>
-        <div class="care-row"><span class="care-icon">○</span><span class="care-text en">Hand wash only — turn inside out before washing</span><span class="care-text fr">Lavage à la main uniquement — retourner avant lavage</span></div>
-        <div class="care-row"><span class="care-icon">◻</span><span class="care-text en">Always use a mesh laundry bag — even for hand washing</span><span class="care-text fr">Toujours utiliser un filet — même pour le lavage à la main</span></div>
-        <div class="care-row"><span class="care-icon">×</span><span class="care-text en">No washing machine · No bleach · No tumble dry</span><span class="care-text fr">Pas de machine · Sans javel · Sans sèche-linge</span></div>
-        <div class="care-row"><span class="care-icon">↓</span><span class="care-text en">Dry flat, away from direct sunlight — silk fades quickly</span><span class="care-text fr">Sécher à plat, à l'abri du soleil direct — la soie se décolore rapidement</span></div>
-        <div class="care-row"><span class="care-icon">△</span><span class="care-text en">Do not iron the fabric piece directly — use a pressing cloth</span><span class="care-text fr">Ne pas repasser la pièce directement — utiliser un tissu de protection</span></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CHEMIN DE TABLE -->
-<div class="care-page-section" style="background:var(--cream-d)">
-  <p class="care-section-title en">Table Runners · Chemin de table</p>
-  <p class="care-section-title fr">Chemins de table</p>
-  <span class="care-section-sub en">Vintage Japanese obi · Decorative use</span>
-  <span class="care-section-sub fr">Obi japonais vintage · Usage décoratif</span>
-
-  <div class="care-card" style="background:rgba(44,36,22,0.04);border-color:rgba(201,168,76,0.25);max-width:100%">
-    <div class="care-grid">
-      <div class="care-section">
-        <span class="care-section-label en" style="font-size:0.8rem">Use</span>
-        <span class="care-section-label fr" style="font-size:0.8rem">Utilisation</span>
-        <div class="care-row"><span class="care-icon" style="font-size:0.9rem">◆</span><span class="care-text en" style="font-size:1rem;line-height:1.7">For decorative use only.</span><span class="care-text fr" style="font-size:1rem;line-height:1.7">Usage exclusivement décoratif.</span></div>
-        <div class="care-row"><span class="care-icon" style="font-size:0.9rem">×</span><span class="care-text en" style="font-size:1rem;line-height:1.7">Do not place food directly on the textile. Always use plates, serving dishes, trivets, or trays.</span><span class="care-text fr" style="font-size:1rem;line-height:1.7">Ne posez jamais d'aliments directement sur le textile. Utilisez toujours des assiettes, plats de service, dessous-de-plat ou plateaux.</span></div>
-      </div>
-      <div class="care-section">
-        <span class="care-section-label en" style="font-size:0.8rem">Conseils</span>
-        <span class="care-section-label fr" style="font-size:0.8rem">Conseils</span>
-        <div class="care-row"><span class="care-icon" style="font-size:0.9rem">×</span><span class="care-text en" style="font-size:1rem;line-height:1.7">Do not wash. Traditional dyes used in vintage Japanese textiles may release some color when exposed to water.</span><span class="care-text fr" style="font-size:1rem;line-height:1.7">Ne pas laver. Les teintures traditionnelles utilisées sur les textiles japonais vintage peuvent légèrement dégorger au contact de l'eau.</span></div>
-        <div class="care-row"><span class="care-icon" style="font-size:0.9rem">◈</span><span class="care-text en" style="font-size:1rem;line-height:1.7">Gently dust when needed, or spot clean only if necessary.</span><span class="care-text fr" style="font-size:1rem;line-height:1.7">Dépoussiérez délicatement si nécessaire, ou nettoyez localement uniquement en cas de besoin.</span></div>
-        <div class="care-row"><span class="care-icon" style="font-size:0.9rem">◈</span><span class="care-text en" style="font-size:1rem;line-height:1.7">On rare occasions, a vintage obi may retain a slight odor from long-term storage. If present, it will usually fade naturally after a few days in a dry, well-ventilated area.</span><span class="care-text fr" style="font-size:1rem;line-height:1.7">Il arrive, rarement, qu'un obi vintage conserve une légère odeur liée à un stockage prolongé. Le cas échéant, elle s'estompe généralement après quelques jours dans un endroit sec et bien aéré.</span></div>
-      </div>
-    </div>
-
-  </div>
-</div>
-
+<section class="care-page-section" style="background:var(--cream-d)">
+<h2 class="fr care-section-title">Précautions essentielles</h2>
+<h2 class="en care-section-title">Essential precautions</h2><span class="fr care-section-sub">Pour tous les textiles anciens</span>
+<span class="en care-section-sub">For all vintage textiles</span><div class="care-card" style="background:rgba(44,36,22,0.04);border-color:rgba(201,168,76,0.25);max-width:100%"><div class="care-grid"><div class="care-section"><span class="fr care-section-label">Lumière et rangement</span>
+<span class="en care-section-label">Light & storage</span><div class="care-row"><span class="care-icon" aria-hidden="true">☀</span><span class="care-text fr">Évitez l’exposition prolongée au soleil direct : les couleurs et les fibres peuvent s’altérer.</span><span class="care-text en">Avoid prolonged direct sunlight: colours and fibres can deteriorate.</span></div><div class="care-row"><span class="care-icon" aria-hidden="true">◌</span><span class="care-text fr">Conservez dans un endroit sec et ventilé, à l’abri de l’humidité et des fortes chaleurs.</span><span class="care-text en">Store in a dry, ventilated place, away from dampness and excessive heat.</span></div><div class="care-row"><span class="care-icon" aria-hidden="true">•</span><span class="care-text fr">Ne laissez pas le textile en contact prolongé avec des surfaces humides ou susceptibles de déteindre.</span><span class="care-text en">Avoid prolonged contact with damp surfaces or materials that may transfer colour.</span></div></div><div class="care-section"><span class="fr care-section-label">Nettoyage et repassage</span>
+<span class="en care-section-label">Cleaning & ironing</span><div class="care-row"><span class="care-icon" aria-hidden="true">×</span><span class="care-text fr">Évitez les frottements, les détachants agressifs et l’eau de Javel. Testez toute intervention sur une zone discrète.</span><span class="care-text en">Avoid rubbing, strong stain removers and bleach. Test any treatment on a hidden area first.</span></div><div class="care-row"><span class="care-icon" aria-hidden="true">△</span><span class="care-text fr">Ne repassez jamais directement un tissu ancien ou brodé. Si le repassage est adapté, utilisez une faible température et un linge de protection.</span><span class="care-text en">Never iron vintage or embroidered fabric directly. If ironing is suitable, use low heat and a pressing cloth.</span></div><div class="care-row"><span class="care-icon" aria-hidden="true">≈</span><span class="care-text fr">Ne mouillez pas une pièce de composition inconnue : certaines teintures peuvent dégorger, et certains tissus rétrécir.</span><span class="care-text en">Do not wet fabric of unknown composition: dyes may bleed and fibres may shrink.</span></div></div></div></div></section>
+<section class="care-page-section" style="background:var(--cream-d)">
+<h2 class="fr care-section-title">Origine &amp; sensibilité</h2>
+<h2 class="en care-section-title">Origin &amp; sensitivities</h2>
+<p class="fr care-intro">Ces textiles ont déjà eu une vie. Leur composition exacte et les traitements qu’ils ont pu recevoir ne sont pas toujours connus. De légères marques d’usage ou une odeur de stockage peuvent réapparaître après le transport.</p>
+<p class="en care-intro">These textiles have had a previous life. Their exact composition and any treatments they may have received are not always known. Minor signs of wear or a storage odour may reappear after transport.</p>
+<p class="fr care-intro" style="margin-bottom:0">Si vous êtes sensible aux fibres ou aux teintures anciennes, nous vous conseillons d’aérer la pièce quelques heures avant de la porter ou de l’utiliser.</p>
+<p class="en care-intro" style="margin-bottom:0">If you are sensitive to older fibres or dyes, we recommend airing the piece for a few hours before wearing or using it.</p>
+</section>
+<section class="care-page-section" style="background:var(--cream)">
+<h2 class="fr care-section-title">Obi Tees</h2>
+<h2 class="en care-section-title">Obi Tees</h2><span class="fr care-section-sub">T-shirt en coton neuf avec empiècement de textile japonais ancien</span>
+<span class="en care-section-sub">New cotton T-shirt with a vintage Japanese textile insert</span><p class="fr care-intro">La partie ancienne est généralement la plus fragile. Les instructions du T-shirt seul ne suffisent donc pas à déterminer comment laver l’ensemble.</p>
+<p class="en care-intro">The vintage insert is usually the most delicate part. Care instructions for the cotton T-shirt alone do not necessarily apply to the combined garment.</p><div class="care-card" style="background:rgba(44,36,22,0.04);border-color:rgba(201,168,76,0.25);max-width:100%"><div class="care-grid"><div class="care-section"><span class="fr care-section-label">Avant le lavage</span>
+<span class="en care-section-label">Before washing</span><div class="care-row"><span class="care-icon" aria-hidden="true">1</span><span class="care-text fr">Vérifiez la matière de l’empiècement et les indications propres à votre modèle. En cas de doute, évitez la machine et demandez conseil à un professionnel du textile.</span><span class="care-text en">Check the insert’s fibre content and the instructions for your specific piece. If uncertain, avoid machine washing and seek advice from a textile specialist.</span></div><div class="care-row"><span class="care-icon" aria-hidden="true">2</span><span class="care-text fr">Si un lavage à l’eau est expressément autorisé : eau froide, lessive douce, manipulation délicate, sans trempage prolongé ni essorage forcé.</span><span class="care-text en">If water washing is specifically permitted: use cold water, mild detergent and gentle handling; avoid prolonged soaking and vigorous wringing.</span></div></div><div class="care-section"><span class="fr care-section-label">Séchage et repassage</span>
+<span class="en care-section-label">Drying & pressing</span><div class="care-row"><span class="care-icon" aria-hidden="true">×</span><span class="care-text fr">Pas de sèche-linge ni de javel. Faites sécher à l’air libre, à l’ombre, en respectant la forme du vêtement.</span><span class="care-text en">No tumble dryer or bleach. Air-dry in the shade, supporting the garment’s shape.</span></div><div class="care-row"><span class="care-icon" aria-hidden="true">△</span><span class="care-text fr">Repassez uniquement les zones autorisées par l’étiquette. Évitez le contact direct du fer ou de la vapeur avec l’empiècement ancien.</span><span class="care-text en">Iron only the areas permitted by the label. Keep the iron and steam away from the vintage insert.</span></div></div></div></div><p class="fr care-note-box">Si l’empiècement contient de la soie, une broderie, des fils métalliques ou si sa composition est inconnue, faites confirmer le nettoyage adapté avant toute immersion ou nettoyage à sec.</p>
+<p class="en care-note-box">For silk, embroidery, metallic threads or unknown fibre content, have an appropriate cleaning method confirmed before washing or dry cleaning.</p></section>
+<section class="care-page-section" style="background:var(--cream-d)">
+<h2 class="fr care-section-title">Chemins de table et obi</h2>
+<h2 class="en care-section-title">Table runners & obi</h2><span class="fr care-section-sub">Textiles japonais anciens destinés à la décoration</span>
+<span class="en care-section-sub">Vintage Japanese textiles for decorative use</span><div class="care-card" style="background:rgba(44,36,22,0.04);border-color:rgba(201,168,76,0.25);max-width:100%"><div class="care-grid"><div class="care-section"><span class="fr care-section-label">Utilisation</span>
+<span class="en care-section-label">Use</span><div class="care-row"><span class="care-icon" aria-hidden="true">•</span><span class="care-text fr">Usage décoratif : ne posez pas d’aliments directement sur le tissu.</span><span class="care-text en">For decorative use: do not place food directly on the textile.</span></div><div class="care-row"><span class="care-icon" aria-hidden="true">×</span><span class="care-text fr">Évitez les plats chauds, bougies, liquides et objets abrasifs ; utilisez un plateau ou un dessous-de-plat adapté.</span><span class="care-text en">Keep hot dishes, candles, liquids and abrasive objects away; use suitable trays or protective mats.</span></div></div><div class="care-section"><span class="fr care-section-label">Entretien</span>
+<span class="en care-section-label">Care</span><div class="care-row"><span class="care-icon" aria-hidden="true">◌</span><span class="care-text fr">Dépoussiérez doucement à sec. N’utilisez pas de machine ni de lavage à l’eau sans confirmation de la compatibilité du textile.</span><span class="care-text en">Dust gently and dry. Do not machine wash or wet-clean unless the textile has been confirmed suitable.</span></div><div class="care-row"><span class="care-icon" aria-hidden="true">!</span><span class="care-text fr">En cas de tache, ne frottez pas et n’appliquez pas de produit au hasard. Consultez un nettoyeur connaissant les textiles délicats ou anciens.</span><span class="care-text en">For stains, do not rub or apply untested products. Consult a cleaner experienced with delicate or historic fabrics.</span></div><div class="care-row"><span class="care-icon" aria-hidden="true">↓</span><span class="care-text fr">Une légère odeur de stockage peut se dissiper après aération à l’ombre, dans un endroit sec.</span><span class="care-text en">A slight storage odour may lessen after airing in a dry, shaded place.</span></div></div></div></div></section>
 <!-- BACK TO SHOP -->
 <div style="text-align:center;padding:52px 32px;background:var(--cream)">
   <a href="shop.html" style="display:inline-block;font-family:'Raleway',sans-serif;font-size:0.72rem;font-weight:800;letter-spacing:0.28em;text-transform:uppercase;color:var(--ink);border:1px solid var(--ink);padding:14px 36px;text-decoration:none;transition:all 0.2s" onmouseover="this.style.background='var(--ink)';this.style.color='var(--cream)'" onmouseout="this.style.background='';this.style.color='var(--ink)'">
