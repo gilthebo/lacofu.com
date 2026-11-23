@@ -240,11 +240,19 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;col
   .footer-grid > div:nth-child(3){text-align:left}
   .footer-grid > div:nth-child(2) > div:first-child{justify-content:flex-start}
 }
-@media(max-width:900px){
-  .nav-links,.lang-toggle{display:none}
-  .burger{display:flex}
+@media(max-width:1180px){
+  #lc-nav .nav-links,#lc-nav .lang-toggle{display:none}
+  #lc-nav .burger{display:flex}
 }
-#nav-overlay .lang-toggle{display:flex!important}
+#nav-overlay .lang-toggle{display:flex!important;flex-shrink:0}
+/* Tablet/mobile: one menu in the burger, no overlapping header links */
+#nav-overlay{overflow-y:auto;overscroll-behavior:contain;min-height:100dvh;
+  padding:80px 24px 36px;justify-content:flex-start;gap:18px}
+#nav-overlay a{font-size:clamp(1.25rem,3.4vw,1.6rem);letter-spacing:.10em;line-height:1.4;text-align:center}
+#nav-close{position:fixed;z-index:2;top:18px;right:24px;padding:8px}
+@media(max-height:650px){#nav-overlay{gap:12px;padding-top:65px}}
+@media(max-width:540px){.nav-inner{padding:0 20px}}
+
 @media(max-width:720px){
   .sec{padding:44px 20px}
 }
@@ -274,7 +282,7 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;col
         <span class="lang-sep">/</span>
         <button id="btn-fr" class="active" data-lang="fr">FR</button>
       </div>
-      <button class="burger" id="burger" aria-label="Menu">
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-controls="nav-overlay" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -282,8 +290,8 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;col
 </nav>
 
 <!-- MOBILE OVERLAY -->
-<div id="nav-overlay">
-  <button id="nav-close">✕</button>
+<div id="nav-overlay" role="navigation" aria-label="Navigation mobile" aria-hidden="true">
+  <button id="nav-close" aria-label="Fermer le menu">✕</button>
   <div class="lang-toggle" style="margin-bottom:16px">
     <button id="btn-en-m" data-lang="en">EN</button>
     <span class="lang-sep">/</span>
@@ -814,12 +822,12 @@ h1,h2{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2;col
   var burger = document.getElementById('burger'),
       overlay = document.getElementById('nav-overlay'),
       closeBtn = document.getElementById('nav-close');
-  function openMenu(){ overlay.classList.add('open'); document.body.style.overflow = 'hidden' }
-  function closeMenu(){ overlay.classList.remove('open'); document.body.style.overflow = '' }
+  function openMenu(){ overlay.classList.add('open'); overlay.setAttribute('aria-hidden','false'); burger.setAttribute('aria-expanded','true'); document.body.style.overflow = 'hidden'; closeBtn.focus(); }
+  function closeMenu(){ overlay.classList.remove('open'); overlay.setAttribute('aria-hidden','true'); burger.setAttribute('aria-expanded','false'); document.body.style.overflow = ''; }
   burger.addEventListener('click', openMenu);
-  burger.addEventListener('touchend', function(e){ e.preventDefault(); openMenu() }, {passive:false});
   closeBtn.addEventListener('click', closeMenu);
-  closeBtn.addEventListener('touchend', function(e){ e.preventDefault(); closeMenu() }, {passive:false});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape' && overlay.classList.contains('open')){closeMenu();burger.focus();}});
+  window.matchMedia('(min-width:1181px)').addEventListener('change',function(e){if(e.matches)closeMenu();});
   overlay.addEventListener('click', function(e){ if(e.target === overlay) closeMenu() });
   overlay.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeMenu) });
 
