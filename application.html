@@ -3,8 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Candidature Hôte — La Cofu</title>
-<meta name="description" content="Proposez votre lieu pour accueillir une résidence culturelle japonaise La Cofu en Europe.">
+<title>Proposer un lieu ou une collaboration | La Cofu</title>
+<meta name="description" content="Présentez votre lieu et votre projet à La Cofu : accueil d’ateliers japonais, collaboration ou résidence. Formulaire de prise de contact pour partenaires en Europe.">
+<link rel="canonical" href="https://lacofu.com/application.html">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://lacofu.com/application.html">
+<meta property="og:title" content="Proposer un lieu ou une collaboration | La Cofu">
+<meta property="og:description" content="Partagez votre projet de collaboration, d’atelier ou de résidence avec La Cofu.">
 <link rel="icon" href="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/editor/official-logo.jpeg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Raleway:wght@300;400;600;700;800&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
@@ -16,7 +23,7 @@
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{background:var(--cream);color:var(--dark);font-family:'Cormorant Garamond',Georgia,serif;font-size:20px;line-height:1.82;-webkit-font-smoothing:antialiased;padding-top:var(--nav-h);}
+body{background:var(--cream);color:var(--dark);font-family:'Raleway',Arial,sans-serif;font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased;padding-top:var(--nav-h);}
 a{text-decoration:none;color:inherit;}
 
 /* LANGUAGE */
@@ -57,13 +64,13 @@ body.lang-fr span.en,body.lang-fr a.en{display:none!important;}
 
 /* PROGRESS */
 .progress{background:var(--dark2);border-bottom:2px solid var(--dark3);}
-.prog-inner{max-width:860px;margin:0 auto;padding:0 32px;display:flex;}
-.prog-step{flex:1;padding:16px 4px;display:flex;flex-direction:column;align-items:center;gap:6px;opacity:.3;transition:opacity .2s;}
+.prog-inner{max-width:860px;margin:0 auto;padding:0 32px;display:flex;overflow-x:auto;}
+.prog-step{flex:1;min-width:72px;padding:16px 4px;display:flex;flex-direction:column;align-items:center;gap:6px;opacity:.3;transition:opacity .2s;}
 .prog-step.done,.prog-step.active{opacity:1;}
 .prog-dot{width:7px;height:7px;border-radius:50%;background:var(--dark3);transition:background .2s;}
 .prog-step.done .prog-dot{background:var(--amber);}
 .prog-step.active .prog-dot{background:var(--gold);box-shadow:0 0 0 3px rgba(201,149,42,.25);}
-.prog-lbl{font-family:'Raleway',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pale);text-align:center;line-height:1.3;}
+.prog-lbl{font-family:'Raleway',sans-serif;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--pale);text-align:center;line-height:1.3;}
 
 /* FORM WRAP */
 .form-wrap{max-width:860px;margin:0 auto;padding:0 32px;}
@@ -71,28 +78,28 @@ body.lang-fr span.en,body.lang-fr a.en{display:none!important;}
 /* STEPS */
 .step{display:none;padding:52px 0 32px;}
 .step.active{display:block;}
-.step-h{font-style:italic;font-weight:300;font-size:clamp(28px,4vw,42px);line-height:1.1;color:var(--dark);margin-bottom:10px;}
-.step-intro{font-size:18px;color:var(--mid);line-height:1.75;margin-bottom:32px;font-style:italic;}
+.step-h{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(28px,4vw,42px);line-height:1.1;color:var(--dark);margin-bottom:10px;}
+.step-intro{font-size:19px;font-family:'Raleway',sans-serif;color:var(--mid);line-height:1.75;margin-bottom:32px;font-style:italic;}
 
 /* FIELDS */
 .field{margin-bottom:28px;}
 .f2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
 .lbl{font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--dark);display:block;margin-bottom:10px;}
-.hint{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--mid);display:block;margin-top:5px;line-height:1.65;}
-input:not([type=checkbox]):not([type=radio]),select,textarea{width:100%;background:var(--warm);border:1px solid var(--rule);padding:13px 16px;font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--dark);outline:none;transition:border-color .2s;-webkit-appearance:none;border-radius:0;}
+.hint{font-family:'Raleway',sans-serif;font-style:normal;font-size:15px;color:var(--mid);display:block;margin-top:5px;line-height:1.65;}
+input:not([type=checkbox]):not([type=radio]),select,textarea{width:100%;background:var(--warm);border:1px solid var(--rule);padding:13px 16px;font-family:'Raleway',sans-serif;font-size:17px;color:var(--dark);outline:none;transition:border-color .2s;-webkit-appearance:none;border-radius:0;}
 input:focus,select:focus,textarea:focus{border-color:var(--amber);background:var(--cream);}
 select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23A0622A' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px;}
 textarea{resize:vertical;min-height:90px;line-height:1.75;}
 
 /* CHOICE GROUPS */
 .cg{display:flex;flex-direction:column;gap:6px;margin-top:10px;}
-.cg label{display:flex;align-items:center;gap:14px;padding:14px 18px;background:var(--warm);border:1px solid var(--rule);cursor:pointer;font-size:19px;line-height:1.4;transition:background .15s,border-color .15s;user-select:none;}
+.cg label{display:flex;align-items:center;gap:14px;padding:14px 18px;background:var(--warm);border:1px solid var(--rule);cursor:pointer;font-size:17px;line-height:1.55;transition:background .15s,border-color .15s;user-select:none;}
 .cg label:hover{background:var(--cream);}
 .cg label.on{border-color:var(--amber);background:rgba(160,98,42,0.07);}
 .cg input[type=radio],.cg input[type=checkbox]{width:18px;height:18px;flex-shrink:0;accent-color:var(--amber);cursor:pointer;}
 
 /* INFO BOX */
-.info-box{background:var(--warm);border-left:3px solid var(--amber);padding:16px 20px;margin-bottom:24px;font-size:18px;line-height:1.75;color:var(--mid);}
+.info-box{background:var(--warm);border-left:3px solid var(--amber);padding:16px 20px;margin-bottom:24px;font-size:17px;line-height:1.75;color:var(--mid);}
 
 /* NAV BUTTONS */
 .fnav{display:flex;justify-content:space-between;align-items:center;padding:28px 0 48px;border-top:1px solid var(--rule);margin-top:8px;gap:12px;}
@@ -145,6 +152,10 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
   .fnav{flex-wrap:wrap;padding:24px 0 52px;}
   .btn-next,.btn-send{width:100%;text-align:center;justify-content:center;}
   .step-ctr{width:100%;text-align:center;order:-1;}
+  .step-intro{font-size:17px;}
+  .cg label{font-size:16px;padding:13px 14px;}
+  .lbl{font-size:11px;}
+  .progress .prog-inner{padding:0 12px;}
   footer{grid-template-columns:1fr;gap:28px;padding:40px 20px 32px;}
   .ft-bottom{padding:12px 20px;}
 }
@@ -164,6 +175,7 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
     <a href="experiences.html"><span class="en">Experiences</span><span class="fr">Expériences</span></a>
     <a href="residencies.html"><span class="en">Residencies</span><span class="fr">Résidences</span></a>
     <a href="locations.html"><span class="en">Locations</span><span class="fr">Lieux</span></a>
+    <a href="campings.html">Camping &amp; Resort</a>
     <a href="shop.html"><span class="en">Collection</span><span class="fr">Collection</span></a>
     <a href="contact.html">Contact</a>
     <div class="lang-toggle">
@@ -176,18 +188,18 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
     <button class="mob-lang-btn" data-l="en" onclick="L('en')">EN</button>
     <span class="mob-lang-sep">/</span>
     <button class="mob-lang-btn on" data-l="fr" onclick="L('fr')">FR</button>
-    <button class="burger" id="lc-burger" onclick="lcToggleMob()"><span></span><span></span><span></span></button>
+    <button class="burger" type="button" id="lc-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="lc-mobPanel" onclick="lcToggleMob()"><span></span><span></span><span></span></button>
   </div>
 </header>
 <div class="mob-veil" id="lc-mobVeil" onclick="lcCloseMob()"></div>
-<nav class="mob-panel" id="lc-mobPanel">
+<nav class="mob-panel" id="lc-mobPanel" aria-label="Navigation mobile" onclick="if(event.target.closest('a'))lcCloseMob();">
   <a href="index.html"><span class="en">Home</span><span class="fr">Accueil</span></a>
   <a href="about.html"><span class="en">About</span><span class="fr">À Propos</span></a>
   <a href="experiences.html"><span class="en">Experiences</span><span class="fr">Expériences</span></a>
   <a href="residencies.html"><span class="en">Residencies</span><span class="fr">Résidences</span></a>
   <a href="locations.html"><span class="en">Locations</span><span class="fr">Lieux</span></a>
   <a href="shop.html"><span class="en">Collection</span><span class="fr">Collection</span></a>
-  <li><a href="https://lacofu.com/campings.html" class="active nav-highlight"><span class="en">Camping &amp; Resort</span><span class="fr">Camping &amp; Resort</span></a></li>
+  <a href="campings.html" onclick="lcCloseMob()">Camping &amp; Resort</a>
   <a href="contact.html">Contact</a>
 </nav>
 
@@ -205,17 +217,17 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
 </div>
 
 <div class="form-wrap">
-<form id="lcForm" action="https://formspree.io/f/myklwoyn" method="POST">
-<input type="hidden" name="_subject" value="La Cofu — Host Application">
+<form id="lcForm" action="https://formspree.io/f/myklwoyn" method="POST" onsubmit="event.preventDefault();if(lcStep===lcTotal)lcSubmit();else lcNext();">
+<input type="hidden" name="_subject" value="La Cofu — Proposition de collaboration">
 
 <!-- STEP 1 — VENUE -->
 <div class="step active" id="s1">
   <h2 class="step-h"><span class="en">Your venue</span><span class="fr">Votre lieu</span></h2>
-  <p class="step-intro"><span class="en">We travel from Japan and stay for the duration of the residency. Tell us about your space so we can picture what a visit would look like.</span><span class="fr">Nous voyageons depuis le Japon et séjournons durant toute la résidence. Parlez-nous de votre espace.</span></p>
+  <p class="step-intro"><span class="en">Tell us a little about your venue. These details help us assess a possible collaboration.</span><span class="fr">Présentez votre lieu en quelques mots pour nous aider à comprendre votre proposition.</span></p>
   <div class="field f2">
     <div>
       <label class="lbl"><span class="en">Venue name</span><span class="fr">Nom du lieu</span> <span style="color:var(--amber)">*</span></label>
-      <input name="venue_name" required placeholder="e.g. Domaine de Salomony">
+      <input name="venue_name" required placeholder="Nom de votre établissement">
     </div>
     <div>
       <label class="lbl">Website</label>
@@ -285,8 +297,8 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
   <p class="step-intro"><span class="en">We travel from Japan with all materials. These details help us understand what a stay would look like in practice.</span><span class="fr">Nous voyageons depuis le Japon avec tout le matériel. Ces informations nous aident à comprendre ce que représenterait un séjour dans la pratique.</span></p>
   <div class="field">
     <label class="lbl"><span class="en">Can you provide accommodation for two people?</span><span class="fr">Pouvez-vous fournir un hébergement pour deux personnes ?</span></label>
-    <span class="hint en">Free accommodation directly benefits both sides — it reduces shared costs and increases the net revenue pool.</span>
-    <span class="hint fr">Un hébergement gratuit bénéficie aux deux parties — il réduit les coûts partagés et augmente le pool de revenus net.</span>
+    <span class="hint en">Accommodation arrangements can be discussed according to the project.</span>
+    <span class="hint fr">Les conditions d’hébergement se discutent selon le projet.</span>
     <div class="cg">
       <label><input type="radio" name="accommodation" value="free"><span class="en">Yes — included at no cost</span><span class="fr">Oui — inclus sans frais</span></label>
       <label><input type="radio" name="accommodation" value="chargeable"><span class="en">Yes — but we would charge for it</span><span class="fr">Oui — mais nous le facturerons</span></label>
@@ -320,8 +332,8 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
   </div>
   <div class="field">
     <label class="lbl"><span class="en">Do you know another venue in your region we could pair with?</span><span class="fr">Connaissez-vous un autre lieu dans votre région avec qui nous pourrions nous associer ?</span></label>
-    <span class="hint en">We try to cover two venues per trip to share travel costs.</span>
-    <span class="hint fr">Nous essayons de couvrir deux lieux par voyage pour partager les frais.</span>
+    <span class="hint en">This may help coordinate travel, but is not a requirement.</span>
+    <span class="hint fr">Cela peut faciliter les déplacements, sans être une condition.</span>
     <div class="cg">
       <label><input type="radio" name="paired_venue_yn" value="yes" id="pv-yes"><span class="en">Yes — I can suggest one</span><span class="fr">Oui — je peux en suggérer un</span></label>
       <label><input type="radio" name="paired_venue_yn" value="no" checked><span class="en">No / Not sure</span><span class="fr">Non / Pas sûr</span></label>
@@ -335,7 +347,7 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
 <!-- STEP 4 — MODEL -->
 <div class="step" id="s4">
   <h2 class="step-h"><span class="en">Collaboration model</span><span class="fr">Modèle de collaboration</span></h2>
-  <p class="step-intro"><span class="en">Two models exist. Neither is better — they suit different contexts. We always discuss the details together before any commitment.</span><span class="fr">Deux modèles existent. Aucun n'est meilleur — ils conviennent à des contextes différents. Nous en discutons toujours ensemble avant tout engagement.</span></p>
+  <p class="step-intro"><span class="en">Two possible approaches are described below. The final arrangement is discussed together, without prior commitment.</span><span class="fr">Voici deux approches possibles. Les modalités sont à définir ensemble, sans engagement à ce stade.</span></p>
   <div class="info-box">
     <strong style="font-family:'Raleway',sans-serif;font-size:10px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;display:block;margin-bottom:8px"><span class="en">Fixed Fee</span><span class="fr">Forfait fixe</span></strong>
     <span class="en">A fee is agreed in advance. You manage pricing, access, and audience development independently. Best suited for cultural institutions, cities, and curated programmes with a budget.</span>
@@ -371,13 +383,13 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
   </div>
   <div class="field">
     <label class="lbl"><span class="en">Preferred season</span><span class="fr">Saison préférée</span></label>
-    <span class="hint en">Our season runs May to September. June and September are preferred — more affordable flights from Japan.</span>
-    <span class="hint fr">Notre saison va de mai à septembre. Juin et septembre sont privilégiés — billets plus abordables depuis le Japon.</span>
+    <span class="hint en">May to September may be convenient, but other periods can be considered.</span>
+    <span class="hint fr">La période de mai à septembre est envisageable, mais d’autres dates peuvent être étudiées.</span>
     <div class="cg">
       <label><input type="radio" name="season" value="may"><span class="en">May</span><span class="fr">Mai</span></label>
-      <label><input type="radio" name="season" value="june"><span class="en">June</span><span class="fr">Juin</span> <span style="color:var(--amber);font-family:'Raleway',sans-serif;font-size:10px;font-weight:800;letter-spacing:.1em">★ preferred</span></label>
+      <label><input type="radio" name="season" value="june"><span class="en">June</span><span class="fr">Juin</span></label>
       <label><input type="radio" name="season" value="julaug"><span class="en">July – August</span><span class="fr">Juillet – Août</span></label>
-      <label><input type="radio" name="season" value="sept"><span class="en">September</span><span class="fr">Septembre</span> <span style="color:var(--amber);font-family:'Raleway',sans-serif;font-size:10px;font-weight:800;letter-spacing:.1em">★ preferred</span></label>
+      <label><input type="radio" name="season" value="sept"><span class="en">September</span><span class="fr">Septembre</span></label>
       <label><input type="radio" name="season" value="open"><span class="en">Open — no strong preference</span><span class="fr">Ouvert — pas de préférence particulière</span></label>
     </div>
   </div>
@@ -408,7 +420,7 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
 <!-- STEP 7 — CONTACT -->
 <div class="step" id="s7">
   <h2 class="step-h"><span class="en">Your contact details</span><span class="fr">Vos coordonnées</span></h2>
-  <p class="step-intro"><span class="en">We read every application personally and reply within 48 hours. No automated responses, no pitch deck — just a conversation.</span><span class="fr">Nous lisons chaque candidature personnellement et répondons sous 48 heures. Pas de réponse automatique — juste un échange.</span></p>
+  <p class="step-intro"><span class="en">Thank you for sharing your details. We will respond as soon as possible.</span><span class="fr">Merci pour ces informations. Nous vous répondrons dès que possible.</span></p>
   <div class="field f2">
     <div>
       <label class="lbl"><span class="en">First name</span><span class="fr">Prénom</span> <span style="color:var(--amber)">*</span></label>
@@ -453,7 +465,7 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
     <span class="en">Next →</span><span class="fr">Suivant →</span>
   </button>
   <button type="button" class="btn-send" id="lcBtnSend" onclick="lcSubmit()">
-    <span class="en">Send my application →</span><span class="fr">Envoyer ma candidature →</span>
+    <span class="en">Send my proposal →</span><span class="fr">Envoyer ma proposition →</span>
   </button>
 </div>
 </form>
@@ -461,8 +473,8 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
 <!-- SUCCESS -->
 <div class="suc" id="lcSuc">
   <div class="kanji">古布</div>
-  <h2><span class="en">Application sent.</span><span class="fr">Candidature envoyée.</span></h2>
-  <p><span class="en">We will come back to you within 48 hours.</span><span class="fr">Nous vous répondrons sous 48 heures.</span></p>
+  <h2><span class="en">Message sent.</span><span class="fr">Message envoyé.</span></h2>
+  <p><span class="en">Thank you. We will reply as soon as possible.</span><span class="fr">Merci. Nous vous répondrons dès que possible.</span></p>
   <div style="margin-top:36px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
     <a href="residencies.html" style="display:inline-block;font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;background:var(--amber);color:#F5F0E8;padding:14px 32px;text-decoration:none"><span class="en">Back to Residencies</span><span class="fr">Retour aux Résidences</span></a>
     <a href="index.html" style="display:inline-block;font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--rule);color:var(--mid);padding:14px 32px;text-decoration:none"><span class="en">Home</span><span class="fr">Accueil</span></a>
@@ -490,9 +502,26 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
 <div class="ft-bottom"><span>© 2026 La Cofu &nbsp;·&nbsp; All rights reserved &nbsp;·&nbsp; Tous droits réservés</span></div>
 
 <script>
-function L(l){document.body.classList.toggle('lang-fr',l==='fr');document.querySelectorAll('[data-l]').forEach(function(b){b.classList.toggle('on',b.dataset.l===l);});localStorage.setItem('lc-l',l);}
-function lcToggleMob(){var p=document.getElementById('lc-mobPanel');var v=document.getElementById('lc-mobVeil');var b=document.getElementById('lc-burger');var open=p.classList.toggle('on');v.classList.toggle('on',open);b.classList.toggle('open',open);}
-function lcCloseMob(){document.getElementById('lc-mobPanel').classList.remove('on');document.getElementById('lc-mobVeil').classList.remove('on');document.getElementById('lc-burger').classList.remove('open');}
+function L(l){
+  document.body.classList.toggle('lang-fr',l==='fr');
+  document.documentElement.lang=l;
+  document.querySelectorAll('[data-l]').forEach(function(b){b.classList.toggle('on',b.dataset.l===l);});
+  try{localStorage.setItem('lc-l',l);}catch(e){}
+  var ctr=document.getElementById('lcCtr');
+  if(ctr)ctr.textContent=(l==='fr'?'Étape '+lcStep+' sur '+lcTotal:'Step '+lcStep+' of '+lcTotal);
+}
+function lcToggleMob(){
+  var p=document.getElementById('lc-mobPanel'),v=document.getElementById('lc-mobVeil'),b=document.getElementById('lc-burger');
+  var open=p.classList.toggle('on');v.classList.toggle('on',open);b.classList.toggle('open',open);
+  b.setAttribute('aria-expanded',String(open));document.body.style.overflow=open?'hidden':'';
+}
+function lcCloseMob(){
+  document.getElementById('lc-mobPanel').classList.remove('on');
+  document.getElementById('lc-mobVeil').classList.remove('on');
+  var b=document.getElementById('lc-burger');b.classList.remove('open');b.setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lcCloseMob();});
 
 var lcStep=1,lcTotal=7;
 function lcGoTo(n){
@@ -506,13 +535,23 @@ function lcGoTo(n){
     else ps.className='prog-step';
   }
   var fr=document.body.classList.contains('lang-fr');
-  document.getElementById('lcCtr').innerHTML=fr?('Étape '+lcStep+' sur '+lcTotal):('Step '+lcStep+' of '+lcTotal);
+  document.getElementById('lcCtr').textContent=fr?('Étape '+lcStep+' sur '+lcTotal):('Step '+lcStep+' of '+lcTotal);
   document.getElementById('lcBtnBack').style.visibility=lcStep===1?'hidden':'visible';
   document.getElementById('lcBtnNext').style.display=lcStep===lcTotal?'none':'inline-block';
   document.getElementById('lcBtnSend').style.display=lcStep===lcTotal?'inline-block':'none';
   window.scrollTo({top:0,behavior:'smooth'});
 }
-function lcNext(){if(lcStep<lcTotal)lcGoTo(lcStep+1);}
+function lcValidateCurrent(){
+  var step=document.getElementById('s'+lcStep);
+  var required=Array.from(step.querySelectorAll('input[required],select[required],textarea[required]'));
+  for(var i=0;i<required.length;i++){
+    if(!required[i].checkValidity()){
+      required[i].reportValidity();required[i].focus();return false;
+    }
+  }
+  return true;
+}
+function lcNext(){if(lcStep<lcTotal&&lcValidateCurrent())lcGoTo(lcStep+1);}
 function lcPrev(){if(lcStep>1)lcGoTo(lcStep-1);}
 
 document.addEventListener('change',function(e){
@@ -527,21 +566,32 @@ document.addEventListener('change',function(e){
 });
 
 function lcSubmit(){
-  var btn=document.getElementById('lcBtnSend');
-  btn.textContent='Sending…';btn.disabled=true;
+  if(!lcValidateCurrent())return;
   var form=document.getElementById('lcForm');
+  // All required fields across the seven steps must be checked before sending.
+  var required=Array.from(form.querySelectorAll('input[required],select[required],textarea[required]'));
+  for(var i=0;i<required.length;i++){
+    if(!required[i].checkValidity()){
+      var step=required[i].closest('.step');
+      if(step)lcGoTo(Number(step.id.substring(1)));
+      required[i].reportValidity();required[i].focus();return;
+    }
+  }
+  var btn=document.getElementById('lcBtnSend');
+  var old=btn.innerHTML;
+  btn.textContent=document.body.classList.contains('lang-fr')?'Envoi en cours…':'Sending…';btn.disabled=true;
   fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
     .then(function(r){
       if(r.ok){form.style.display='none';document.getElementById('lcSuc').style.display='block';document.querySelector('.progress').style.display='none';window.scrollTo({top:0,behavior:'smooth'});}
-      else{btn.textContent='Send my application →';btn.disabled=false;alert('Something went wrong. Please email info@mglobaljapan.com');}
-    }).catch(function(){btn.textContent='Send my application →';btn.disabled=false;alert('Something went wrong. Please email info@mglobaljapan.com');});
+      else{btn.innerHTML=old;btn.disabled=false;alert(document.body.classList.contains('lang-fr')?'Envoi impossible. Écrivez-nous à info@mglobaljapan.com':'Unable to send. Please email info@mglobaljapan.com');}
+    }).catch(function(){btn.innerHTML=old;btn.disabled=false;alert(document.body.classList.contains('lang-fr')?'Envoi impossible. Écrivez-nous à info@mglobaljapan.com':'Unable to send. Please email info@mglobaljapan.com');});
 }
 
 (function(){
   var u='info',d='mglobaljapan.com';
   var fe=document.getElementById('lcFooterEmail');
   if(fe)fe.textContent=u+'\u0040'+d;
-  var s=localStorage.getItem('lc-l')||'fr';
+  var s;try{s=localStorage.getItem('lc-l')||'fr';}catch(e){s='fr';}
   L(s);
 })();
 </script>
