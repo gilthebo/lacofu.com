@@ -58,7 +58,7 @@ body.lang-fr span.en,body.lang-fr a.en{display:none!important;}
 
 /* HERO */
 .hero{position:relative;min-height:clamp(480px,65vh,720px);display:flex;align-items:flex-end;overflow:hidden;border-bottom:2px solid var(--amber);}
-.hero-bg{position:absolute;inset:0;background-color:#3a3020;background-image:url('https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/ton-don-2_orig.jpg');background-size:cover;background-position:center 30%;background-repeat:no-repeat;}
+.hero-bg{position:absolute;inset:0;background-color:#3a3020;background-image:none;background-size:cover;background-position:center 30%;background-repeat:no-repeat;}
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(44,36,22,0.25) 0%,rgba(44,36,22,0.60) 50%,rgba(44,36,22,0.90) 100%);}
 .hero-inner{position:relative;z-index:1;padding:48px 48px 56px;max-width:860px;}
 .hero-kicker{font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:#C9A84C;margin-bottom:18px;display:block;text-shadow:0 1px 3px rgba(0,0,0,0.4);}
@@ -186,16 +186,16 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
 <meta content="La Cofu — Textiles, objets &amp; histoires du Japon" name="twitter:title"/>
 <meta content="Objets chinés, textiles anciens et créations singulières. Découvrez La Collection de La Cofu." name="twitter:description"/>
 <meta content="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-23-at-12-59-03_orig.png" name="twitter:image"/>
-<style id="lacofu-hero-logo-20261123">/* New supplied logo HERO: full image, no crop, no dark overlay. */
+<style id="lacofu-hero-logo-20261123">/* HERO La Cofu : image panoramique entière, sans recadrage. */
 .hero{display:block!important;min-height:0!important;background:#ebe9e2!important;overflow:hidden;border-bottom:2px solid var(--amber)}
-.hero .hero-image{display:block;width:100%;height:auto;aspect-ratio:1000 / 444;object-fit:contain;object-position:center}
+.hero .hero-image{display:block;width:100%;height:auto;object-fit:contain;object-position:center}
 @media(max-width:720px){.hero{min-height:0!important}.hero .hero-image{width:100%;height:auto;object-fit:contain}}
 .home-main-heading .en,.home-main-heading .fr{white-space:normal}
 </style>
 <style id="lacofu-accueil-v6-readability">
-/* V6 — user supplied final HERO and more comfortable reading. Titles untouched. */
-.hero{background:#edeae2!important}
-.hero .hero-image{width:100%!important;height:auto!important;display:block!important;object-fit:contain!important;filter:none!important;mix-blend-mode:normal!important}
+/* HERO panoramique et lisibilité. Titres inchangés. */
+.hero{background:#edeae2!important;width:100vw!important;max-width:none!important;margin-left:calc(50% - 50vw)!important;padding:0!important}
+.hero .hero-image{width:100%!important;max-width:none!important;height:auto!important;display:block!important;object-fit:contain!important;filter:none!important;mix-blend-mode:normal!important}
 /* Desktop: main paragraphs, editorial columns and explanatory cards only. */
 @media(min-width:1025px){
   .hero-sub,
@@ -269,7 +269,7 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
 <a href="contact.html" onclick="closeMob()">Contact</a>
 </nav>
 <!-- HERO -->
-<section class="hero"><img alt="La Cofu — logo et univers de la marque" class="hero-image" decoding="async" fetchpriority="high" src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/ton-don-2_orig.jpg"/></section>
+<section class="hero"><img alt="La Cofu — de Kyushu vers la France : brocantes, créations et expériences japonaises" class="hero-image" decoding="async" fetchpriority="high" src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/hero-banner-final_orig.jpeg"/></section>
 <!-- HERO TEXT BAND -->
 <div style="background:var(--dark);border-bottom:2px solid var(--amber);padding:52px 56px">
 <div style="max-width:1080px;margin:0 auto">
