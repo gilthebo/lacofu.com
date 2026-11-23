@@ -58,7 +58,7 @@ body.lang-fr span.en,body.lang-fr a.en{display:none!important;}
 
 /* HERO */
 .hero{position:relative;min-height:clamp(480px,65vh,720px);display:flex;align-items:flex-end;overflow:hidden;border-bottom:2px solid var(--amber);}
-.hero-bg{position:absolute;inset:0;background-color:#3a3020;background-image:url('https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-23-at-12-59-03_orig.png');background-size:cover;background-position:center 30%;background-repeat:no-repeat;}
+.hero-bg{position:absolute;inset:0;background-color:#3a3020;background-image:url('https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-04-23-at-16-43-45_orig.png');background-size:cover;background-position:center 30%;background-repeat:no-repeat;}
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(44,36,22,0.25) 0%,rgba(44,36,22,0.60) 50%,rgba(44,36,22,0.90) 100%);}
 .hero-inner{position:relative;z-index:1;padding:48px 48px 56px;max-width:860px;}
 .hero-kicker{font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:#C9A84C;margin-bottom:18px;display:block;text-shadow:0 1px 3px rgba(0,0,0,0.4);}
@@ -179,18 +179,53 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
 <meta content="https://lacofu.com/" property="og:url"/>
 <meta content="La Cofu — Textiles, objets &amp; histoires du Japon" property="og:title"/>
 <meta content="Objets chinés, textiles anciens et créations singulières. La Cofu partage ses trouvailles au Japon et invite à la découverte et aux rencontres." property="og:description"/>
-<meta content="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-23-at-12-02-57_orig.png" property="og:image"/>
+<meta content="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-23-at-12-59-03_orig.png" property="og:image"/>
 <meta content="fr_FR" property="og:locale"/>
 <meta content="La Cofu" property="og:site_name"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="La Cofu — Textiles, objets &amp; histoires du Japon" name="twitter:title"/>
 <meta content="Objets chinés, textiles anciens et créations singulières. Découvrez La Collection de La Cofu." name="twitter:description"/>
-<meta content="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-23-at-12-02-57_orig.png" name="twitter:image"/>
+<meta content="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-23-at-12-59-03_orig.png" name="twitter:image"/>
 <style id="lacofu-hero-logo-20261123">/* New supplied logo HERO: full image, no crop, no dark overlay. */
 .hero{display:block!important;min-height:0!important;background:#ebe9e2!important;overflow:hidden;border-bottom:2px solid var(--amber)}
 .hero .hero-image{display:block;width:100%;height:auto;aspect-ratio:1000 / 444;object-fit:contain;object-position:center}
 @media(max-width:720px){.hero{min-height:0!important}.hero .hero-image{width:100%;height:auto;object-fit:contain}}
 .home-main-heading .en,.home-main-heading .fr{white-space:normal}
+</style>
+<style id="lacofu-accueil-v6-readability">
+/* V6 — user supplied final HERO and more comfortable reading. Titles untouched. */
+.hero{background:#edeae2!important}
+.hero .hero-image{width:100%!important;height:auto!important;display:block!important;object-fit:contain!important;filter:none!important;mix-blend-mode:normal!important}
+/* Desktop: main paragraphs, editorial columns and explanatory cards only. */
+@media(min-width:1025px){
+  .hero-sub,
+  .narrative-body,.narrative-key,.narrative-note,
+  .ni-desc,.concept-body,.concept-body-light,
+  .narrative-band p,
+  section[style*="padding:72px 56px"] p,
+  .sec-dark p:not(.ft-credit):not(.ft-bottom),
+  .nav-item p,.nav-half p,
+  div[style*="background:var(--dark);border-bottom:2px solid var(--amber)"] p,
+  div[style*="background:var(--dark);border-bottom:2px solid var(--amber)"] em
+  {font-size:clamp(20px,1.55vw,23px)!important;line-height:1.76!important}
+  /* Pillars and three philosophy cards are narrower: moderately larger instead. */
+  section[style*="padding:72px 56px"] div[style*="background:var(--cream)"] p,
+  .sec-dark div[style*="grid-template-columns:repeat(3,1fr)"] p:not([style*="font-family"])
+  {font-size:19px!important;line-height:1.7!important}
+  /* Footer remains compact. */
+}
+@media(min-width:721px) and (max-width:1024px){
+  .hero-sub,.narrative-body,.narrative-key,.ni-desc,.concept-body,.concept-body-light,
+  section[style*="padding:72px 56px"] p,.sec-dark p,
+  div[style*="background:var(--dark);border-bottom:2px solid var(--amber)"] p
+  {font-size:19px!important;line-height:1.75!important}
+}
+@media(max-width:720px){
+  .hero-sub,.narrative-body,.narrative-key,.ni-desc,.concept-body,.concept-body-light,
+  section[style*="padding:72px 56px"] p,.sec-dark p,
+  div[style*="background:var(--dark);border-bottom:2px solid var(--amber)"] p
+  {font-size:18px!important;line-height:1.72!important}
+}
 </style></head>
 <body>
 <header class="site-header" id="siteHeader">
@@ -234,15 +269,13 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
 <a href="contact.html" onclick="closeMob()">Contact</a>
 </nav>
 <!-- HERO -->
-<section class="hero"><img alt="La Cofu — emblème japonais de la Collection" class="hero-image" decoding="async" fetchpriority="high" src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-23-at-12-59-03_orig.png"/></section>
+<section class="hero"><img alt="La Cofu — logo et univers de la marque" class="hero-image" decoding="async" fetchpriority="high" src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-23-at-12-59-03_orig.png"/></section>
 <!-- HERO TEXT BAND -->
 <div style="background:var(--dark);border-bottom:2px solid var(--amber);padding:52px 56px">
 <div style="max-width:1080px;margin:0 auto">
 <span class="en" style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px">Itoshima · Kyūshū · Japan</span>
 <span class="fr" style="font-family:'Raleway',sans-serif;font-size:11px;font-weight:800;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:18px">Itoshima · Kyūshū · Japon</span>
 <h1 class="home-main-heading" style="font-family:Raleway,Arial,sans-serif;font-weight:700;font-size:clamp(14px,2vw,23px);line-height:1.5;letter-spacing:.16em;color:var(--gold);margin-bottom:22px;text-transform:uppercase"><span class="fr">Textiles · Objets · Histoires du Japon</span><span class="en">Textiles · Objects · Stories from Japan</span></h1>
-
-
 <div style="width:40px;height:1px;background:var(--amber);margin-bottom:28px"></div>
 <p class="en" style="font-size:clamp(17px,2.2vw,21px);font-weight:300;line-height:1.78;color:rgba(245,240,232,.88);max-width:100%;margin-bottom:36px">Flea-market finds, vintage textiles and one-of-a-kind creations.<br/><em style="font-style:italic;color:var(--cream)">Found in Japan, reimagined and shared through encounters.</em></p>
 <p class="fr" style="font-size:clamp(17px,2.2vw,21px);font-weight:300;line-height:1.78;color:rgba(245,240,232,.88);max-width:100%;margin-bottom:36px">Objets chinés, textiles anciens et créations singulières.<br/><em style="font-style:italic;color:var(--cream)">Dénichés au Japon, imaginés et partagés au fil des rencontres.</em></p>
