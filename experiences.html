@@ -173,6 +173,29 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
   .bottom-nav{padding:20px 22px;}
 }
 @media(max-width:860px){.gallery{grid-template-columns:repeat(5,1fr);}}
+
+/* V2 — Lisibilité : une police plus nette pour les textes, titres inchangés */
+.exp-body, .body, .fmt-body, .price-name,
+.exp-meta-item, .price-detail, .price-amt {
+  font-family:'Raleway',Arial,sans-serif;
+  font-weight:400;
+  color:#30271C;
+}
+.exp-body, .body {font-size:20px;line-height:1.85;letter-spacing:0;}
+.fmt-body {font-size:18px;line-height:1.8;}
+.exp-meta-item {font-size:12px;font-weight:700;line-height:1.6;}
+.price-name {font-size:19px;font-weight:600;color:#F5F0E8;}
+.price-detail {font-size:12px;font-weight:600;color:rgba(245,240,232,.85);}
+.price-amt {font-size:18px;font-weight:700;color:#E7B65B;}
+/* Texte sur fond sombre : contraste fort, même en inline */
+.sec-dark .body, .sec-dark p[style*="rgba(245,240,232"] {color:#F1E8D8!important;}
+/* Garder des lignes de lecture confortables sur grands écrans */
+.exp-body, .sec-inner > .body {max-width:900px;}
+@media(max-width:720px){
+  .exp-body, .body {font-size:17px;line-height:1.8;}
+  .fmt-body {font-size:17px;}
+  .exp-meta-item,.price-detail {font-size:11px;}
+}
 </style>
 </head>
 <body>
@@ -449,6 +472,8 @@ footer{background:var(--dark);border-top:2px solid var(--amber);padding:52px 48p
   <a href="campings.html" class="btn fr">Camping 5* & Resorts</a>
   <a href="shop.html" class="btn en">Collection</a>
   <a href="shop.html" class="btn fr">Collection</a>
+  <a href="contact.html" class="btn en">Get in touch</a>
+  <a href="contact.html" class="btn fr">Nous contacter</a>
 </div>
 
 <!-- FOOTER -->
