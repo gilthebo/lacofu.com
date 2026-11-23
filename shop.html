@@ -1085,7 +1085,88 @@ body[data-lang=en] #kyushu-in-motion .fr,body:has(#lc-lang-en:checked) #kyushu-i
   }
   #cat-obitee .model-expand > summary .model-open-glyph {justify-self:center!important;}
 }
-</style></head><body data-lang="fr"><header class="topbar"><div class="topinner"><a class="brand" href="https://lacofu.com/index.html">La Cofu</a><nav aria-label="Main navigation" class="site-links"><a href="https://lacofu.com/index.html"><span class="fr">Accueil</span><span class="en">Home</span></a><a href="https://lacofu.com/about.html"><span class="fr">Notre histoire</span><span class="en">About us</span></a><a href="https://lacofu.com/experiences.html"><span class="fr">Expériences</span><span class="en">Experiences</span></a><a href="https://lacofu.com/residencies.html"><span class="fr">Résidences</span><span class="en">Residencies</span></a><a href="https://lacofu.com/locations.html"><span class="fr">Lieux</span><span class="en">Locations</span></a><a href="https://lacofu.com/campings.html"><span class="fr">Camping &amp; Resort</span><span class="en">Camping &amp; Resort</span></a><a href="https://lacofu.com/shop.html"><span class="fr">Collection</span><span class="en">Collection</span></a><a href="https://lacofu.com/contact.html"><span class="fr">Contact</span><span class="en">Contact</span></a></nav><div class="toolbar"><div class="language"><input aria-label="FR" checked="checked" class="lang-radio" id="lc-lang-fr" name="lc-language" type="radio" value="fr"/><label class="lang-option" for="lc-lang-fr">FR</label><span class="lang-sep">/</span><input aria-label="EN" class="lang-radio" id="lc-lang-en" name="lc-language" type="radio" value="en"/><label class="lang-option" for="lc-lang-en">EN</label></div><details class="mobile-menu" id="mobile-menu"><summary aria-label="Ouvrir le menu de navigation" class="menu-btn">☰</summary><nav aria-label="Mobile navigation" class="mobile-links" id="mobile-nav"><a href="https://lacofu.com/index.html"><span class="fr">Accueil</span><span class="en">Home</span></a><a href="https://lacofu.com/about.html"><span class="fr">Notre histoire</span><span class="en">About us</span></a><a href="https://lacofu.com/experiences.html"><span class="fr">Expériences</span><span class="en">Experiences</span></a><a href="https://lacofu.com/residencies.html"><span class="fr">Résidences</span><span class="en">Residencies</span></a><a href="https://lacofu.com/locations.html"><span class="fr">Lieux</span><span class="en">Locations</span></a><a href="https://lacofu.com/campings.html"><span class="fr">Camping &amp; Resort</span><span class="en">Camping &amp; Resort</span></a><a href="https://lacofu.com/shop.html"><span class="fr">Collection</span><span class="en">Collection</span></a><a href="https://lacofu.com/contact.html"><span class="fr">Contact</span><span class="en">Contact</span></a></nav></details></div></div></header><div class="hero"><img alt="La Cofu — vintage objects and textiles" src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-10-at-12-48-14_orig.png"/></div><main><div class="wrap"><div class="intro"><div class="eyebrow"><span class="eyebrow-first">Textiles · Objets</span> · <span class="eyebrow-last">Histoires du Japon</span></div>
+</style>
+<style id="lacofu-github-20261123-text-arrows">
+/* Corrections based strictly on the uploaded GitHub shop (1).html. */
+/* Balanced centered paragraph blocks, with justified desktop reading lines. */
+#cat-chemins .wrap > p.obi-intro-text,
+#cat-objets .wrap > p.lede,
+#cat-ceramiques .ceramics-intro,
+#cat-obitee .tee-intro,
+#cat-sacs .obi-bags-intro {
+  box-sizing:border-box!important;
+  width:min(100%, 940px)!important;
+  max-width:940px!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+  padding-left:0!important;
+  padding-right:0!important;
+}
+#cat-chemins .wrap > p.obi-intro-text,
+#cat-objets .wrap > p.lede,
+#cat-ceramiques .ceramics-intro p,
+#cat-obitee .tee-intro p:not(.tee-subtitle),
+#cat-sacs .obi-bags-intro p {
+  text-align:justify!important;
+  text-align-last:left;
+  text-justify:inter-word;
+  text-wrap:wrap!important;
+  hyphens:auto!important;
+  overflow-wrap:break-word;
+}
+/* Keep subtitles and intentionally centered elements centered. */
+#cat-obitee .tee-intro p.tee-subtitle {text-align:center!important;}
+/* On narrow screens, full justification causes excessive word spacing. */
+@media(max-width:680px){
+  #cat-chemins .wrap > p.obi-intro-text,
+  #cat-objets .wrap > p.lede,
+  #cat-ceramiques .ceramics-intro,
+  #cat-obitee .tee-intro,
+  #cat-sacs .obi-bags-intro{width:100%!important;max-width:100%!important;}
+  #cat-chemins .wrap > p.obi-intro-text,
+  #cat-objets .wrap > p.lede,
+  #cat-ceramiques .ceramics-intro p,
+  #cat-obitee .tee-intro p:not(.tee-subtitle),
+  #cat-sacs .obi-bags-intro p{
+    text-align:left!important;
+    text-wrap:pretty!important;
+    hyphens:none!important;
+  }
+}
+/* White, heavier arrows on brown CTAs: avoid the earlier universal gold arrow rule. */
+.v41-collection-jump a .lacofu-link-arrow,
+.kyushu-teaser > a .lacofu-link-arrow,
+.kyushu-visit-button .lacofu-link-arrow,
+.showroom-primary .lacofu-link-arrow,
+.collection-film-button .lacofu-link-arrow,
+.collection-intro-cta a .lacofu-link-arrow,
+.intro-univers-link a .lacofu-link-arrow {
+  color:#fff!important;
+  opacity:1!important;
+  filter:none!important;
+}
+.v41-collection-jump a .lacofu-link-arrow::before,
+.kyushu-teaser > a .lacofu-link-arrow::before,
+.kyushu-visit-button .lacofu-link-arrow::before,
+.showroom-primary .lacofu-link-arrow::before,
+.collection-film-button .lacofu-link-arrow::before,
+.collection-intro-cta a .lacofu-link-arrow::before,
+.intro-univers-link a .lacofu-link-arrow::before {
+  border-top:2.5px solid #fff!important;
+  border-right:2.5px solid #fff!important;
+}
+.v41-collection-jump a .lacofu-link-arrow::after,
+.kyushu-teaser > a .lacofu-link-arrow::after,
+.kyushu-visit-button .lacofu-link-arrow::after,
+.showroom-primary .lacofu-link-arrow::after,
+.collection-film-button .lacofu-link-arrow::after,
+.collection-intro-cta a .lacofu-link-arrow::after,
+.intro-univers-link a .lacofu-link-arrow::after {
+  background:#fff!important;
+  height:2.5px!important;
+}
+</style>
+</head><body data-lang="fr"><header class="topbar"><div class="topinner"><a class="brand" href="https://lacofu.com/index.html">La Cofu</a><nav aria-label="Main navigation" class="site-links"><a href="https://lacofu.com/index.html"><span class="fr">Accueil</span><span class="en">Home</span></a><a href="https://lacofu.com/about.html"><span class="fr">Notre histoire</span><span class="en">About us</span></a><a href="https://lacofu.com/experiences.html"><span class="fr">Expériences</span><span class="en">Experiences</span></a><a href="https://lacofu.com/residencies.html"><span class="fr">Résidences</span><span class="en">Residencies</span></a><a href="https://lacofu.com/locations.html"><span class="fr">Lieux</span><span class="en">Locations</span></a><a href="https://lacofu.com/campings.html"><span class="fr">Camping &amp; Resort</span><span class="en">Camping &amp; Resort</span></a><a href="https://lacofu.com/shop.html"><span class="fr">Collection</span><span class="en">Collection</span></a><a href="https://lacofu.com/contact.html"><span class="fr">Contact</span><span class="en">Contact</span></a></nav><div class="toolbar"><div class="language"><input aria-label="FR" checked="checked" class="lang-radio" id="lc-lang-fr" name="lc-language" type="radio" value="fr"/><label class="lang-option" for="lc-lang-fr">FR</label><span class="lang-sep">/</span><input aria-label="EN" class="lang-radio" id="lc-lang-en" name="lc-language" type="radio" value="en"/><label class="lang-option" for="lc-lang-en">EN</label></div><details class="mobile-menu" id="mobile-menu"><summary aria-label="Ouvrir le menu de navigation" class="menu-btn">☰</summary><nav aria-label="Mobile navigation" class="mobile-links" id="mobile-nav"><a href="https://lacofu.com/index.html"><span class="fr">Accueil</span><span class="en">Home</span></a><a href="https://lacofu.com/about.html"><span class="fr">Notre histoire</span><span class="en">About us</span></a><a href="https://lacofu.com/experiences.html"><span class="fr">Expériences</span><span class="en">Experiences</span></a><a href="https://lacofu.com/residencies.html"><span class="fr">Résidences</span><span class="en">Residencies</span></a><a href="https://lacofu.com/locations.html"><span class="fr">Lieux</span><span class="en">Locations</span></a><a href="https://lacofu.com/campings.html"><span class="fr">Camping &amp; Resort</span><span class="en">Camping &amp; Resort</span></a><a href="https://lacofu.com/shop.html"><span class="fr">Collection</span><span class="en">Collection</span></a><a href="https://lacofu.com/contact.html"><span class="fr">Contact</span><span class="en">Contact</span></a></nav></details></div></div></header><div class="hero"><img alt="La Cofu — vintage objects and textiles" src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-10-at-12-48-14_orig.png"/></div><main><div class="wrap"><div class="intro"><div class="eyebrow"><span class="eyebrow-first">Textiles · Objets</span> · <span class="eyebrow-last">Histoires du Japon</span></div>
 <h1><span class="fr">La Collection</span><span class="en">The Collection</span></h1>
 <h2 class="intro-editorial-title"><span class="fr">Un regard, une sélection</span><span class="en">An eye for the unusual</span></h2>
 <div class="intro-reading"><p><span class="fr">Chineurs et amateurs de décoration, nous rapportons du Japon des textiles anciens, des objets du quotidien et des trouvailles qui attirent notre regard. Certains restent tels que nous les avons découverts ; d’autres sont adaptés dans notre atelier, ou associés à d’autres matières.</span><span class="en">With an eye for flea-market discoveries and interiors, we bring together vintage textiles, everyday objects and unusual finds from Japan. Some remain exactly as found; others are adapted in our atelier or combined with different materials.</span></p>
@@ -1103,8 +1184,8 @@ body[data-lang=en] #kyushu-in-motion .fr,body:has(#lc-lang-en:checked) #kyushu-i
 <span class="eyebrow">04 · Upcycled vintage kimono fabric</span>
 <h2>“Obi” Tees</h2>
 <div class="tee-intro"><p class="tee-subtitle centered-editions"><span class="fr">Éditions limitées · Obi / kimono vintage · Unisexe</span><span class="en">Limited editions · Vintage obi / kimono · Unisex</span></p>
-<p class="fr">Des T-shirts à manches courtes ou longues en coton japonais épais, rehaussés d’un panneau en tissu d’obi ou de kimono vintage. Les motifs, les teintes et les tissages sont authentiques : rien n’est reproduit. Chaque tissu n’existe qu’en quantité limitée ; une fois épuisé, le modèle ne revient pas.</p>
-<p class="en">Heavy Japanese cotton tees, short- or long-sleeved, with panels made from genuine vintage obi or kimono cloth. Original patterns, colours and weaves are never reproduced. Each fabric exists only in a limited quantity; once it is gone, that edition will not return.</p></div><p class="tee-style-advice"><span class="fr">Conseil de style — Les modèles à large bandeau horizontal (Indigo Current et Togarashi) mettent davantage en valeur une silhouette féminine ou une silhouette masculine fine. Le tombé dépend bien sûr de la morphologie et de la taille choisie.</span><span class="en">Styling note — Tees with a wide horizontal panel (Indigo Current and Togarashi) tend to flatter a feminine silhouette or a slimmer masculine build. The fit also depends on body shape and sizing.</span></p>
+<p class="fr">Des T-shirts neufs à manches courtes ou longues en coton japonais épais, rehaussés d’un panneau en tissu d’obi ou de kimono vintage. Les textiles anciens sont lavés avant d’être cousus sur les T-shirts. Les motifs, les teintes et les tissages sont authentiques : rien n’est reproduit. Chaque tissu n’existe qu’en quantité limitée ; une fois épuisé, le modèle ne revient pas.</p>
+<p class="en">Brand-new, heavyweight Japanese cotton tees, short- or long-sleeved, with panels made from genuine vintage obi or kimono cloth. The vintage fabrics are washed before being sewn onto the T-shirts. Original patterns, colours and weaves are never reproduced. Each fabric exists only in a limited quantity; once it is gone, that edition will not return.</p></div><p class="tee-style-advice"><span class="fr">Conseil de style — Les modèles à large bandeau horizontal (Indigo Current et Togarashi) mettent davantage en valeur une silhouette féminine ou une silhouette masculine fine. Le tombé dépend bien sûr de la morphologie et de la taille choisie.</span><span class="en">Styling note — Tees with a wide horizontal panel (Indigo Current and Togarashi) tend to flatter a feminine silhouette or a slimmer masculine build. The fit also depends on body shape and sizing.</span></p>
 <details class="collection-expand" id="details-cat-obitee"><summary><span class="collection-preview-gallery"><span class="collection-preview-image"><img alt="Golden Garden Bleu — Obi Tee manches longues" loading="lazy" src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-13-at-14-35-13.png"/></span><span class="collection-preview-image"><img alt="Atelier La Cofu — couture des Obi Tees" loading="lazy" src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-17-at-10-58-27.png"/></span><span class="collection-preview-image"><img alt="Golden Garden Bleu — Obi Tee manches longues" loading="lazy" src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-13-at-17-01-40.png"/></span></span><span class="collection-expand-command"><span class="fr">Découvrir les 12 Obi Tees</span><span class="en">Explore the 12 Obi Tees</span> <span aria-hidden="true" class="expand-glyph">+</span></span></summary><div class="collection-expand-body"><nav aria-label="Obi Tee quick navigation" class="tee-quicknav"><a href="#tee-short"><span class="fr">Manches courtes</span><span class="en">Short sleeve</span></a><a href="#tee-long"><span class="fr">Manches longues</span><span class="en">Long sleeve</span></a><a href="#tee-parker">Sweat à capuche</a><a href="#tee-enseignes"><span class="fr">Enseignes &amp; Matsuri</span><span class="en">Vintage Signs &amp; Matsuri</span></a></nav><div class="tee-opening"><div class="tee-opening-photo-wrap v49-gallery-photo"><img alt="La Cofu — Obi Tee, aperçu 1" class="tee-opening-photo" loading="lazy" src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-13-at-14-35-13.png"/></div><div class="tee-opening-photo-wrap v49-gallery-photo"><img alt="La Cofu — Obi Tee, aperçu 2" class="tee-opening-photo" loading="lazy" src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-17-at-10-58-27.png"/></div><div class="tee-opening-photo-wrap v49-gallery-photo"><img alt="La Cofu — Obi Tee, aperçu 3" class="tee-opening-photo" loading="lazy" src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-13-at-17-01-40.png"/></div></div><div class="v49-tee-presentation-videos"><button class="tee-video-button" data-tee-video="IOmZyGvQhzY" type="button"><span class="fr">▶ Voir la présentation en vidéo</span><span class="en">▶ Watch the presentation</span></button><button class="tee-video-button" data-tee-video="qeNCZHCQEQ4" type="button"><span class="fr">▶ Voir la fabrication en vidéo</span><span class="en">▶ Watch the making of</span></button></div><div class="tee-subheading" id="tee-short"><h3><span class="fr">Obi Tees · Manches courtes</span><span class="en">Obi Tees · Short sleeve</span></h3></div><details class="model-expand"><summary><span class="model-preview-photo"><img alt="" loading="lazy" src="https://lacofu2.weebly.com/uploads/2/2/0/6/22062792/screenshot-2026-11-17-at-10-58-27.png"/></span><span class="model-preview-text"><strong>Seigaiha (Black)</strong><small><span class="fr">Photos, tailles, histoire et vidéo</span><span class="en">Photos, sizes, story and video</span></small></span><span aria-hidden="true" class="model-open-glyph">+</span></summary><div class="model-expanded"><article class="tee-model textile-set" id="tee-01">
 <div class="tee-model-top"><div class="tee-model-title"><span class="kicker">SHORT · 01</span><h3>Seigaiha (Black)</h3></div>
 </div>
